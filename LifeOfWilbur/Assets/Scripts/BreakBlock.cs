@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class BreakBlock : MonoBehaviour
 {
-    public GameObject gameObject;
     public Animator animator;
     public float delayTime; //Num seconds
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Wilbur")
+        if (collision.name == "Wilbur")
         {
             animator.SetBool("IsBreak", true);
             StartCoroutine(HideObject(gameObject, delayTime));
