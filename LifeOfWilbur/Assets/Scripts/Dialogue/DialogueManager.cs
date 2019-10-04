@@ -11,10 +11,10 @@ public class DialogueManager : MonoBehaviour {
     public Text continueButtonField;
     public Animator animator;
 
-    private Queue<string> sentences;
+    private Queue<Quote> quoteQueue;
 
     public void Start() {
-        sentences = new Queue<string>();
+        quoteQueue = new Queue<Quote>();
     }
 
     public void StartDialogue(Dialogue dialogue) {
@@ -23,23 +23,23 @@ public class DialogueManager : MonoBehaviour {
 
     IEnumerator startDialogueRoutine(Dialogue dialogue) {
         animator.SetBool("isOpen", true);
-        sentences.Clear();
+        quoteQueue.Clear();
 
         yield return new WaitForSeconds(0.2f);
         continueButtonField.text = "Continue";
-        nameTextField.text = dialogue.npcName;
 
-        foreach (string sentence in dialogue.sentenceList) {
-            sentences.Enqueue(sentence);
+        foreach (Quote quote in dialogue.quoteList) {
+            quoteQueue.Enqueue(quote);
         }
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence() {
-        if (sentences.Count > 0) {
-            string sentence = sentences.Dequeue();
-            StartCoroutine(TypeDialogueAnimation(sentence));
-            if (sentences.Count == 0) {
+        if (quoteQueue.Count > 0) {
+            Quote quote = quoteQueue.Dequeue();
+            nameTextField.text = quote.name;
+            StartCoroutine(TypeDialogueAnimation(quote.quote));
+            if (quoteQueue.Count == 0) {
                 continueButtonField.text = "Close";
             }
         } else {

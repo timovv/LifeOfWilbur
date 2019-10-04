@@ -234,7 +234,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -263,8 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    npcName: Bob
-    sentenceList: []
+    quoteList: []
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,10 +825,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    npcName: Bob
-    sentenceList:
-    - Yoyoyo
-    - It's wednesday my dudes
+    quoteList:
+    - name: Wilbur
+      quote: Yo
+    - name: Bob
+      quote: Bruh
+    - name: Wilbur
+      quote: Yeet
 --- !u!114 &1062771547
 MonoBehaviour:
   m_ObjectHideFlags: 0
