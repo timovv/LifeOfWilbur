@@ -25,6 +25,12 @@ public class DialogueManager : MonoBehaviour {
         quoteQueue = new Queue<Quote>();
     }
 
+    void Update() {
+        if (IsOpen && Input.GetKeyDown(KeyCode.C)) {
+            DisplayNextSentence();
+        }
+    }
+
     // Adds all quotes to the queue and opens dialogueWindow
     public void StartDialogue(Dialogue dialogue) {
         quoteQueue.Clear();
@@ -37,12 +43,11 @@ public class DialogueManager : MonoBehaviour {
 
     // Opens and populates the dialogueWindow
     IEnumerator StartDialogueRoutine(Dialogue dialogue) {
-        IsOpen = true;
         animator.SetBool("isOpen", true);
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
-        continueButtonTextField.text = "Continue";
+        continueButtonTextField.text = "Continue (c)";
         DisplayNextSentence();
     }
 
@@ -59,8 +64,9 @@ public class DialogueManager : MonoBehaviour {
 
             // Sets the "Continue" button text to "Close" if it is on the last quote
             if (quoteQueue.Count == 0) {
-                continueButtonTextField.text = "Close";
+                continueButtonTextField.text = "Close (c)";
             }
+            IsOpen = true;
         } else {
             // No more quotes to display so ends the dialogue
             EndDialogue();

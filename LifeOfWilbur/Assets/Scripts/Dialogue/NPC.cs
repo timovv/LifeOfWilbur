@@ -9,7 +9,7 @@ public class NPC : MonoBehaviour {
 
     // Opens the dialogueWindow if player in range (collision detection), user pressing "X" and dialogueWindow is not already open
     void Update() {
-        if (inRange && Input.GetKeyDown(KeyCode.X) && !DialogueManager.Instance.IsOpen) {
+        if (inRange && Input.GetKeyDown(KeyCode.C) && !DialogueManager.Instance.IsOpen) {
             dialogueTrigger.TriggerDialogue();
         }
     }
