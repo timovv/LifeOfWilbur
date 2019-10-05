@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour {
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
-        continueButtonTextField.text = "Continue (c)";
+        continueButtonTextField.text = "Press C to continue";
         DisplayNextSentence();
     }
 
@@ -57,14 +57,14 @@ public class DialogueManager : MonoBehaviour {
             
             // Sets the name property and changes the image animation for the quote speaker
             nameTextField.text = quote.name;
-            animator.SetBool("isWilbur", quote.name == "CubWilbur" || quote.name == "AdultWilbur");
+            animator.SetBool("isWilbur", quote.name == "Cub Wilbur" || quote.name == "Adult Wilbur");
 
             // Sets the dialogue through the animation
             StartCoroutine(TypeDialogueAnimation(quote.quote, quoteQueue.Count));
 
             // Sets the "Continue" button text to "Close" if it is on the last quote
             if (quoteQueue.Count == 0) {
-                continueButtonTextField.text = "Close (c)";
+                continueButtonTextField.text = "Press C to continue";
             }
             IsOpen = true;
         } else {
