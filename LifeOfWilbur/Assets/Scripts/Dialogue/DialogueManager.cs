@@ -10,7 +10,9 @@ public class DialogueManager : MonoBehaviour {
     public Text nameTextField;
     public Text continueButtonField;
     public Animator animator;
+    public static Boolean isOpen;
 
+    private int dialogueQuoteIndex = 0;
     private Queue<Quote> quoteQueue;
 
     public void Start() {
@@ -18,6 +20,8 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void StartDialogue(Dialogue dialogue) {
+        isOpen = true;
+        dialogueQuoteIndex = 0;
         StartCoroutine(startDialogueRoutine(dialogue));
     }
 
@@ -35,10 +39,16 @@ public class DialogueManager : MonoBehaviour {
     }
 
     public void DisplayNextSentence() {
+        dialogueQuoteIndex += 1;
         if (quoteQueue.Count > 0) {
             Quote quote = quoteQueue.Dequeue();
+            
             nameTextField.text = quote.name;
-            StartCoroutine(TypeDialogueAnimation(quote.quote));
+            animator.SetBool("isWilbur", quote.name == "CubWilbur");
+
+
+            StartCoroutine(TypeDialogueAnimation(quote.quote, dialogueQuoteIndex));
+            
             if (quoteQueue.Count == 0) {
                 continueButtonField.text = "Close";
             }
@@ -47,11 +57,13 @@ public class DialogueManager : MonoBehaviour {
         }
     }
 
-    IEnumerator TypeDialogueAnimation(string text) {
+    IEnumerator TypeDialogueAnimation(string text, int quotePrintingIndex) {
         dialogueTextField.text = "";
         foreach (char character in text.ToCharArray()) {
-            dialogueTextField.text += character;
-            yield return null;
+            if (dialogueQuoteIndex == quotePrintingIndex) {
+                dialogueTextField.text += character;
+                yield return null;
+            }
         }
     }
 
@@ -60,5 +72,6 @@ public class DialogueManager : MonoBehaviour {
         dialogueTextField.text = "";
         nameTextField.text = "";
         animator.SetBool("isOpen", false);
+        isOpen = false;
     }
 }
