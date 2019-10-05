@@ -10,7 +10,7 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
 	[SerializeField] private Transform m_CeilingCheck;							// A position marking where to check for ceilings
 	
-	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
+	const float k_GroundedRadius = 0.05f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D m_Rigidbody2D;
@@ -22,6 +22,13 @@ public class CharacterController2D : MonoBehaviour
 
 	public UnityEvent OnLandEvent;
 
+    public float runSpeed = 25f;
+	private float horizontalMove = 0f;
+    private float jumpRemember = 0.2f;
+    private float groundedRemember = 0f;
+    const float jumpBuffer = 0.1f;
+    const float groundedBuffer = 0.2f;
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -30,8 +37,22 @@ public class CharacterController2D : MonoBehaviour
 			OnLandEvent = new UnityEvent();
 	}
 
+	void Update()
+    {
+        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        
+        if (Input.GetButtonDown("Jump"))
+        {
+            jumpRemember = jumpBuffer;
+        }
+		Debug.Log(jumpRemember);
+    }
+
 	private void FixedUpdate()
 	{
+		jumpRemember = jumpRemember - Time.deltaTime;
+		groundedRemember = groundedRemember - Time.deltaTime;
+
 		bool wasGrounded = m_Grounded;
 		m_Grounded = false;
 
@@ -42,19 +63,22 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-				m_Grounded = true;
+                groundedRemember = groundedBuffer;
+                m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
 		}
+
+		Move(horizontalMove * Time.fixedDeltaTime);
 	}
 
 
-	public void Move(float move, bool jump)
+	public void Move(float move)
 	{
-
+        
 		//only control the player if grounded or airControl is turned on
-		if (m_Grounded || m_AirControl)
+		if (groundedRemember > 0 || m_AirControl)
 		{
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, m_Rigidbody2D.velocity.y);
@@ -74,9 +98,12 @@ public class CharacterController2D : MonoBehaviour
 				Flip();
 			}
 		}
+
 		// If the player should jump...
-		if (m_Grounded && jump)
+		if (groundedRemember > 0 && jumpRemember > 0)
 		{
+			jumpRemember = jumpBuffer; // not sure why this doesn't work when its set to 0
+            groundedRemember = 0f;
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
