@@ -5,11 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject optionsMenu;
+    public GameObject creditsMenu;
+    public GameObject mainMenu;
 
-     void Update()
+    void Update()
     {
         if(Input.GetKeyDown(KeyCode.X)) {
+            Debug.Log("X");
            PlayGame();
+        }else if(Input.GetKeyDown(KeyCode.Escape)){
+            Debug.Log("Baboons");
+            creditsMenu.SetActive(false);
+            mainMenu.SetActive(true);
+            optionsMenu.SetActive(false);
         }
     }
 
