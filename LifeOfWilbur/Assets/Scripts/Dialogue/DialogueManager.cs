@@ -6,72 +6,85 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour {
 
+    public static DialogueManager Instance { get; private set; }
+    public Boolean IsOpen { get; private set; }
+
     public Text dialogueTextField;
     public Text nameTextField;
-    public Text continueButtonField;
+    public Text continueButtonTextField;
     public Animator animator;
-    public static Boolean isOpen;
 
-    private int dialogueQuoteIndex = 0;
     private Queue<Quote> quoteQueue;
+
+    // Singleton design pattern used for DialogueManager because only one dialogueWindow can be open at a time
+    void Awake() {
+        Instance = this;
+    }
 
     public void Start() {
         quoteQueue = new Queue<Quote>();
     }
 
+    // Adds all quotes to the queue and opens dialogueWindow
     public void StartDialogue(Dialogue dialogue) {
-        isOpen = true;
-        dialogueQuoteIndex = 0;
-        StartCoroutine(startDialogueRoutine(dialogue));
-    }
-
-    IEnumerator startDialogueRoutine(Dialogue dialogue) {
-        animator.SetBool("isOpen", true);
         quoteQueue.Clear();
-
-        yield return new WaitForSeconds(0.2f);
-        continueButtonField.text = "Continue";
-
         foreach (Quote quote in dialogue.quoteList) {
             quoteQueue.Enqueue(quote);
         }
+
+        StartCoroutine(StartDialogueRoutine(dialogue));
+    }
+
+    // Opens and populates the dialogueWindow
+    IEnumerator StartDialogueRoutine(Dialogue dialogue) {
+        IsOpen = true;
+        animator.SetBool("isOpen", true);
+
+        // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
+        yield return new WaitForSeconds(0.2f);
+        continueButtonTextField.text = "Continue";
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence() {
-        dialogueQuoteIndex += 1;
         if (quoteQueue.Count > 0) {
             Quote quote = quoteQueue.Dequeue();
             
+            // Sets the name property and changes the image animation for the quote speaker
             nameTextField.text = quote.name;
-            animator.SetBool("isWilbur", quote.name == "CubWilbur");
+            animator.SetBool("isWilbur", quote.name == "CubWilbur" || quote.name == "AdultWilbur");
 
+            // Sets the dialogue through the animation
+            StartCoroutine(TypeDialogueAnimation(quote.quote, quoteQueue.Count));
 
-            StartCoroutine(TypeDialogueAnimation(quote.quote, dialogueQuoteIndex));
-            
+            // Sets the "Continue" button text to "Close" if it is on the last quote
             if (quoteQueue.Count == 0) {
-                continueButtonField.text = "Close";
+                continueButtonTextField.text = "Close";
             }
         } else {
+            // No more quotes to display so ends the dialogue
             EndDialogue();
         }
     }
 
+    // Coroutine which animates the appearance of the quote text
     IEnumerator TypeDialogueAnimation(string text, int quotePrintingIndex) {
         dialogueTextField.text = "";
         foreach (char character in text.ToCharArray()) {
-            if (dialogueQuoteIndex == quotePrintingIndex) {
+            // Will only animate the next character if the user is still on the same quote slide
+            if (quoteQueue.Count == quotePrintingIndex) {
                 dialogueTextField.text += character;
                 yield return null;
             }
         }
     }
 
+    // Unassigns all text entries in the dialogueWindow and hides it
     private void EndDialogue() {
-        continueButtonField.text = "";
+        continueButtonTextField.text = "";
         dialogueTextField.text = "";
         nameTextField.text = "";
         animator.SetBool("isOpen", false);
-        isOpen = false;
+        IsOpen = false;
     }
 }
