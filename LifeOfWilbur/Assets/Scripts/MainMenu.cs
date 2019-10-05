@@ -5,7 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void PlayGame()
+
+     void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.X)) {
+           PlayGame();
+        }
+    }
+
+
+    private void PlayGame()
     {
         //Queue the next scene in the build order
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
