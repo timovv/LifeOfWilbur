@@ -8,6 +8,8 @@ public class LevelSwitcher : MonoBehaviour
 {
     public int sceneBuildIndex;
 
+    private bool disable;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +20,9 @@ public class LevelSwitcher : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) //TODO: change to button, not keycode
+        if (Input.GetKeyDown(KeyCode.R) && !disable) //TODO: change to button, not keycode
         {
+            disable = true;
             StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex));
         }
     }
