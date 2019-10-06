@@ -260,7 +260,7 @@ GameObject:
   - component: {fileID: 1386755195}
   - component: {fileID: 1386755196}
   m_Layer: 0
-  m_Name: LevelSwitcher
+  m_Name: LevelReset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,8 +292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8ebfe557aab4d49b79f7e23a2ac752, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene:
-    m_Handle: 1
 --- !u!1 &1395481310
 GameObject:
   m_ObjectHideFlags: 0

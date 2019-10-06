@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelSwitcher : MonoBehaviour
+public class LevelReset : MonoBehaviour
 {
-    public int sceneBuildIndex;
-
     private bool disable;
 
     // Start is called before the first frame update
@@ -25,11 +23,6 @@ public class LevelSwitcher : MonoBehaviour
             disable = true;
             StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex));
         }
-    }
-
-    public void nextLevel()
-    {
-        StartCoroutine(LoadScene(sceneBuildIndex));
     }
 
     IEnumerator LoadScene(int sceneIndex)
