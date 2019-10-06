@@ -17,7 +17,7 @@ public class NPC : MonoBehaviour {
 
     // Opens the dialogueWindow if player in range (collision detection), user pressing "X" and dialogueWindow is not already open
     void Update() {
-        if (inRange && Input.GetKeyDown(KeyCode.C) && !DialogueManager.Instance.IsOpen) {
+        if (!playerHasRead && inRange && Input.GetKeyDown(KeyCode.C) && !DialogueController.Instance.IsOpen) {
             dialogueTrigger.TriggerDialogue();
             playerHasRead = true;
             animator.SetBool("showToolTip", false);
