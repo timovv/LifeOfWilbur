@@ -18,6 +18,7 @@ using UnityEngine;
 /// </summary>
 public class TimeTravelController : MonoBehaviour
 {
+
     /// <summary>
     /// Whether the level is currently in the past or in the future.
     /// </summary>

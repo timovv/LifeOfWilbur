@@ -1,160 +1,160 @@
 fileFormatVersion: 2
-guid: d503d5ecce3acb04eb0b359c025a1e57
+guid: 835c69b3134fca349995a9fa6f05d4dd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1065972054714495248
-    second: Overworld_Tiles_0
+      213: 1848272587428494799
+    second: Overworld_Tiles_Past_0
   - first:
-      213: -8538268608959665966
-    second: Overworld_Tiles_1
+      213: 5371853897768837699
+    second: Overworld_Tiles_Past_1
   - first:
-      213: 4790796057977911624
-    second: Overworld_Tiles_2
+      213: 597760317438617539
+    second: Overworld_Tiles_Past_2
   - first:
-      213: 4477643471824190211
-    second: Overworld_Tiles_3
+      213: -9178245600195731944
+    second: Overworld_Tiles_Past_3
   - first:
-      213: -8954654923853750072
-    second: Overworld_Tiles_4
+      213: -9086569940983844666
+    second: Overworld_Tiles_Past_4
   - first:
-      213: 4436803923235749700
-    second: Overworld_Tiles_5
+      213: 8653158022942592086
+    second: Overworld_Tiles_Past_5
   - first:
-      213: -2057402151480327017
-    second: Overworld_Tiles_6
+      213: -1695910247406037451
+    second: Overworld_Tiles_Past_6
   - first:
-      213: 6937577646835150266
-    second: Overworld_Tiles_7
+      213: 478992122897644063
+    second: Overworld_Tiles_Past_7
   - first:
-      213: 6314105277646097574
-    second: Overworld_Tiles_8
+      213: 6440540054274444979
+    second: Overworld_Tiles_Past_8
   - first:
-      213: 2734863440222343143
-    second: Overworld_Tiles_9
+      213: 3989497614550382751
+    second: Overworld_Tiles_Past_9
   - first:
-      213: -6922733540488627804
-    second: Overworld_Tiles_10
+      213: -2669876745485281608
+    second: Overworld_Tiles_Past_10
   - first:
-      213: 3141509796181327211
-    second: Overworld_Tiles_11
+      213: 7515650797769107071
+    second: Overworld_Tiles_Past_11
   - first:
-      213: 7311144799974790988
-    second: Overworld_Tiles_12
+      213: -1078815329140599347
+    second: Overworld_Tiles_Past_12
   - first:
-      213: 3893441483690433232
-    second: Overworld_Tiles_13
+      213: -2144656335330787764
+    second: Overworld_Tiles_Past_13
   - first:
-      213: -3897944265127666477
-    second: Overworld_Tiles_14
+      213: -1788364738322054108
+    second: Overworld_Tiles_Past_14
   - first:
-      213: -259968969151413226
-    second: Overworld_Tiles_15
+      213: -8868265014938046195
+    second: Overworld_Tiles_Past_15
   - first:
-      213: 2843530682194431255
-    second: Overworld_Tiles_16
+      213: -8136708871293223743
+    second: Overworld_Tiles_Past_16
   - first:
-      213: -1519583055346570293
-    second: Overworld_Tiles_17
+      213: -8681395836054358851
+    second: Overworld_Tiles_Past_17
   - first:
-      213: -3428228298439363985
-    second: Overworld_Tiles_18
+      213: -9069788300410910654
+    second: Overworld_Tiles_Past_18
   - first:
-      213: 1076849346079449001
-    second: Overworld_Tiles_19
+      213: 3248083116280516451
+    second: Overworld_Tiles_Past_19
   - first:
-      213: 7921166523371169861
-    second: Overworld_Tiles_20
+      213: -1079059626719344704
+    second: Overworld_Tiles_Past_20
   - first:
-      213: -8731224979064295187
-    second: Overworld_Tiles_21
+      213: 2334148728327317890
+    second: Overworld_Tiles_Past_21
   - first:
-      213: 793372085341386862
-    second: Overworld_Tiles_22
+      213: -8677974013553566831
+    second: Overworld_Tiles_Past_22
   - first:
-      213: -6457346829221197064
-    second: Overworld_Tiles_23
+      213: -7024352683156330906
+    second: Overworld_Tiles_Past_23
   - first:
-      213: -5628591903298009929
-    second: Overworld_Tiles_24
+      213: 5168946338426432983
+    second: Overworld_Tiles_Past_24
   - first:
-      213: 3995722536697879334
-    second: Overworld_Tiles_25
+      213: -4300141537240138159
+    second: Overworld_Tiles_Past_25
   - first:
-      213: 5243760736361368863
-    second: Overworld_Tiles_26
+      213: 1323764148403802010
+    second: Overworld_Tiles_Past_26
   - first:
-      213: -106448620468688841
-    second: Overworld_Tiles_27
+      213: 8351639559948994115
+    second: Overworld_Tiles_Past_27
   - first:
-      213: -143907447722079685
-    second: Overworld_Tiles_28
+      213: 5933680531281178130
+    second: Overworld_Tiles_Past_28
   - first:
-      213: 2350122047519434488
-    second: Overworld_Tiles_29
+      213: -4254337247380092804
+    second: Overworld_Tiles_Past_29
   - first:
-      213: 1408870654756564293
-    second: Overworld_Tiles_30
+      213: -2440123823712960421
+    second: Overworld_Tiles_Past_30
   - first:
-      213: -8185730956232025470
-    second: Overworld_Tiles_31
+      213: 137106855748126150
+    second: Overworld_Tiles_Past_31
   - first:
-      213: -1471165338241361485
-    second: Overworld_Tiles_32
+      213: 1020696044128189179
+    second: Overworld_Tiles_Past_32
   - first:
-      213: -4543291712845773695
-    second: Overworld_Tiles_33
+      213: -6414986093547495790
+    second: Overworld_Tiles_Past_33
   - first:
-      213: -5398974700322841167
-    second: Overworld_Tiles_34
+      213: -130222552289665968
+    second: Overworld_Tiles_Past_34
   - first:
-      213: -2875677311353290849
-    second: Overworld_Tiles_35
+      213: 1562753682679623828
+    second: Overworld_Tiles_Past_35
   - first:
-      213: -6634840438643370569
-    second: Overworld_Tiles_36
+      213: 4579480892197973392
+    second: Overworld_Tiles_Past_36
   - first:
-      213: -992756158920076574
-    second: Overworld_Tiles_37
+      213: -4934389293174782900
+    second: Overworld_Tiles_Past_37
   - first:
-      213: 6155076728760547026
-    second: Overworld_Tiles_38
+      213: 7909838034403604471
+    second: Overworld_Tiles_Past_38
   - first:
-      213: 8109901682384178376
-    second: Overworld_Tiles_39
+      213: -4933779444125667998
+    second: Overworld_Tiles_Past_39
   - first:
-      213: 1377243663910010684
-    second: Overworld_Tiles_40
+      213: -3549113171248107592
+    second: Overworld_Tiles_Past_40
   - first:
-      213: -1303074270992256637
-    second: Overworld_Tiles_41
+      213: 2868133835136154232
+    second: Overworld_Tiles_Past_41
   - first:
-      213: -8689444655085347645
-    second: Overworld_Tiles_42
+      213: 9185122249228544796
+    second: Overworld_Tiles_Past_42
   - first:
-      213: 8412574737062493099
-    second: Overworld_Tiles_43
+      213: 3344885447481752011
+    second: Overworld_Tiles_Past_43
   - first:
-      213: -9076206899019552472
-    second: Overworld_Tiles_44
+      213: -4777694788759926048
+    second: Overworld_Tiles_Past_44
   - first:
-      213: -6462243444375802122
-    second: Overworld_Tiles_45
+      213: 8737813868807001681
+    second: Overworld_Tiles_Past_45
   - first:
-      213: -2106489306227615513
-    second: Overworld_Tiles_46
+      213: 805091914357197701
+    second: Overworld_Tiles_Past_46
   - first:
-      213: 103956739762731733
-    second: Overworld_Tiles_47
+      213: -6011746417492470218
+    second: Overworld_Tiles_Past_47
   - first:
-      213: -1078009232469925761
-    second: Overworld_Tiles_48
+      213: -1432569371369129093
+    second: Overworld_Tiles_Past_48
   - first:
-      213: 827455804198166674
-    second: Overworld_Tiles_49
+      213: -3840497965719508394
+    second: Overworld_Tiles_Past_49
   - first:
-      213: -674604000010244035
-    second: Overworld_Tiles_50
+      213: 7254571163531161360
+    second: Overworld_Tiles_Past_50
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -200,7 +200,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -235,23 +235,11 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Overworld_Tiles_0
+      name: Overworld_Tiles_Past_0
       rect:
         serializedVersion: 2
         x: 0
@@ -265,14 +253,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f180ac2e3c908d54abdfc02c333b39bf
-      internalID: 1065972054714495248
+      spriteID: 30671ba80dce7b64c99ac344855ebacb
+      internalID: 1848272587428494799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_1
+      name: Overworld_Tiles_Past_1
       rect:
         serializedVersion: 2
         x: 16
@@ -286,14 +274,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e61fe6f4ee5e2e340bae77aa54bcc453
-      internalID: -8538268608959665966
+      spriteID: 553361f1511b05e498e4207bf80070cf
+      internalID: 5371853897768837699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_2
+      name: Overworld_Tiles_Past_2
       rect:
         serializedVersion: 2
         x: 32
@@ -307,14 +295,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92e4784069e4c474785ec1bd52726f2a
-      internalID: 4790796057977911624
+      spriteID: 2672207a8b1d0e447a67f467063ece93
+      internalID: 597760317438617539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_3
+      name: Overworld_Tiles_Past_3
       rect:
         serializedVersion: 2
         x: 48
@@ -328,14 +316,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 974d382484978ce40b16fd537eec3c4d
-      internalID: 4477643471824190211
+      spriteID: 4771e3fc50bba5346b692c4c74fe30f8
+      internalID: -9178245600195731944
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_4
+      name: Overworld_Tiles_Past_4
       rect:
         serializedVersion: 2
         x: 64
@@ -349,14 +337,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 617143f8cb89e9f4b9a2b0c8d2226857
-      internalID: -8954654923853750072
+      spriteID: e9999bbfb3b01a541a59c2453afe3813
+      internalID: -9086569940983844666
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_5
+      name: Overworld_Tiles_Past_5
       rect:
         serializedVersion: 2
         x: 80
@@ -370,14 +358,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d2c89c2cf426c24abf94836a9e87eee
-      internalID: 4436803923235749700
+      spriteID: ca8a8830e2f93fd48b9b660bc252dee8
+      internalID: 8653158022942592086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_6
+      name: Overworld_Tiles_Past_6
       rect:
         serializedVersion: 2
         x: 96
@@ -391,14 +379,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2b8aa99b1f957e439ab699fe3d05024
-      internalID: -2057402151480327017
+      spriteID: 1bf9bba6d77b45343b6e6f3406f3e6eb
+      internalID: -1695910247406037451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_7
+      name: Overworld_Tiles_Past_7
       rect:
         serializedVersion: 2
         x: 112
@@ -412,14 +400,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 612cac8fbca1a604da32553fe1609e08
-      internalID: 6937577646835150266
+      spriteID: 925723730723a0c408e3e220c340c97d
+      internalID: 478992122897644063
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_8
+      name: Overworld_Tiles_Past_8
       rect:
         serializedVersion: 2
         x: 128
@@ -433,14 +421,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d45ac604ec3d18441a7404d14769091a
-      internalID: 6314105277646097574
+      spriteID: d3f0c01cfbd794e4f8cf8f0e8de8572a
+      internalID: 6440540054274444979
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_9
+      name: Overworld_Tiles_Past_9
       rect:
         serializedVersion: 2
         x: 0
@@ -454,14 +442,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3f846d389099004ba89816847322527
-      internalID: 2734863440222343143
+      spriteID: 47325fb416cb9d142970b4e04dc78389
+      internalID: 3989497614550382751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_10
+      name: Overworld_Tiles_Past_10
       rect:
         serializedVersion: 2
         x: 16
@@ -475,14 +463,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80b3f090d6d8dcc4fa33930df4513b0a
-      internalID: -6922733540488627804
+      spriteID: 454341c4b5c71d94d9867eb2ffd542c8
+      internalID: -2669876745485281608
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_11
+      name: Overworld_Tiles_Past_11
       rect:
         serializedVersion: 2
         x: 32
@@ -496,14 +484,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20f1a2c9051cd4e4b8eb87ee20f8c21b
-      internalID: 3141509796181327211
+      spriteID: 840a09fd673d16446b80d5e1eed2373e
+      internalID: 7515650797769107071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_12
+      name: Overworld_Tiles_Past_12
       rect:
         serializedVersion: 2
         x: 48
@@ -517,14 +505,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3857cc4f919e96b45912aae8e0e69d0c
-      internalID: 7311144799974790988
+      spriteID: 151c5dedfd6cd9b469e8df0c095db043
+      internalID: -1078815329140599347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_13
+      name: Overworld_Tiles_Past_13
       rect:
         serializedVersion: 2
         x: 64
@@ -538,14 +526,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c28350fff9668b4cba4aae16f99ac69
-      internalID: 3893441483690433232
+      spriteID: 153592f1a23d8794788a19eb57fa6ae6
+      internalID: -2144656335330787764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_14
+      name: Overworld_Tiles_Past_14
       rect:
         serializedVersion: 2
         x: 80
@@ -559,14 +547,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af64ef46efdc75c41a43f2c01e41305b
-      internalID: -3897944265127666477
+      spriteID: dbeb83ec2d4cdcb489d7110df18350a0
+      internalID: -1788364738322054108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_15
+      name: Overworld_Tiles_Past_15
       rect:
         serializedVersion: 2
         x: 96
@@ -580,14 +568,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed487c56f6e249b4ca07ebb6eca6aea0
-      internalID: -259968969151413226
+      spriteID: f163f6f4a67850041b9e94790305997e
+      internalID: -8868265014938046195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_16
+      name: Overworld_Tiles_Past_16
       rect:
         serializedVersion: 2
         x: 112
@@ -601,14 +589,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3408bbdf17718bb419a812ac91ece4d7
-      internalID: 2843530682194431255
+      spriteID: 1796c3fa5d662d141bab860aaa6c3e9e
+      internalID: -8136708871293223743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_17
+      name: Overworld_Tiles_Past_17
       rect:
         serializedVersion: 2
         x: 0
@@ -622,14 +610,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e22dfbe68d94c4c4189f6b9b590e0e0a
-      internalID: -1519583055346570293
+      spriteID: bcc96f4ec9969e54baec310e65e9beda
+      internalID: -8681395836054358851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_18
+      name: Overworld_Tiles_Past_18
       rect:
         serializedVersion: 2
         x: 16
@@ -643,14 +631,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f40cd8ef7f6018248906aabc9ad577cf
-      internalID: -3428228298439363985
+      spriteID: 2dc7ae3f72e603d4a941c3a2e0122cb1
+      internalID: -9069788300410910654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_19
+      name: Overworld_Tiles_Past_19
       rect:
         serializedVersion: 2
         x: 32
@@ -664,14 +652,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ea1232329dd8bd4ebcbf0672319fa4e
-      internalID: 1076849346079449001
+      spriteID: cfc76bb61499fd447ac29d1cd846ac31
+      internalID: 3248083116280516451
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_20
+      name: Overworld_Tiles_Past_20
       rect:
         serializedVersion: 2
         x: 48
@@ -685,14 +673,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37da498a9c4a70f4c8d40be71816d6eb
-      internalID: 7921166523371169861
+      spriteID: a83e88307034f3c49a4efaa3275a9bbc
+      internalID: -1079059626719344704
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_21
+      name: Overworld_Tiles_Past_21
       rect:
         serializedVersion: 2
         x: 64
@@ -706,14 +694,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 006f314eda6064a4bbb91a7f4901f9f2
-      internalID: -8731224979064295187
+      spriteID: 7175eddd91f40714f94ce7fd662333e3
+      internalID: 2334148728327317890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_22
+      name: Overworld_Tiles_Past_22
       rect:
         serializedVersion: 2
         x: 80
@@ -727,14 +715,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24cef894388a9374b813d21658b84b9b
-      internalID: 793372085341386862
+      spriteID: ae51d319fbe48f8409b73ae0b30ba3f0
+      internalID: -8677974013553566831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_23
+      name: Overworld_Tiles_Past_23
       rect:
         serializedVersion: 2
         x: 96
@@ -748,14 +736,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01310dde8550b914a8774f45b6ba9997
-      internalID: -6457346829221197064
+      spriteID: a9f4d99557e3db040a860c3b0ef5275b
+      internalID: -7024352683156330906
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_24
+      name: Overworld_Tiles_Past_24
       rect:
         serializedVersion: 2
         x: 112
@@ -769,14 +757,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 212aa5502e92d4040b3cf5b3b1e4fb9f
-      internalID: -5628591903298009929
+      spriteID: 3767bc6d0ba4ae14bbaf35b6e4604ed6
+      internalID: 5168946338426432983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_25
+      name: Overworld_Tiles_Past_25
       rect:
         serializedVersion: 2
         x: 0
@@ -790,14 +778,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13a070ed19b09ef49a3c0ce02266e4ac
-      internalID: 3995722536697879334
+      spriteID: 9d5124097d872df488fbf157e7f9d270
+      internalID: -4300141537240138159
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_26
+      name: Overworld_Tiles_Past_26
       rect:
         serializedVersion: 2
         x: 16
@@ -811,14 +799,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b13285dd44b551742941be3710b37ed2
-      internalID: 5243760736361368863
+      spriteID: 353940993732cf4459a01ce95e7dafbb
+      internalID: 1323764148403802010
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_27
+      name: Overworld_Tiles_Past_27
       rect:
         serializedVersion: 2
         x: 32
@@ -832,14 +820,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97f859ce24476ac4fb262e39fa5d8543
-      internalID: -106448620468688841
+      spriteID: 56a415a0a10b9274b938b659ae2ea80f
+      internalID: 8351639559948994115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_28
+      name: Overworld_Tiles_Past_28
       rect:
         serializedVersion: 2
         x: 48
@@ -853,14 +841,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a07c6908486688a4ca96c6917a79db9d
-      internalID: -143907447722079685
+      spriteID: e1060afac961e1d479dfd4850c97586b
+      internalID: 5933680531281178130
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_29
+      name: Overworld_Tiles_Past_29
       rect:
         serializedVersion: 2
         x: 64
@@ -874,14 +862,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bb3af81e3559ea4cb40f26e7b30eb36
-      internalID: 2350122047519434488
+      spriteID: f3709720f5df5e5458e379dbf2189a8f
+      internalID: -4254337247380092804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_30
+      name: Overworld_Tiles_Past_30
       rect:
         serializedVersion: 2
         x: 80
@@ -895,14 +883,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39b44280e8589c4438b9b9d7fa69b6f1
-      internalID: 1408870654756564293
+      spriteID: 045b05d8ced34c4488d82e7eec82d2ad
+      internalID: -2440123823712960421
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_31
+      name: Overworld_Tiles_Past_31
       rect:
         serializedVersion: 2
         x: 96
@@ -916,14 +904,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6abf1273000f234682dfdd64f5a8cc4
-      internalID: -8185730956232025470
+      spriteID: 07f9c0d6ea18bcb4d9c071d50887b704
+      internalID: 137106855748126150
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_32
+      name: Overworld_Tiles_Past_32
       rect:
         serializedVersion: 2
         x: 112
@@ -937,14 +925,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24076ae37e3e64047bdad7284c436529
-      internalID: -1471165338241361485
+      spriteID: 9d31b137cc97bad4287f6dde13e90e2a
+      internalID: 1020696044128189179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_33
+      name: Overworld_Tiles_Past_33
       rect:
         serializedVersion: 2
         x: 128
@@ -958,14 +946,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ad0a47e33318514cb7a901ddc789a04
-      internalID: -4543291712845773695
+      spriteID: bd02546cfe557e64a86d456594f3797c
+      internalID: -6414986093547495790
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_34
+      name: Overworld_Tiles_Past_34
       rect:
         serializedVersion: 2
         x: 0
@@ -979,14 +967,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 162cddb695ea70648ad45bfa255775bf
-      internalID: -5398974700322841167
+      spriteID: 607f74777b124ca45be53bd4bfd0f757
+      internalID: -130222552289665968
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_35
+      name: Overworld_Tiles_Past_35
       rect:
         serializedVersion: 2
         x: 32
@@ -1000,14 +988,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d59d4f53b6ce8084698ab04948dbe74b
-      internalID: -2875677311353290849
+      spriteID: ae6b9827217ddd547af0ece935112e63
+      internalID: 1562753682679623828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_36
+      name: Overworld_Tiles_Past_36
       rect:
         serializedVersion: 2
         x: 48
@@ -1021,14 +1009,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c0adbff5d980784485b5ff1c669b312
-      internalID: -6634840438643370569
+      spriteID: b949710d8c2dcd34ea612360074efab3
+      internalID: 4579480892197973392
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_37
+      name: Overworld_Tiles_Past_37
       rect:
         serializedVersion: 2
         x: 32
@@ -1042,14 +1030,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7877c2d48077e4c4bb4fbd7589160dab
-      internalID: -992756158920076574
+      spriteID: fd8537e1807662342a4efde10e0b38cc
+      internalID: -4934389293174782900
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_38
+      name: Overworld_Tiles_Past_38
       rect:
         serializedVersion: 2
         x: 48
@@ -1063,14 +1051,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5eba15424fcaaca41af374b301f6ddcd
-      internalID: 6155076728760547026
+      spriteID: 4561cf59a053b274a90e5e84910abba6
+      internalID: 7909838034403604471
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_39
+      name: Overworld_Tiles_Past_39
       rect:
         serializedVersion: 2
         x: 64
@@ -1084,14 +1072,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d5b7553b1fe3b64390ca4cba489276f
-      internalID: 8109901682384178376
+      spriteID: 6688cc8277d40d14dbbf9304b535b430
+      internalID: -4933779444125667998
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_40
+      name: Overworld_Tiles_Past_40
       rect:
         serializedVersion: 2
         x: 80
@@ -1105,14 +1093,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3790266f31d14b0448052c9520a817b6
-      internalID: 1377243663910010684
+      spriteID: 3356e16738afba24a96ffb54d1036a2e
+      internalID: -3549113171248107592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_41
+      name: Overworld_Tiles_Past_41
       rect:
         serializedVersion: 2
         x: 96
@@ -1126,14 +1114,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee4dbb3a7250fc84baefed17cc2ffa59
-      internalID: -1303074270992256637
+      spriteID: 36b959076299d5449aa855ad686e0cb1
+      internalID: 2868133835136154232
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_42
+      name: Overworld_Tiles_Past_42
       rect:
         serializedVersion: 2
         x: 112
@@ -1147,14 +1135,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16f6d1b222a029841941aa3c26008ba9
-      internalID: -8689444655085347645
+      spriteID: 600fd7c118df6964f8f15d5dfece9292
+      internalID: 9185122249228544796
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_43
+      name: Overworld_Tiles_Past_43
       rect:
         serializedVersion: 2
         x: 128
@@ -1168,14 +1156,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d546b16061654fc4fb1eab70934bfffc
-      internalID: 8412574737062493099
+      spriteID: 10098c305e06f70498dd747a59e580c6
+      internalID: 3344885447481752011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_44
+      name: Overworld_Tiles_Past_44
       rect:
         serializedVersion: 2
         x: 144
@@ -1189,14 +1177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b32f9d45cae9e5c46a82a676cfc8118f
-      internalID: -9076206899019552472
+      spriteID: 3755b976d2228714ca48890571655347
+      internalID: -4777694788759926048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_45
+      name: Overworld_Tiles_Past_45
       rect:
         serializedVersion: 2
         x: 0
@@ -1210,14 +1198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce55e6865990a3244a7156c7af48f434
-      internalID: -6462243444375802122
+      spriteID: 56a2c20bd14ab4d4a8eee97302052c55
+      internalID: 8737813868807001681
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_46
+      name: Overworld_Tiles_Past_46
       rect:
         serializedVersion: 2
         x: 16
@@ -1231,14 +1219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 672a57601fa955a40ad18bffb0faa3c5
-      internalID: -2106489306227615513
+      spriteID: eba1801031f5e2d4c8776fbfe4f6c30a
+      internalID: 805091914357197701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_47
+      name: Overworld_Tiles_Past_47
       rect:
         serializedVersion: 2
         x: 32
@@ -1252,14 +1240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91718d05a015c9a44be3ba6b2414ceba
-      internalID: 103956739762731733
+      spriteID: 5ca880d0f0902e546ab3c78cb261304c
+      internalID: -6011746417492470218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_48
+      name: Overworld_Tiles_Past_48
       rect:
         serializedVersion: 2
         x: 48
@@ -1273,14 +1261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac516607e1a493948a0b6f8b49687e13
-      internalID: -1078009232469925761
+      spriteID: 7876522a848ac90469d9e82a1af8fe8c
+      internalID: -1432569371369129093
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_Tiles_49
+      name: Overworld_Tiles_Past_49
       rect:
         serializedVersion: 2
         x: 64
@@ -1294,8 +1282,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64f6deddafe03b24e830c81a04cec974
-      internalID: 827455804198166674
+      spriteID: 0d508c413d9a0c540b42d512592d76cb
+      internalID: -3840497965719508394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Overworld_Tiles_Past_50
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 138
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83cada3b070ad97468019e780c94a85a
+      internalID: 7254571163531161360
       vertices: []
       indices: 
       edges: []
