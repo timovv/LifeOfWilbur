@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7987080166520284526}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OldWilbur
   m_TagString: FutureOnly
   m_Icon: {fileID: 0}
@@ -138,7 +138,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ec9a755442baecf49b1432d06d0f75a3, type: 3}
+  m_Sprite: {fileID: -2159935642091596051, guid: a03e15df1fa125c439ab7c590751384a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -208,7 +209,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.032119885}
+  m_Offset: {x: 0, y: 0.11638719}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -219,7 +220,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4523994, y: 0.46568117}
+  m_Size: {x: 0.4523994, y: 0.63421583}
   m_EdgeRadius: 0
 --- !u!58 &8224099002070441912
 CircleCollider2D:
@@ -247,7 +248,7 @@ Animator:
   m_GameObject: {fileID: 5919439276877198327}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 07c233251742a2942b3741197e99fd0b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0bfe4c5acbfa75847bbe27eb490a0e0d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -544,7 +545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8522223557125317022}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wilbur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -576,7 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8522223557534936003}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YoungWilbur
   m_TagString: PastOnly
   m_Icon: {fileID: 0}

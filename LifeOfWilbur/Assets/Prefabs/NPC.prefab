@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8089151939254619192}
   - component: {fileID: 8089151939254619174}
   - component: {fileID: 8089151939254619195}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NPC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8089151940117664512}
   - component: {fileID: 8089151940117664515}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NPCButtonTooltip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
