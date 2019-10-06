@@ -11,9 +11,10 @@ public class CharacterController2D : MonoBehaviour
 	[SerializeField] private Transform ceilingCheck;							// A position marking where to check for ceilings
 	
 	const float groundedRadius = 0.2f; // Radius of the overlap circle to determine if grounded
-	private bool grounded;            // Whether or not the player is grounded.
+	private bool grounded = false;            // Whether or not the player is grounded.
 	const float ceilingRadius = 0.2f; // Radius of the overlap circle to determine if the player can stand up
 	private Rigidbody2D rigidBody2D;
+	public Animator animator;
 	private bool facingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 velocity = Vector3.zero;
 
@@ -27,7 +28,7 @@ public class CharacterController2D : MonoBehaviour
     private float jumpRemember = 0f;
     private float groundedRemember = 0f;
     const float jumpBuffer = 0.1f;
-    const float groundedBuffer = 0.2f;
+    const float groundedBuffer = 0.1f;
 
 	private void Awake()
 	{
@@ -40,12 +41,14 @@ public class CharacterController2D : MonoBehaviour
 	void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+
+		animator.SetFloat("h_speed", Mathf.Abs(horizontalMove));
         
         if (Input.GetButtonDown("Jump"))
         {
             jumpRemember = jumpBuffer;
         }
-		Debug.Log(jumpRemember);
+	
     }
 
 	private void FixedUpdate()
@@ -78,7 +81,7 @@ public class CharacterController2D : MonoBehaviour
 	{
         
 		//only control the player if grounded or airControl is turned on
-		if (groundedRemember > 0 || airControl)
+		if (grounded || airControl)
 		{
 			// Move the character by finding the target velocity
 			Vector3 targetVelocity = new Vector2(move * 10f, rigidBody2D.velocity.y);
@@ -100,7 +103,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 
 		// If the player should jump...
-		if (groundedRemember > 0 && jumpRemember > 0)
+		if (grounded && jumpRemember > 0)
 		{
 			jumpRemember = 0f;
             groundedRemember = 0f;

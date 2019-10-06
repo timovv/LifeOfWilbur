@@ -220,13 +220,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 500
-  movementSmoothing: 0.05
+  movementSmoothing: 0.02
   airControl: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 55
   groundCheck: {fileID: 855325378}
   ceilingCheck: {fileID: 1702053553}
+  animator: {fileID: 311022832}
   onLandEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -243,10 +244,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 4.5
+  m_GravityScale: 3.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -337,7 +338,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855325377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.502, z: 0}
+  m_LocalPosition: {x: 0, y: -0.451, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 311022826}
