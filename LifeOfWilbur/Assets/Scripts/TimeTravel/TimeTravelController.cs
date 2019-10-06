@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,7 +21,7 @@ public class TimeTravelController : MonoBehaviour
     /// <summary>
     /// Whether the level is currently in the past or in the future.
     /// </summary>
-    public bool _isInPast = false;
+    public static bool IsInPast { get; private set; }
 
     /// <summary>
     /// 
@@ -51,6 +51,8 @@ public class TimeTravelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        IsInPast = false;
+
         if (pastOnlyObjects == null)
         {
             pastOnlyObjects = GameObject.FindGameObjectsWithTag("PastOnly");
@@ -66,7 +68,7 @@ public class TimeTravelController : MonoBehaviour
             timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
         }
 
-        StartCoroutine(UpdateTimeTravelState(_isInPast, fade: false));
+        StartCoroutine(UpdateTimeTravelState(IsInPast, fade: false));
     }
 
     // Update is called once per frame
@@ -76,8 +78,8 @@ public class TimeTravelController : MonoBehaviour
         // TODO: use Input.GetButton instead of checking keys like this
         if (!_isTransitioning && Input.GetKeyDown(KeyCode.X))
         {
-            _isInPast = !_isInPast;
-            StartCoroutine(UpdateTimeTravelState(_isInPast, fade: true));
+            IsInPast = !IsInPast;
+            StartCoroutine(UpdateTimeTravelState(IsInPast, fade: true));
         }
     }
 
