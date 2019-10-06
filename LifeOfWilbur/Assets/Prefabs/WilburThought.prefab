@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4002941001655589483}
   - component: {fileID: 4002941001655589481}
   - component: {fileID: 753090016978157177}
-  - component: {fileID: -3227760776639258632}
   - component: {fileID: 2973153034003641373}
+  - component: {fileID: 5455648977340157378}
   m_Layer: 0
   m_Name: WilburThought
   m_TagString: Untagged
@@ -73,8 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8538268608959665966, guid: d503d5ecce3acb04eb0b359c025a1e57,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -82,7 +81,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &4002941001655589481
@@ -125,22 +124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     quoteList: []
---- !u!58 &-3227760776639258632
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4002941001655589486}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!114 &2973153034003641373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,3 +137,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTrigger: {fileID: 753090016978157177}
+--- !u!61 &5455648977340157378
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4002941001655589486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
