@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - PastLevel
-  - FutureLevel
   - PastOnly
   - FutureOnly
+  - TimeTravelling
   layers:
   - Default
   - TransparentFX
