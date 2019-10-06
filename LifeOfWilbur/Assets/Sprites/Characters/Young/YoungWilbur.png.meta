@@ -184,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f98868729ee4f7d44a2fd6d30f214741
+      spriteID: c2372bdc40bad59498f0213ddf537602
       internalID: 6056293365342337843
       vertices: []
       indices: 
@@ -205,7 +205,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8edf25c348d341b4da5ad5d5e07a180a
+      spriteID: ff6f0a78ef0585d4e915fd89fe11ec8e
       internalID: -2047631088483589600
       vertices: []
       indices: 
@@ -226,7 +226,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09410bbdb8fe7ce439b71f610635a6c2
+      spriteID: 050aaececb09ed04c879da7f25b56e00
       internalID: 5780878142297944806
       vertices: []
       indices: 
@@ -247,7 +247,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 670a1d6ccc2f13048ab394970c2734c6
+      spriteID: 346ad627d9a899847a6dc3343611e815
       internalID: 5205381374438572206
       vertices: []
       indices: 
@@ -268,7 +268,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b4ccd30407c1bf4fad39576952a7cf4
+      spriteID: 1352f22163217c044bb355e0ec4d77ec
       internalID: -1330248343857903956
       vertices: []
       indices: 
@@ -289,7 +289,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51caddd93a8c70e428b0316a6c0cdf2f
+      spriteID: 2f36b23ea3836ca44bd2771b0554cb97
       internalID: -2227077878176708875
       vertices: []
       indices: 
@@ -310,7 +310,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a3053bec6086c34191fc7302880fa4a
+      spriteID: fb1e61d2ac973de4189201bf8b9597e4
       internalID: -2694109920402774563
       vertices: []
       indices: 
@@ -331,7 +331,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dff13c6763563e4db2f94abb1f5ee26
+      spriteID: 59520524aa79d4b4691a012e6cfca3c7
       internalID: 327029716094949569
       vertices: []
       indices: 
@@ -352,7 +352,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55fe2b191a779564bbfd535455c1e0a0
+      spriteID: 878d65fe7f6e7eb4e95476860f123e20
       internalID: 5526873008016827118
       vertices: []
       indices: 
@@ -373,7 +373,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b58420f787de3d544976413a1e6990ce
+      spriteID: 86d304319762e9c4c8f264af95ed8733
       internalID: -5340736674346859247
       vertices: []
       indices: 
@@ -394,7 +394,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5e59bc53017a344393a84985fdb2082
+      spriteID: ee37ed48ce5283849b0ebc544ae042f3
       internalID: 4757773813060644227
       vertices: []
       indices: 
@@ -415,7 +415,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8c8e095dc9596740bf5f15ef26d866d
+      spriteID: 47e123465dac0a840836819820f5afe8
       internalID: -1287762631515446670
       vertices: []
       indices: 
@@ -436,7 +436,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e900bd548450fb64889d43c09738aee4
+      spriteID: 73b0f659e20ae6d43b5f3f21ddac8b67
       internalID: 1271474807900698690
       vertices: []
       indices: 
@@ -457,7 +457,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6177aa9a19af164285eaa36e60cf5af
+      spriteID: e0813b4448764af4e99996c157c486c7
       internalID: -3642605032900618349
       vertices: []
       indices: 
@@ -478,7 +478,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1b18c99b927e3a42899ebb5ec12b71a
+      spriteID: 6bd1d91d6816acc408eedb116bae0a78
       internalID: -799017800634467241
       vertices: []
       indices: 
@@ -499,176 +499,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0a2fcb54e99b43439a73e351d21d480
+      spriteID: 3d9e65a4fcceef043b8f1a31306a9c1f
       internalID: -8762511222795008727
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 170
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 401f560ba3d97f14eaed013b34c560e2
-      internalID: -2148532046213561797
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_17
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 170
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4595b943d823d774fbaad89a2e8ba643
-      internalID: 6872513332269937451
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_18
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 170
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa6625d87306b2e45b302eee00c7c3eb
-      internalID: 4643929382448071129
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_19
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 170
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6f5154d32224594091b5494572de259
-      internalID: -940591313181343263
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_20
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 154
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6207da5e876096147ac10e4e5c8d7050
-      internalID: -150878808187635487
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_21
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 154
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90c7c6ad6af3571429379687f1985bdb
-      internalID: 6797570395360160231
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_22
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 154
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2aadd03cbf290ae44871391ba327235a
-      internalID: 7021656545900573449
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YoungWilbur_23
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 154
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 875386c8d82f22b47aa9c5cab5d560dc
-      internalID: -1941588321331614332
       vertices: []
       indices: 
       edges: []
