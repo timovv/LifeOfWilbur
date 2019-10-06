@@ -12,7 +12,7 @@ AnimatorStateTransition:
     m_ConditionEvent: grounded
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8515025919753557567}
@@ -35,7 +35,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Young_Jump_Down
+  m_Name: YoungJumpDown
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -87,7 +87,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Young_Jump_Up
+  m_Name: YoungJumpUp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -131,7 +131,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: h_speed
+    m_ConditionEvent: horizontalSpeed
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4143772874793335106}
@@ -181,7 +181,7 @@ AnimatorStateTransition:
     m_ConditionEvent: grounded
     m_EventTreshold: 0
   - m_ConditionMode: 4
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8515025919753557567}
@@ -204,7 +204,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Young_Idle
+  m_Name: YoungIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -238,7 +238,7 @@ AnimatorStateTransition:
     m_ConditionEvent: grounded
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -7524794515946271448}
@@ -263,13 +263,13 @@ AnimatorController:
   m_Name: YoungWilbur
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: h_speed
+  - m_Name: horizontalSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: v_speed
+  - m_Name: verticalSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -303,7 +303,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: grounded
@@ -329,7 +329,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Young_Run
+  m_Name: YoungRun
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -360,7 +360,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: h_speed
+    m_ConditionEvent: horizontalSpeed
     m_EventTreshold: 0.01
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 565113893920526521}
@@ -410,7 +410,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -8515025919753557567}

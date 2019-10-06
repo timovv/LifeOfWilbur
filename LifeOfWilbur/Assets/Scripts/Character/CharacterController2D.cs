@@ -42,8 +42,8 @@ public class CharacterController2D : MonoBehaviour
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
 
-		animator.SetFloat("h_speed", Mathf.Abs(horizontalMove)); // Inform animator whether or not wilbur is moving
-		animator.SetFloat("v_speed", rigidBody2D.velocity.y); // Inform animator of wilburs y-velocity
+		animator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalMove)); // Inform animator whether or not wilbur is moving
+		animator.SetFloat("verticalSpeed", rigidBody2D.velocity.y); // Inform animator of wilburs y-velocity
 		animator.SetBool("grounded",grounded); // Informing animator whether or not wilbur is on the ground
         
         if (Input.GetButtonDown("Jump"))

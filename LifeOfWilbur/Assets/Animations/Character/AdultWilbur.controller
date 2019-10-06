@@ -63,7 +63,13 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: grounded
+    m_EventTreshold: 0
+  - m_ConditionMode: 3
+    m_ConditionEvent: verticalSpeed
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 2295103246352818965}
   m_Solo: 0
@@ -87,7 +93,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: grounded
@@ -115,7 +121,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1446766427260008345}
@@ -138,7 +144,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Jump_Down
+  m_Name: AdultJumpDown
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -165,7 +171,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Idle
+  m_Name: AdultIdle
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -196,13 +202,13 @@ AnimatorController:
   m_Name: AdultWilbur
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: v_speed
+  - m_Name: verticalSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: h_speed
+  - m_Name: horizontalSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -234,7 +240,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Jump_Up
+  m_Name: AdultJumpUp
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -262,7 +268,13 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 2
+    m_ConditionEvent: grounded
+    m_EventTreshold: 0
+  - m_ConditionMode: 4
+    m_ConditionEvent: verticalSpeed
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -1446766427260008345}
   m_Solo: 0
@@ -286,10 +298,10 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   - m_ConditionMode: 3
-    m_ConditionEvent: h_speed
+    m_ConditionEvent: horizontalSpeed
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -181702167440809211}
@@ -314,7 +326,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 4
-    m_ConditionEvent: v_speed
+    m_ConditionEvent: verticalSpeed
     m_EventTreshold: 0
   - m_ConditionMode: 2
     m_ConditionEvent: grounded
@@ -367,7 +379,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 3
-    m_ConditionEvent: h_speed
+    m_ConditionEvent: horizontalSpeed
     m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: grounded
@@ -393,7 +405,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Adult_Run
+  m_Name: AdultRun
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
