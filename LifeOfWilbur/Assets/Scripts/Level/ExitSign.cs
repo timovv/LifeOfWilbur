@@ -26,11 +26,19 @@ public class ExitSign : MonoBehaviour
     /// </summary>
     public string _nextSceneName;
 
+    private GameObject _youngWilburIndicator;
+    private GameObject _oldWilburIndicator;
+
     // Start is called before the first frame update
     void Start()
     {
         IsOldWilburAtExit = false;
         IsYoungWilburAtExit = false;
+
+        _youngWilburIndicator = transform.Find("YoungWilburIndicator").gameObject;
+        _oldWilburIndicator = transform.Find("OldWilburIndicator").gameObject;
+        _youngWilburIndicator.SetActive(false);
+        _oldWilburIndicator.SetActive(false);
     }
 
     /// <summary>
@@ -44,10 +52,12 @@ public class ExitSign : MonoBehaviour
             if(TimeTravelController.IsInPast)
             {
                 IsYoungWilburAtExit = true;
+                _youngWilburIndicator.SetActive(true);
             }
             else
             {
                 IsOldWilburAtExit = true;
+                _oldWilburIndicator.SetActive(true);
             }
         }
 
@@ -64,10 +74,12 @@ public class ExitSign : MonoBehaviour
             if (TimeTravelController.IsInPast)
             {
                 IsYoungWilburAtExit = false;
+                _youngWilburIndicator.SetActive(false);
             }
             else
             {
                 IsOldWilburAtExit = false;
+                _oldWilburIndicator.SetActive(false);
             }
         }
     }
