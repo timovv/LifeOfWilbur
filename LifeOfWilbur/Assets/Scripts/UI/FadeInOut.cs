@@ -28,6 +28,16 @@ public class FadeInOut : MonoBehaviour
 
     public void Start()
     {
+        StartCoroutine(FadeInFromBlackAfterDelay());
+    }
+
+    /// <summary>
+    /// Fades in from black after a 5 second (game time) delay. Used at the start of the level to allow initialisation.
+    /// </summary>
+    /// <returns></returns>
+    private IEnumerator FadeInFromBlackAfterDelay()
+    {
+        yield return new WaitForSeconds(5);
         FadeInFromBlack();
     }
 
