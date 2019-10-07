@@ -37,41 +37,41 @@ public class TimeTravelController : MonoBehaviour
     /// <summary>
     /// Objects that should only appear in the past.
     /// </summary>
-    private GameObject[] pastOnlyObjects;
+    private GameObject[] _pastOnlyObjects;
 
     /// <summary>
     /// Objects that should only appear in the future.
     /// </summary>
-    private GameObject[] futureOnlyObjects;
+    private GameObject[] _futureOnlyObjects;
 
     /// <summary>
     /// Objects that should time travel, as described above.
     /// </summary>
-    private GameObject[] timeTravellingObjects;
+    private GameObject[] _timeTravellingObjects;
 
     /// <summary>
     /// Copies of time travelling objects for the future.
     /// </summary>
-    private GameObject[] futureTimeTravellingObjects = new GameObject[0];
+    private GameObject[] _futureTimeTravellingObjects = new GameObject[0];
 
     // Start is called before the first frame update
     void Start()
     {
         IsInPast = false;
 
-        if (pastOnlyObjects == null)
+        if (_pastOnlyObjects == null)
         {
-            pastOnlyObjects = GameObject.FindGameObjectsWithTag("PastOnly");
+            _pastOnlyObjects = GameObject.FindGameObjectsWithTag("PastOnly");
         }
 
-        if (futureOnlyObjects == null)
+        if (_futureOnlyObjects == null)
         {
-            futureOnlyObjects = GameObject.FindGameObjectsWithTag("FutureOnly");
+            _futureOnlyObjects = GameObject.FindGameObjectsWithTag("FutureOnly");
         }
 
-        if(timeTravellingObjects == null)
+        if(_timeTravellingObjects == null)
         {
-            timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
+            _timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
         }
 
         StartCoroutine(UpdateTimeTravelState(IsInPast));
@@ -86,15 +86,6 @@ public class TimeTravelController : MonoBehaviour
         {
             IsInPast = !IsInPast;
             StartCoroutine(UpdateTimeTravelState(IsInPast));
-        }
-
-        if(IsInPast)
-        {
-            
-        }
-        else
-        {
-            
         }
     }
 
@@ -111,13 +102,13 @@ public class TimeTravelController : MonoBehaviour
         if (transitioningToPast)
         {
             // Destroy future objects
-            foreach (var toDestroy in futureTimeTravellingObjects)
+            foreach (var toDestroy in _futureTimeTravellingObjects)
             {
                 Destroy(toDestroy);
             }
 
             // re-enable past objects, which will be where they were in the past
-            foreach (var objectToRestore in timeTravellingObjects)
+            foreach (var objectToRestore in _timeTravellingObjects)
             {
                 objectToRestore.SetActive(true);
             }
@@ -127,14 +118,14 @@ public class TimeTravelController : MonoBehaviour
         } 
         else
         {
-            futureTimeTravellingObjects = new GameObject[timeTravellingObjects.Length];
+            _futureTimeTravellingObjects = new GameObject[_timeTravellingObjects.Length];
 
-            for (int i = 0; i < timeTravellingObjects.Length; ++i)
+            for (int i = 0; i < _timeTravellingObjects.Length; ++i)
             {
-                GameObject objectToSave = timeTravellingObjects[i];
+                GameObject objectToSave = _timeTravellingObjects[i];
 
                 GameObject cloneForFuture = Instantiate(objectToSave);
-                futureTimeTravellingObjects[i] = cloneForFuture;
+                _futureTimeTravellingObjects[i] = cloneForFuture;
 
                 // disable past object.
                 objectToSave.SetActive(false);
@@ -147,12 +138,12 @@ public class TimeTravelController : MonoBehaviour
 
         // 2. Disable and enable objects that only appear in past and future.
 
-        foreach (var x in pastOnlyObjects)
+        foreach (var x in _pastOnlyObjects)
         {
             x.SetActive(transitioningToPast);
         }
 
-        foreach (var x in futureOnlyObjects)
+        foreach (var x in _futureOnlyObjects)
         {
             x.SetActive(!transitioningToPast);
         }
