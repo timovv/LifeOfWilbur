@@ -24,8 +24,6 @@ public class PauseScript : MonoBehaviour
         }
     }
 
-
-
     void Pause()
     {
         pauseMenuUI.SetActive(true);
@@ -45,7 +43,4 @@ public class PauseScript : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MenuScene");
     }
-
-
-
 }
