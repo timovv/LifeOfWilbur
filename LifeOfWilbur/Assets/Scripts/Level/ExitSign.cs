@@ -90,7 +90,9 @@ public class ExitSign : MonoBehaviour
     /// <returns>Enumerator for coroutine</returns>
     private IEnumerator ExitLevel()
     {
-        yield return StartCoroutine(FindObjectOfType<FadeInOut>().FadeOutToBlack());
+        var fadeInOut = FindObjectOfType<FadeInOut>();
+        fadeInOut.FadeOutToBlack();
+        yield return new WaitForSeconds(fadeInOut._fadeDurationSeconds);
         SceneManager.LoadScene(_nextSceneName, LoadSceneMode.Single);
     }
 }

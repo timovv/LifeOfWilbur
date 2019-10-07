@@ -32,38 +32,34 @@ public class FadeInOut : MonoBehaviour
     }
 
     /// <summary>
-    /// Coroutine fade to black.
+    /// Fade the scene out to black.
     /// </summary>
-    /// <returns>Enumerator to be passed to StartCoroutine</returns>
-    public IEnumerator FadeOutToBlack()
+    public void FadeOutToBlack()
     {
         if(_fadedOut)
         {
-            yield break;
+            return;
         }
 
         _fadedOut = true;
 
         var image = GetComponent<RawImage>();
         image.CrossFadeAlpha(alpha: 1f, duration: _fadeDurationSeconds * .75f, ignoreTimeScale: true);
-        yield return new WaitForSecondsRealtime(_fadeDurationSeconds);
     }
 
     /// <summary>
-    /// Coroutine to fade the scene back in from black.
+    /// Fade the scene back in from black.
     /// </summary>
-    /// <returns>Enumerator to be passed to StartCoroutine</returns>
-    public IEnumerator FadeInFromBlack()
+    public void FadeInFromBlack()
     {
         if(!_fadedOut)
         {
-            yield break;
+            return;
         }
 
         _fadedOut = false;
 
         var image = GetComponent<RawImage>();
         image.CrossFadeAlpha(alpha: 0f, duration: _fadeDurationSeconds * .75f, ignoreTimeScale: true);
-        yield return new WaitForSecondsRealtime(_fadeDurationSeconds);
     }
 }

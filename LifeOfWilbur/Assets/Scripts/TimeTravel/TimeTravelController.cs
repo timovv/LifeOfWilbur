@@ -94,10 +94,12 @@ public class TimeTravelController : MonoBehaviour
         _isTransitioning = true;
 
         var fadeInOut = GetComponent<FadeInOut>();
-        yield return StartCoroutine(fadeInOut.FadeOutToBlack());
+
+        fadeInOut.FadeOutToBlack();
+        yield return new WaitForSeconds(fadeInOut._fadeDurationSeconds);
 
         // 1. If we are going to the future, save the state of all time travelling objects; if we are going to the future, restore them.
-        if(transitioningToPast)
+        if (transitioningToPast)
         {
             // Destroy future objects
             foreach (var toDestroy in futureTimeTravellingObjects)
@@ -152,7 +154,8 @@ public class TimeTravelController : MonoBehaviour
             CharacterController2D.MovementDisabled = false;
         }
 
-        yield return StartCoroutine(fadeInOut.FadeInFromBlack());
+        fadeInOut.FadeInFromBlack();
+        yield return new WaitForSeconds(fadeInOut._fadeDurationSeconds);
 
         _isTransitioning = false;
     }
