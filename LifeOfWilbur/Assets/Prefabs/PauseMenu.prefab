@@ -329,7 +329,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7224999237785737552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1735,10 +1735,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 809021997054654208}
     m_Modifications:
-    - target: {fileID: 5182348759801808435, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
+    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
         type: 3}
-      propertyPath: m_Name
-      value: PauseMenuCanvas
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 338579912314946274}
+    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.4481132
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.5667004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
+        type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5182348759801808396, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
         type: 3}
@@ -1845,30 +1865,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
+    - target: {fileID: 5182348758814794731, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
         type: 3}
-      propertyPath: m_TargetGraphic
-      value: 
-      objectReference: {fileID: 338579912314946274}
-    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.4481132
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.5667004
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5182348758814794729, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
-        type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.a
-      value: 1
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5182348759592655638, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
         type: 3}
@@ -1884,6 +1884,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5182348759801808435, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
+        type: 3}
+      propertyPath: m_Name
+      value: PauseMenuCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 5182348759651701522, guid: 0a3b1ede9fa94dc4292a47ca20c128fa,
         type: 3}
