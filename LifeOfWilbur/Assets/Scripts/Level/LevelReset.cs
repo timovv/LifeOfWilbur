@@ -6,15 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class LevelReset : MonoBehaviour
 {
-    private bool disable;
+    private bool pressed;
 
-
+    public static bool ResetDisabled { get; set; } = false;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !disable) //TODO: change to button, not keycode
+        if (Input.GetKeyDown(KeyCode.R) && !pressed && !ResetDisabled) //TODO: change to button, not keycode
         {
-            disable = true;
+            pressed = true;
             StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex));
         }
     }
