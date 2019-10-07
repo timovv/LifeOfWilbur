@@ -8,12 +8,6 @@ public class LevelReset : MonoBehaviour
 {
     private bool disable;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        // Persist this script across the scene change
-        DontDestroyOnLoad(gameObject);   
-    }
 
     // Update is called once per frame
     void Update()
@@ -28,16 +22,9 @@ public class LevelReset : MonoBehaviour
     IEnumerator LoadScene(int sceneIndex)
     {
         // Need to persist the black canvas too
-        GameObject timecontroller = GameObject.Find("TimeTravelController");
-        DontDestroyOnLoad(timecontroller);
-        FadeInOut script = timecontroller.GetComponent<FadeInOut>();
+        FadeInOut script = GetComponent<FadeInOut>();
 
         yield return StartCoroutine(script.FadeOutToBlack());
         SceneManager.LoadScene(sceneIndex);
-        yield return StartCoroutine(script.FadeInFromBlack());
-
-        // Don't need anymore
-        Destroy(timecontroller);
-        Destroy(gameObject); 
     }
 }
