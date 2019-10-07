@@ -30,6 +30,11 @@ public class TimeTravelController : MonoBehaviour
     private bool _isTransitioning = false;
 
     /// <summary>
+    /// Allow time travel to be disabled
+    /// </summary>
+    public static bool TimeTravelDisabled { get; set; } = false; 
+
+    /// <summary>
     /// Objects that should only appear in the past.
     /// </summary>
     private GameObject[] pastOnlyObjects;
@@ -77,7 +82,7 @@ public class TimeTravelController : MonoBehaviour
     {
         // do time travel when they press x
         // TODO: use Input.GetButton instead of checking keys like this
-        if (!_isTransitioning && Input.GetKeyDown(KeyCode.X))
+        if (!_isTransitioning && !TimeTravelDisabled && Input.GetKeyDown(KeyCode.X))
         {
             IsInPast = !IsInPast;
             StartCoroutine(UpdateTimeTravelState(IsInPast, fade: true));
