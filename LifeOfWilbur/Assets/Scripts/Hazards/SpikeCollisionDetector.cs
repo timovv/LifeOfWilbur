@@ -3,9 +3,8 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 /// <summary>
-/// Attach on player object to detect collisions with spikes
+/// Attach on (player) objects to reset level on collisions with spikes.
 /// </summary>
 public class SpikeCollisionDetector : MonoBehaviour
 {
