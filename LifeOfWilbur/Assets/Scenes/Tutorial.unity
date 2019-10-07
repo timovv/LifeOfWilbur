@@ -201,6 +201,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WilburThought
       objectReference: {fileID: 0}
+    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7714,6 +7719,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8479126747980071151, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492873042192759731, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
