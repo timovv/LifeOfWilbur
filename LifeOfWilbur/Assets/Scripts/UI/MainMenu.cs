@@ -20,13 +20,18 @@ public class MainMenu : MonoBehaviour
             mainMenu.SetActive(true);
             optionsMenu.SetActive(false);
         }
+
+        if (PauseScript.IsPaused)
+        {
+            PauseScript.IsPaused = false;
+        }
     }
 
 
     private void PlayGame()
     {
         //Queue the next scene in the build order
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("DemoSceneWithPause");
     }
 
    public void QuitGame()
