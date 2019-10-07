@@ -280,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[0].name
-      value: Wilbur
+      value: Adult Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}

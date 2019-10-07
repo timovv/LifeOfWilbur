@@ -11,6 +11,78 @@ TextureImporter:
   - first:
       213: -3228093357419198213
     second: DialogueTooltip_2
+  - first:
+      213: -1785529437076018167
+    second: DialogueTooltip_3
+  - first:
+      213: -8812702989197987826
+    second: DialogueTooltip_4
+  - first:
+      213: -1087265111758984000
+    second: DialogueTooltip_5
+  - first:
+      213: 7083348463308610781
+    second: DialogueTooltip_6
+  - first:
+      213: 5723619753834415743
+    second: DialogueTooltip_7
+  - first:
+      213: -7567757493230054304
+    second: DialogueTooltip_8
+  - first:
+      213: 2428366481262449320
+    second: DialogueTooltip_9
+  - first:
+      213: -4841735820062820405
+    second: DialogueTooltip_10
+  - first:
+      213: 838669399976977515
+    second: DialogueTooltip_11
+  - first:
+      213: -4550068662759969763
+    second: DialogueTooltip_12
+  - first:
+      213: -3429072557554108673
+    second: DialogueTooltip_13
+  - first:
+      213: 5542063152116047809
+    second: DialogueTooltip_14
+  - first:
+      213: 7449680319310535283
+    second: DialogueTooltip_15
+  - first:
+      213: 5412626675783229757
+    second: DialogueTooltip_16
+  - first:
+      213: -1981955104658377882
+    second: DialogueTooltip_17
+  - first:
+      213: 1991356867896431217
+    second: DialogueTooltip_18
+  - first:
+      213: 20308609077235690
+    second: DialogueTooltip_19
+  - first:
+      213: 3403514694690734821
+    second: DialogueTooltip_20
+  - first:
+      213: 3821837313453868778
+    second: DialogueTooltip_21
+  - first:
+      213: -6794545498039092523
+    second: DialogueTooltip_22
+  - first:
+      213: -1751948880995054092
+    second: DialogueTooltip_23
+  - first:
+      213: 3536203855254979879
+    second: DialogueTooltip_24
+  - first:
+      213: 3054125918554445323
+    second: DialogueTooltip_25
+  - first:
+      213: 7037315498074345593
+    second: DialogueTooltip_26
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -115,13 +187,13 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b13a74a03e6260749aa54361451ac912
+      spriteID: 1e42ef476d90ea64594a9e06f1e988f3
       internalID: -7397553509635440869
       vertices: []
       indices: 
@@ -136,13 +208,13 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0bbd7ec806498d47ad2d107cc742274
+      spriteID: 945faa541a66098459f46b046c4322a9
       internalID: 120489383907103149
       vertices: []
       indices: 
@@ -157,14 +229,329 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47a0c522b43df94685b7c1e3fff9371
+      internalID: -3228093357419198213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 218
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93622944417de8942ae9ade640b7fd72
+      internalID: -1785529437076018167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 218
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042faf6153aa32f4fa0e7d95df3b0e1b
+      internalID: -8812702989197987826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 218
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e319abcc85501e4c90db7027b90be89
+      internalID: -1087265111758984000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 202
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fab867af57a78e4a9924efe6716de45
+      internalID: 7083348463308610781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 154
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3baaf2a80f4c6394e8ba6b361da34b6a
+      internalID: -4550068662759969763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5220d926701d6b54d9310f5f6a9e0962
+      internalID: 7449680319310535283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 48
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f2492b582201974f872dc49c1727153
+      internalID: 1991356867896431217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 106
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22060f8c100500b4887ad1f4e280037a
+      internalID: 3821837313453868778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_22
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 106
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62178f7cd20ae45468ef5ec4628a8333
+      internalID: -6794545498039092523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 106
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9063518d6bd10469278243f73c3bbe
+      internalID: -1751948880995054092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0c923825bfc3d438888f5eac948eb7
+      internalID: 3536203855254979879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6f46e5001e97494096cf291cce07630
+      internalID: 3054125918554445323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_26
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 90
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70780061d2b88ce4da5a566e9bd61d17
+      internalID: 7037315498074345593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 32
+        height: 16
+      alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c09a389091f199344ab0a8b009d34240
-      internalID: -3228093357419198213
+      spriteID: 394c3b637759be440a7b48fd1aceebed
+      internalID: 5723619753834415743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogueTooltip_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 170
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0fb05ad12a716f4690006719ef02b2e
+      internalID: -7567757493230054304
       vertices: []
       indices: 
       edges: []
