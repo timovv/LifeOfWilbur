@@ -64,7 +64,8 @@ public class ExitSign : MonoBehaviour
         if(IsYoungWilburAtExit && IsOldWilburAtExit)
         {
             // we're done
-            StartCoroutine(ExitLevel());
+            FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
+            script.LoadSceneByName(_nextSceneName);
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -82,17 +83,5 @@ public class ExitSign : MonoBehaviour
                 _oldWilburIndicator.SetActive(false);
             }
         }
-    }
-
-    /// <summary>
-    /// Coroutine to fade out level and transition to the specified scene.
-    /// </summary>
-    /// <returns>Enumerator for coroutine</returns>
-    private IEnumerator ExitLevel()
-    {
-        var fadeInOut = FindObjectOfType<FadeInOut>();
-        fadeInOut.FadeOutToBlack();
-        yield return new WaitForSeconds(fadeInOut._fadeDurationSeconds);
-        SceneManager.LoadScene(_nextSceneName, LoadSceneMode.Single);
     }
 }

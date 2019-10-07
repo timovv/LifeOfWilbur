@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 /// <summary>
@@ -60,5 +61,23 @@ public class FadeInOut : MonoBehaviour
 
         var image = GetComponent<RawImage>();
         image.CrossFadeAlpha(alpha: 0f, duration: _fadeDurationSeconds * .75f, ignoreTimeScale: true);
+    }
+
+
+    public void ReloadCurrentScene()
+    {
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().name));
+    }
+
+    public void LoadSceneByName(string sceneName)
+    {
+        StartCoroutine(LoadScene(sceneName));
+    }
+
+    private IEnumerator LoadScene(string sceneName)
+    {
+        FadeOutToBlack();
+        yield return new WaitForSeconds(_fadeDurationSeconds);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }
