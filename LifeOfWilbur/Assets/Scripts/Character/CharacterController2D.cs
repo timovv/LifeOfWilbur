@@ -29,6 +29,8 @@ public class CharacterController2D : MonoBehaviour
     private float groundedRemember = 0f;
     const float jumpBuffer = 0.1f;
     const float groundedBuffer = 0.1f;
+	
+	public static bool MovementDisabled { get; set; } = false;
 
 	private void Awake()
 	{
@@ -75,7 +77,10 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
-		Move(horizontalMove * Time.fixedDeltaTime);
+		if (!MovementDisabled)
+		{
+			Move(horizontalMove * Time.fixedDeltaTime);
+		}
 	}
 
 

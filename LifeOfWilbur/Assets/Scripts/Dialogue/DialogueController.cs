@@ -44,6 +44,9 @@ public class DialogueController : MonoBehaviour {
     // Opens and populates the dialogueWindow
     IEnumerator StartDialogueRoutine(Dialogue dialogue) {
         animator.SetBool("isOpen", true);
+        
+        CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
+        TimeTravelController.TimeTravelDisabled = true; // enable Time Travel
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
@@ -87,6 +90,8 @@ public class DialogueController : MonoBehaviour {
 
     // Unassigns all text entries in the dialogueWindow and hides it
     private void EndDialogue() {
+        CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
+        TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
         continueButtonTextField.text = "";
         dialogueTextField.text = "";
         nameTextField.text = "";
