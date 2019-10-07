@@ -7,15 +7,18 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Text))]
 public class GameTimer : MonoBehaviour
 {
-    public static float ElapsedTimeSeconds { get; private set; }
+    public static float ElapsedTimeSeconds { get; private set; } = 0;
+    public static string FormattedElapsedTime
+    {
+        get
+        {
+            return string.Format("{0:00}:{1:00}:{2:00}",
+                (int)(ElapsedTimeSeconds / 60), (int)(ElapsedTimeSeconds % 60), (int)(ElapsedTimeSeconds % 1 * 100));
+        }
+    }
+
 
     public static bool Paused { get; set; } = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        ElapsedTimeSeconds = 0;
-    }
 
     // Update is called once per frame
     void Update()
@@ -25,7 +28,6 @@ public class GameTimer : MonoBehaviour
             ElapsedTimeSeconds += Time.unscaledDeltaTime;
         }
 
-        var ts = TimeSpan.FromSeconds(ElapsedTimeSeconds);
-        GetComponent<Text>().text = string.Format("{0:00}:{1:00}:{2:00}", ts.TotalMinutes, ts.Seconds, ts.Milliseconds / 10f);
+        GetComponent<Text>().text = FormattedElapsedTime;
     }
 }
