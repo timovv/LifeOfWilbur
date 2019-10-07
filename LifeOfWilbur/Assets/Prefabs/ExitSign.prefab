@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136936984201839279}
   - component: {fileID: 6326826543669102791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YoungWilburIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6648822079741500564}
   - component: {fileID: 8069030904714111091}
   - component: {fileID: 5867254277225472370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ExitSign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1810162116881148180}
   - component: {fileID: 8509040742220948682}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OldWilburIndicator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
