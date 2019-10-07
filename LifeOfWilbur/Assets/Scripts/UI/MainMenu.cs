@@ -33,13 +33,12 @@ public class MainMenu : MonoBehaviour
     {
         //Queue the next scene in the build order
         SceneManager.LoadScene(1);
+        GameTimer.ElapsedTimeSeconds = 0;
     }
 
    public void QuitGame()
     {
-        //TODO: Remove Debug Statement
         //Testing/Making sure that the quit command is thrown
-        Debug.Log("Quitting Game");
         Application.Quit();
     }
 }

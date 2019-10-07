@@ -7,7 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Text))]
 public class GameTimer : MonoBehaviour
 {
-    public static float ElapsedTimeSeconds { get; private set; } = 0;
+    public static float ElapsedTimeSeconds { get; set; } = 0;
     public static string FormattedElapsedTime
     {
         get

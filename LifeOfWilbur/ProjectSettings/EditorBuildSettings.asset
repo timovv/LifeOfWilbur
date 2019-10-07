@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Complex.unity
     guid: 5e7e414ec480db44e939bcdc2b01383f
   - enabled: 1
+    path: Assets/Scenes/MoreComplex.unity
+    guid: 907a5c6fc1d1dd746bc176ec3909b071
+  - enabled: 1
     path: Assets/Scenes/ExitScene.unity
     guid: 7816f718c13d9544a989bd376173ae91
   m_configObjects: {}
