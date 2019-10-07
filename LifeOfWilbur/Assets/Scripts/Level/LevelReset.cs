@@ -4,17 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Script to trigger a scene reset when R is pressed
+/// </summary>
 public class LevelReset : MonoBehaviour
 {
-    private bool pressed;
-
+    /// <summary>
+    /// Allows other scripts to temporarily disable the reset functionality
+    /// </summary>
     public static bool ResetDisabled { get; set; } = false;
-    // Update is called once per frame
+
+    /// <summary>
+    /// Stores if a reset has previously started executing
+    /// </summary>
+    private bool _pressed;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !pressed && !ResetDisabled) //TODO: change to button, not keycode
+        if (Input.GetKeyDown(KeyCode.R) && !_pressed && !ResetDisabled) //TODO: change to button, not keycode
         {
-            pressed = true; // Disable further requests in case the button was spammed
+            _pressed = true; // Disable further requests in case the button was spammed
             FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
             script.ReloadCurrentScene();
         }
