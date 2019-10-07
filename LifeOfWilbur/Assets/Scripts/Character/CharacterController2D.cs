@@ -1,85 +1,107 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 // Adapted from https://github.com/Brackeys/2D-Character-Controller
+/// <summary>
+/// Controller for Wilburs movement.
+/// There are many fields which allow the movement to be fine tuned and customised.
+/// </summary>
 public class CharacterController2D : MonoBehaviour
 {
-	[SerializeField] private float jumpForce = 400f;							// Amount of force added when the player jumps.
-	[Range(0, .3f)] [SerializeField] private float movementSmoothing = 0.05f;	// How much to smooth out the movement
-	[SerializeField] private bool airControl = false;							// Whether or not a player can steer while jumping;
-	[SerializeField] private LayerMask whatIsGround;							// A mask determining what is ground to the character
-	[SerializeField] private Transform groundCheck;							    // A position marking where to check if the player is grounded.
-	[SerializeField] private Transform ceilingCheck;							// A position marking where to check for ceilings
+	/// <summary>
+    /// Amount of force added when the player jumps.
+    /// </summary>
+	[SerializeField] private float _jumpForce = 400f;
+	/// <summary>
+    /// How much to smooth out the movement
+    /// </summary>							
+	[Range(0, .3f)] [SerializeField] private float _movementSmoothing = 0.05f;
+	/// <summary>
+    /// Whether or not a player can steer while jumping;
+    /// </summary>	
+	[SerializeField] private bool _airControl = false;		
+	/// <summary>
+    /// A mask determining what is ground to the character
+    /// </summary>						
+	[SerializeField] private LayerMask _whatIsGround;
+	/// <summary>
+    /// A position marking where to check if the player is grounded.
+    /// </summary>								
+	[SerializeField] private Transform _groundCheck;
+	/// <summary>
+    /// A position marking where to check for ceilings
+    /// </summary>								    
+	[SerializeField] private Transform _ceilingCheck;							
 	
-	const float groundedRadius = 0.2f; // Radius of the overlap circle to determine if grounded
-	private bool grounded = false;            // Whether or not the player is grounded.
-	const float ceilingRadius = 0.2f; // Radius of the overlap circle to determine if the player can stand up
-	private Rigidbody2D rigidBody2D;
-	public Animator animator;
-	private bool facingRight = true;  // For determining which way the player is currently facing.
-	private Vector3 velocity = Vector3.zero;
-
-	[Header("Events")]
-	[Space]
-
-	public UnityEvent onLandEvent;
-
-    public float runSpeed = 25f;
-	private float horizontalMove = 0f;
-    private float jumpRemember = 0f;
-    private float groundedRemember = 0f;
-    const float jumpBuffer = 0.1f;
-    const float groundedBuffer = 0.1f;
-	
+	/// <summary>
+    /// Radius of the overlap circle to determine if grounded
+    /// </summary>	
+	const float GroundedRadius = 0.2f; 
+	/// <summary>
+    /// Whether or not the player is grounded.
+    /// </summary>	
+	private bool _grounded = false;
+	/// <summary>
+    /// Radius of the overlap circle to determine if the player can stand up
+    /// </summary>
+	const float CeilingRadius = 0.2f;
+	private Rigidbody2D _rigidBody2D;
+	public Animator _animator;
+	/// <summary>
+    /// For determining which way the player is currently facing.
+    /// </summary>
+	private bool _facingRight = true;  
+	private Vector3 _velocity = Vector3.zero;
+    public float _runSpeed = 25f;
+	private float _horizontalMove = 0f;
+    private float _jumpRemember = 0f;
+    private float _groundedRemember = 0f;
+    const float JumpBuffer = 0.1f;
+    const float GroundedBuffer = 0.1f;
 	public static bool MovementDisabled { get; set; } = false;
 
 	private void Awake()
 	{
-		rigidBody2D = GetComponent<Rigidbody2D>();
-
-		if (onLandEvent == null)
-			onLandEvent = new UnityEvent();
+		_rigidBody2D = GetComponent<Rigidbody2D>();
 	}
 
 	void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        _horizontalMove = Input.GetAxisRaw("Horizontal") * _runSpeed;
 
-		animator.SetFloat("horizontalSpeed", Mathf.Abs(horizontalMove)); // Inform animator whether or not wilbur is moving
-		animator.SetFloat("verticalSpeed", rigidBody2D.velocity.y); // Inform animator of wilburs y-velocity
-		animator.SetBool("grounded",grounded); // Informing animator whether or not wilbur is on the ground
+		_animator.SetFloat("horizontalSpeed", Mathf.Abs(_horizontalMove)); // Inform animator whether or not wilbur is moving
+		_animator.SetFloat("verticalSpeed", _rigidBody2D.velocity.y); // Inform animator of wilburs y-velocity
+		_animator.SetBool("grounded",_grounded); // Informing animator whether or not wilbur is on the ground
         
         if (Input.GetButtonDown("Jump"))
         {
-            jumpRemember = jumpBuffer;
+            _jumpRemember = JumpBuffer;
         }
 	
     }
 
 	private void FixedUpdate()
 	{
-		jumpRemember = jumpRemember - Time.deltaTime;
-		groundedRemember = groundedRemember - Time.deltaTime;
+		_jumpRemember = _jumpRemember - Time.deltaTime;
+		_groundedRemember = _groundedRemember - Time.deltaTime;
 
-		bool wasGrounded = grounded;
-		grounded = false;
+		bool wasGrounded = _grounded;
+		_grounded = false;
 
 		// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 		// This can be done using layers instead but Sample Assets will not overwrite your project settings.
-		Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.position, groundedRadius, whatIsGround);
+		Collider2D[] colliders = Physics2D.OverlapCircleAll(_groundCheck.position, GroundedRadius, _whatIsGround);
 		for (int i = 0; i < colliders.Length; i++)
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-                groundedRemember = groundedBuffer;
-                grounded = true;
-				if (!wasGrounded)
-					onLandEvent.Invoke();
+                _groundedRemember = GroundedBuffer;
+                _grounded = true;
 			}
 		}
 
 		if (!MovementDisabled)
 		{
-			Move(horizontalMove * Time.fixedDeltaTime);
+			Move(_horizontalMove * Time.fixedDeltaTime);
 		}
 	}
 
@@ -87,36 +109,36 @@ public class CharacterController2D : MonoBehaviour
 	public void Move(float move)
 	{
         
-		//only control the player if grounded or airControl is turned on
-		if (grounded || airControl)
+		// Only control the player if grounded or airControl is turned on
+		if (_grounded || _airControl)
 		{
 			// Move the character by finding the target velocity
-			Vector3 targetVelocity = new Vector2(move * 10f, rigidBody2D.velocity.y);
+			Vector3 targetVelocity = new Vector2(move * 10f, _rigidBody2D.velocity.y);
 			// And then smoothing it out and applying it to the character
-			rigidBody2D.velocity = Vector3.SmoothDamp(rigidBody2D.velocity, targetVelocity, ref velocity, movementSmoothing);
+			_rigidBody2D.velocity = Vector3.SmoothDamp(_rigidBody2D.velocity, targetVelocity, ref _velocity, _movementSmoothing);
 
 			// If the input is moving the player right and the player is facing left...
-			if (move > 0 && !facingRight)
+			if (move > 0 && !_facingRight)
 			{
-				// ... flip the player.
+				// Flip the player.
 				Flip();
 			}
 			// Otherwise if the input is moving the player left and the player is facing right...
-			else if (move < 0 && facingRight)
+			else if (move < 0 && _facingRight)
 			{
-				// ... flip the player.
+				// Flip the player.
 				Flip();
 			}
 		}
 
 		// If the player should jump...
-		if (grounded && jumpRemember > 0)
+		if (_grounded && _jumpRemember > 0)
 		{
-			jumpRemember = 0f;
-            groundedRemember = 0f;
+			_jumpRemember = 0f;
+            _groundedRemember = 0f;
 			// Add a vertical force to the player.
-			grounded = false;
-			rigidBody2D.AddForce(new Vector2(0f, jumpForce));
+			_grounded = false;
+			_rigidBody2D.AddForce(new Vector2(0f, _jumpForce));
 		}
 	}
 
@@ -124,7 +146,7 @@ public class CharacterController2D : MonoBehaviour
 	private void Flip()
 	{
 		// Switch the way the player is labelled as facing.
-		facingRight = !facingRight;
+		_facingRight = !_facingRight;
 
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
