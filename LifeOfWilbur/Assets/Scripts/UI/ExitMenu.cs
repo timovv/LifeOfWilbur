@@ -11,12 +11,11 @@ public class ExitMenu : MonoBehaviour
     public void PlayAgain()
     {
         //Loading the Game again, and not the menu screen
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting the Game");
         Application.Quit();
     }
 
