@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad2b4dd1a6dcb449a66423d31f1cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 500
+  jumpForce: 550
   movementSmoothing: 0.02
   airControl: 1
   whatIsGround:
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad2b4dd1a6dcb449a66423d31f1cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 500
+  jumpForce: 550
   movementSmoothing: 0.02
   airControl: 1
   whatIsGround:
