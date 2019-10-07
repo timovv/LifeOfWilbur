@@ -162,19 +162,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad2b4dd1a6dcb449a66423d31f1cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 550
-  movementSmoothing: 0.02
-  airControl: 1
-  whatIsGround:
+  _jumpForce: 550
+  _movementSmoothing: 0.02
+  _airControl: 1
+  _whatIsGround:
     serializedVersion: 2
     m_Bits: 55
-  groundCheck: {fileID: 4166983577176447233}
-  ceilingCheck: {fileID: 7890860724401125774}
-  animator: {fileID: 1195086570321844347}
-  onLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  runSpeed: 20
+  _groundCheck: {fileID: 4166983577176447233}
+  _ceilingCheck: {fileID: 7890860724401125774}
+  _animator: {fileID: 1195086570321844347}
+  _runSpeed: 20
 --- !u!50 &1185656430249875893
 Rigidbody2D:
   serializedVersion: 4
@@ -399,19 +396,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad2b4dd1a6dcb449a66423d31f1cb5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 550
-  movementSmoothing: 0.02
-  airControl: 1
-  whatIsGround:
+  _jumpForce: 550
+  _movementSmoothing: 0.02
+  _airControl: 1
+  _whatIsGround:
     serializedVersion: 2
     m_Bits: 55
-  groundCheck: {fileID: 8522223557067271404}
-  ceilingCheck: {fileID: 8522223558300897439}
-  animator: {fileID: 8522223556523131614}
-  onLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  runSpeed: 20
+  _groundCheck: {fileID: 8522223557067271404}
+  _ceilingCheck: {fileID: 8522223558300897439}
+  _animator: {fileID: 8522223556523131614}
+  _runSpeed: 20
 --- !u!50 &8522223556523131586
 Rigidbody2D:
   serializedVersion: 4
