@@ -4,10 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Component that keep strack of game time used for scoring and upates it.
+/// This component is part of the game's HUD.
+/// </summary>
 [RequireComponent(typeof(Text))]
 public class GameTimer : MonoBehaviour
 {
+    /// <summary>
+    /// Total elapsed game time in seconds.
+    /// </summary>
     public static float ElapsedTimeSeconds { get; set; } = 0;
+
+    /// <summary>
+    /// Whether the game timer is currently paused.
+    /// </summary>
+    public static bool Paused { get; set; } = false;
+
+    /// <summary>
+    /// Elapsed game time in seconds, formatted in the form mm:ss:ii
+    /// </summary>
     public static string FormattedElapsedTime
     {
         get
@@ -18,8 +34,6 @@ public class GameTimer : MonoBehaviour
     }
 
 
-    public static bool Paused { get; set; } = false;
-
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +41,8 @@ public class GameTimer : MonoBehaviour
         {
             ElapsedTimeSeconds += Time.unscaledDeltaTime;
         }
-
+        
+        // update text on HUD.
         GetComponent<Text>().text = FormattedElapsedTime;
     }
 }
