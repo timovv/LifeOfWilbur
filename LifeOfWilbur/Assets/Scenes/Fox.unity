@@ -200,7 +200,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[0].name
-      value: Iris
+      value: Old Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -211,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[1].name
-      value: Wilbur
+      value: Adult Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -221,7 +221,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[2].name
-      value: Iris
+      value: Old Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -232,7 +232,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[3].name
-      value: Wilbur
+      value: Adult Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[4].name
-      value: Iris
+      value: Old Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -519,7 +519,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[0].name
-      value: Iris
+      value: Young Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -529,7 +529,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[1].name
-      value: Wilbur
+      value: Cub Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -539,7 +539,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[2].name
-      value: Iris
+      value: Young Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -550,7 +550,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[3].name
-      value: Iris
+      value: Yong Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -560,7 +560,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[4].name
-      value: Wilbur
+      value: Cub Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -570,7 +570,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.data[5].name
-      value: Iris
+      value: Young Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -9404,11 +9404,37 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090130309482242, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -271.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090130309482242, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -11.751
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090130309482242, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 99.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090130309482242, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 84.883
+      objectReference: {fileID: 0}
     - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: _nextSceneName
       value: Complex
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090130309482243, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -7102846815764760196, guid: 479831f51a15ef6488454ad106a01b1e,
+        type: 3}
     - target: {fileID: 3492873042192759731, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z

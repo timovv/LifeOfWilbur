@@ -14,6 +14,8 @@ public class DialogueController : MonoBehaviour {
     public Text continueButtonTextField;
     public Animator animator;
 
+    private Dictionary<string, int> characterMapper;
+
     private Queue<Quote> quoteQueue;
 
     // Singleton design pattern used for DialogueManager because only one dialogueWindow can be open at a time
@@ -23,6 +25,12 @@ public class DialogueController : MonoBehaviour {
 
     public void Start() {
         quoteQueue = new Queue<Quote>();
+        characterMapper = new Dictionary<string, int> {
+            { "Cub Wilbur", 1 },
+            { "Adult Wilbur", 2 },
+            { "Young Iris", 3 },
+            { "Old Iris", 4 }
+        };
     }
 
     void Update() {
@@ -63,6 +71,11 @@ public class DialogueController : MonoBehaviour {
             // Sets the name property and changes the image animation for the quote speaker
             nameTextField.text = quote.name;
             animator.SetBool("isWilbur", quote.name == "Cub Wilbur" || quote.name == "Adult Wilbur");
+            
+            int characterInteger;
+            characterMapper.TryGetValue(quote.name, out characterInteger);
+            animator.SetInteger("characterInteger", characterInteger);
+            Debug.Log(characterInteger);
 
             // Sets the dialogue through the animation
             StartCoroutine(TypeDialogueAnimation(quote.quote, quoteQueue.Count));
