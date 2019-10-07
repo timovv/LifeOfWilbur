@@ -4,6 +4,15 @@ SOFTENG 306 Project 2
 
 Life of Wilbur details Wilburs journey to the Polar Bear Summit in the present day and 10 years ago. Wilburs surroundings have changed drasitically due to climate change. Wilbur himself remains the same mechanically.
 
+Play
+----
+
+Life of Wilbur is deployed at https://timo.nz/lifeofwilbur/.
+
+Prototype
+---------
+
+The commit tagged with `prototype-submission` is our prototype submission. It is on the `prototype-submission` branch.
 
 Setup Guide
 ------------
