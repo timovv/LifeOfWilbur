@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// The conversation which is had with the player.
+/// </summary>
 [System.Serializable]
 public class Dialogue {
 
-    // Dialogue is made up of list of quotes. This allows the conversation text to be set nicely in Unity
-    public Quote[] quoteList;
+    /// <summary>
+    /// Dialogue is made up of list of quotes. This allows the conversation text to be set nicely in Unity
+    /// </summary>
+    public Quote[] _quoteList;
 
 }

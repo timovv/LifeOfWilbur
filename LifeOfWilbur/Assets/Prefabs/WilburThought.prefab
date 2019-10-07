@@ -122,8 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10f65c0c2b7e1b4c96270d2e7fb4417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    quoteList: []
+  _dialogue:
+    _quoteList: []
 --- !u!114 &2973153034003641373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79b64576e4a0f9b4ca190fb920d187f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTrigger: {fileID: 753090016978157177}
+  _dialogueTrigger: {fileID: 753090016978157177}
 --- !u!61 &5455648977340157378
 BoxCollider2D:
   m_ObjectHideFlags: 0

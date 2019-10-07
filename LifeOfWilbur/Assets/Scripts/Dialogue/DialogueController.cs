@@ -4,28 +4,67 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Controls the dialogue conversation and its display on the dialogue window in the game.
+/// 
+/// Singleton is used to ensure a singular popup window exsits and seamless conversation.
+/// 
+/// Allows for the quotes to be displayed and allows the player to request the next line in the conversation.
+///  - Dialogue quotes are displayed character by character to provide an animated effect to the user and aid readability.
+///  - Sets the quote-speaker's name on the dialogue window, and sets the int associated with each character to display image 
+/// 
+/// </summary>
 public class DialogueController : MonoBehaviour {
 
+    /// <summary>
+    /// Holds the singleton instance of the DialogueController class
+    /// </summary>
     public static DialogueController Instance { get; private set; }
+    
+    /// <summary>
+    /// Boolean storing the state of the DialogueWindow popup. True if it is showing and false if it is not showing.
+    /// </summary>
     public Boolean IsOpen { get; private set; }
 
-    public Text dialogueTextField;
-    public Text nameTextField;
-    public Text continueButtonTextField;
-    public Animator animator;
+    /// <summary>
+    /// The GUI entry holding the current dialogue quote spoken by a character
+    /// </summary>
+    public Text _dialogueTextField;
 
-    private Dictionary<string, int> characterMapper;
+    /// <summary>
+    /// The speaker of the current dialogue quote
+    /// </summary>
+    public Text _nameTextField;
 
-    private Queue<Quote> quoteQueue;
+    /// <summary>
+    /// The text field in the GUI inside the continue button. This allows the text to be reassigned to "close" when no more slides exist
+    /// </summary>
+    public Text _continueButtonTextField;
+
+    /// <summary>
+    /// The animator used animate the appearance of the DialogueWindow
+    /// </summary>
+    public Animator _animator;
+
+    /// <summary>
+    /// Dictionary storing the mapping between input quotes speakers to number. The number is used in the animator to control which speaker animation plaus
+    /// </summary>
+    private Dictionary<string, int> _characterMapper;
+
+    /// <summary>
+    /// The queue of quotes to play in the current conversation
+    /// </summary>
+    private Queue<Quote> _quoteQueue;
 
     // Singleton design pattern used for DialogueManager because only one dialogueWindow can be open at a time
     void Awake() {
         Instance = this;
     }
 
+    // Populates the dictionary with the preset mappings of character to integers.
     public void Start() {
-        quoteQueue = new Queue<Quote>();
-        characterMapper = new Dictionary<string, int> {
+        _quoteQueue = new Queue<Quote>();
+        _characterMapper = new Dictionary<string, int> {
             { "Cub Wilbur", 1 },
             { "Adult Wilbur", 2 },
             { "Young Iris", 3 },
@@ -33,6 +72,7 @@ public class DialogueController : MonoBehaviour {
         };
     }
 
+    // If player presses c button, will display the next sentence
     void Update() {
         if (IsOpen && Input.GetKeyDown(KeyCode.C)) {
             DisplayNextSentence();
@@ -41,48 +81,53 @@ public class DialogueController : MonoBehaviour {
 
     // Adds all quotes to the queue and opens dialogueWindow
     public void StartDialogue(Dialogue dialogue) {
-        quoteQueue.Clear();
-        foreach (Quote quote in dialogue.quoteList) {
-            quoteQueue.Enqueue(quote);
+        _quoteQueue.Clear();
+        foreach (Quote quote in dialogue._quoteList) {
+            _quoteQueue.Enqueue(quote);
         }
 
         StartCoroutine(StartDialogueRoutine(dialogue));
     }
 
-    // Opens and populates the dialogueWindow
+    /// <summary>
+    /// Opens and populates the dialogueWindow and disables movement and physcis to prevent character from moving during speed-up
+    /// </summary>
+    /// <param name="dialogue">The dialogue instance which needs to be printed</param>
+    /// <returns></returns>
     IEnumerator StartDialogueRoutine(Dialogue dialogue) {
-        animator.SetBool("isOpen", true);
+        _animator.SetBool("isOpen", true);
         
         CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = true; // disable Time Travel
         LevelReset.ResetDisabled = true; // disable resetting level
-        Physics2D.autoSimulation = false;
+        Physics2D.autoSimulation = false; // disable physics
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
-        continueButtonTextField.text = "Press C to continue";
+        _continueButtonTextField.text = "Press C to continue";
         DisplayNextSentence();
     }
 
+    /// <summary>
+    /// Displays the next quote and populates the necessary text information
+    /// </summary>
     public void DisplayNextSentence() {
-        if (quoteQueue.Count > 0) {
-            Quote quote = quoteQueue.Dequeue();
+        if (_quoteQueue.Count > 0) {
+            Quote quote = _quoteQueue.Dequeue();
             
             // Sets the name property and changes the image animation for the quote speaker
-            nameTextField.text = quote.name;
-            animator.SetBool("isWilbur", quote.name == "Cub Wilbur" || quote.name == "Adult Wilbur");
-            
+            _nameTextField.text = quote._name;
+            _animator.SetBool("isWilbur", quote._name == "Cub Wilbur" || quote._name == "Adult Wilbur");
             int characterInteger;
-            characterMapper.TryGetValue(quote.name, out characterInteger);
-            animator.SetInteger("characterInteger", characterInteger);
-            //Debug.Log(characterInteger);
+            _characterMapper.TryGetValue(quote._name, out characterInteger);
+            _animator.SetInteger("characterInteger", characterInteger);
 
             // Sets the dialogue through the animation
-            StartCoroutine(TypeDialogueAnimation(quote.quote, quoteQueue.Count));
+            StartCoroutine(TypeDialogueAnimation(quote._quote, _quoteQueue.Count));
 
             // Sets the "Continue" button text to "Close" if it is on the last quote
-            if (quoteQueue.Count == 0) {
-                continueButtonTextField.text = "Press C to continue";
+            if (_quoteQueue.Count == 0) {
+                _continueButtonTextField.text = "Press C to continue";
             }
             IsOpen = true;
         } else {
@@ -91,28 +136,36 @@ public class DialogueController : MonoBehaviour {
         }
     }
 
-    // Coroutine which animates the appearance of the quote text
+    /// <summary>
+    /// Coroutine which animates the appearance of the quote text
+    /// </summary>
+    /// <param name="text">The line to print onto the DialogueWindow</param>
+    /// <param name="quotePrintingIndex">The current line in the conversation that is being printed</param>
+    /// <returns></returns>
     IEnumerator TypeDialogueAnimation(string text, int quotePrintingIndex) {
-        dialogueTextField.text = "";
+        _dialogueTextField.text = "";
         foreach (char character in text.ToCharArray()) {
+            
             // Will only animate the next character if the user is still on the same quote slide
-            if (quoteQueue.Count == quotePrintingIndex) {
-                dialogueTextField.text += character;
+            if (_quoteQueue.Count == quotePrintingIndex) {
+                _dialogueTextField.text += character;
                 yield return null;
             }
         }
     }
 
-    // Unassigns all text entries in the dialogueWindow and hides it
+    /// <summary>
+    /// Unassigns all text entries in the dialogueWindow and hides it. Restarts the movement and the physcis
+    /// </summary>
     private void EndDialogue() {
         CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
         LevelReset.ResetDisabled = false; // enable resetting level
-        Physics2D.autoSimulation = true;
-        continueButtonTextField.text = "";
-        dialogueTextField.text = "";
-        nameTextField.text = "";
-        animator.SetBool("isOpen", false);
+        Physics2D.autoSimulation = true; // enable physcis
+        _continueButtonTextField.text = "";
+        _dialogueTextField.text = "";
+        _nameTextField.text = "";
+        _animator.SetBool("isOpen", false);
         IsOpen = false;
     }
 }
