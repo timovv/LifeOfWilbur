@@ -30,6 +30,7 @@ public class PauseScript : MonoBehaviour
     {
         _pauseMenuUI.SetActive(true);
         Time.timeScale = 0f; //Pause the time in the game, in order to not effect the highscore or Wilbur's position
+        GameTimer.Paused = true; //Pause the game timer in addition to the 'real time'
         IsPaused = true;
     }
 
@@ -40,6 +41,7 @@ public class PauseScript : MonoBehaviour
     {
         _pauseMenuUI.SetActive(false);
         Time.timeScale = 1f; //Re-enable the time to enable Wilbur's movement and the time counter
+        GameTimer.Paused = false; //Resume the game timer in addition to the 'real time'
         IsPaused = false;
     }
 
@@ -49,6 +51,7 @@ public class PauseScript : MonoBehaviour
     public void BackToMainMenu()
     {
         Time.timeScale = 1f; //Re-enable the time, in the case of restarting the game.
+        GameTimer.Paused = false; //Resume the game timer in addition to the 'real time'
         SceneManager.LoadScene("MenuScene");
     }
 }
