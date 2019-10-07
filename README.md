@@ -1,6 +1,5 @@
 SOFTENG 306 Project 2
 =====================
-![logo](https://i.ibb.co/sHgsx2M/Logo-export.png)
 Life of Wilbur details Wilburs journey to the Polar Bear Summit in the present day and 10 years ago. Wilburs surroundings have changed drasitically due to climate change. Wilbur himself remains the same mechanically.
 
 Setup Guide
