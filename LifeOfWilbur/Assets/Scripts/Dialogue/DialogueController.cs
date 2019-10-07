@@ -75,7 +75,7 @@ public class DialogueController : MonoBehaviour {
             int characterInteger;
             characterMapper.TryGetValue(quote.name, out characterInteger);
             animator.SetInteger("characterInteger", characterInteger);
-            Debug.Log(characterInteger);
+            //Debug.Log(characterInteger);
 
             // Sets the dialogue through the animation
             StartCoroutine(TypeDialogueAnimation(quote.quote, quoteQueue.Count));
