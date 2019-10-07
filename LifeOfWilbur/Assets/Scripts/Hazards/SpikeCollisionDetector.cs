@@ -1,17 +1,20 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+/// <summary>
+/// Attach on player object to detect collisions with spikes
+/// </summary>
 public class SpikeCollisionDetector : MonoBehaviour
 {
-    public event Action TouchedSpike; // Access with Find and GetComponent
-
     void OnTriggerEnter2D(Collider2D otherObj)
     {
         if (otherObj.name == "Spikes")
         {
-            TouchedSpike?.Invoke(); // Call listeners (if any)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // temp, subscribe from a level controller thing instead
+            FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
+            script.ReloadCurrentScene();
         }
     }
 }

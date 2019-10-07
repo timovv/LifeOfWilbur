@@ -14,18 +14,9 @@ public class LevelReset : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) && !pressed && !ResetDisabled) //TODO: change to button, not keycode
         {
-            pressed = true;
-            StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex));
+            pressed = true; // Disable further requests in case the button was spammed
+            FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
+            script.ReloadCurrentScene();
         }
-    }
-
-    IEnumerator LoadScene(int sceneIndex)
-    {
-        // Need to persist the black canvas too
-        FadeInOut script = GetComponent<FadeInOut>();
-
-        script.FadeOutToBlack();
-        yield return new WaitForSeconds(script._fadeDurationSeconds);
-        SceneManager.LoadScene(sceneIndex);
     }
 }
