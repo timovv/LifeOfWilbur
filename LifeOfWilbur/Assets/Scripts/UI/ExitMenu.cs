@@ -8,21 +8,21 @@ using UnityEngine.UI;
 public class ExitMenu : MonoBehaviour
 {
     public TextMeshProUGUI TimeText;
+    
+    void Start()
+    {
+        TimeText.SetText("Your time is: " + GameTimer.FormattedElapsedTime); 
+    }
+    
     public void PlayAgain()
     {
         //Loading the Game again, and not the menu screen
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quitting the Game");
         Application.Quit();
-    }
-
-    public void SetTime(float f)
-    {
-        TimeText.text = f.ToString();
     }
 
 }
