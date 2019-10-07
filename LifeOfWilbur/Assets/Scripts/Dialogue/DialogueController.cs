@@ -46,7 +46,8 @@ public class DialogueController : MonoBehaviour {
         animator.SetBool("isOpen", true);
         
         CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
-        TimeTravelController.TimeTravelDisabled = true; // enable Time Travel
+        TimeTravelController.TimeTravelDisabled = true; // disable Time Travel
+        LevelReset.ResetDisabled = true; // disable resetting level
         Physics2D.autoSimulation = false;
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
@@ -93,6 +94,7 @@ public class DialogueController : MonoBehaviour {
     private void EndDialogue() {
         CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
+        LevelReset.ResetDisabled = false; // enable resetting level
         Physics2D.autoSimulation = true;
         continueButtonTextField.text = "";
         dialogueTextField.text = "";
