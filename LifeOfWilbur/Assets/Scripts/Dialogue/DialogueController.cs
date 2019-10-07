@@ -47,6 +47,7 @@ public class DialogueController : MonoBehaviour {
         
         CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = true; // enable Time Travel
+        Physics2D.autoSimulation = false;
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
@@ -92,6 +93,7 @@ public class DialogueController : MonoBehaviour {
     private void EndDialogue() {
         CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
+        Physics2D.autoSimulation = true;
         continueButtonTextField.text = "";
         dialogueTextField.text = "";
         nameTextField.text = "";

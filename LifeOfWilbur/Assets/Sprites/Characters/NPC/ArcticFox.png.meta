@@ -26,6 +26,18 @@ TextureImporter:
   - first:
       213: -1763074772617966438
     second: ArcticFox_7
+  - first:
+      213: 2623340788500923062
+    second: ArcticFox_8
+  - first:
+      213: 6837016260697285933
+    second: ArcticFox_9
+  - first:
+      213: -5681123391302521774
+    second: ArcticFox_10
+  - first:
+      213: 1902568710893299547
+    second: ArcticFox_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -106,6 +118,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -124,7 +148,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65fb9bed49a31014fb8e0c13a415bd65
+      spriteID: 2e54a38468c138f46aa6fa83be0fed4c
       internalID: -6364162845145023018
       vertices: []
       indices: 
@@ -145,7 +169,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e18f1c831a73d64c8323c6466675359
+      spriteID: c50e24600127ce543a7eed2655d41b0f
       internalID: -5989422508411284737
       vertices: []
       indices: 
@@ -166,7 +190,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 25788e02428161941b327765cdafbea4
+      spriteID: 42ed7c92a2db7c54593c8b5d7ecf6a6b
       internalID: -1834708625087808189
       vertices: []
       indices: 
@@ -187,7 +211,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab3947b5d517e1f48997cddf35097aee
+      spriteID: 79f08692ee57deb45b9d6174647e5cd7
       internalID: -1735666741110477164
       vertices: []
       indices: 
@@ -208,7 +232,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7c503bdb6864554c83505eb73eb5946
+      spriteID: e4765e497b8e0164bac09c1456966533
       internalID: 5606885272227756772
       vertices: []
       indices: 
@@ -229,7 +253,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5bad93dd54af6c48a366d0c5a3239bb
+      spriteID: 698e9d0909108b9409278c0030fdcca4
       internalID: 4740249572954675758
       vertices: []
       indices: 
@@ -250,7 +274,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4e5e3dd9ec8a4442b26ece177fb689a
+      spriteID: a718e52fc897f174bba2869b894eaca8
       internalID: 5981902976032564874
       vertices: []
       indices: 
@@ -271,8 +295,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f036617777652e340a9b8e6c24ac2552
+      spriteID: 447087733f4069f419b0bd4cddaccd78
       internalID: -1763074772617966438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcticFox_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c911ddd929976044a37339f011bbe36
+      internalID: 2623340788500923062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcticFox_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6e7580006a4f34db24a7f51941cbec
+      internalID: 6837016260697285933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcticFox_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b6a647d59e32584eacd783787251f45
+      internalID: -5681123391302521774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArcticFox_11
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05d9ebe007cab141af7c5168c5ba697
+      internalID: 1902568710893299547
       vertices: []
       indices: 
       edges: []

@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 7687635267991001931}
   - component: {fileID: 7687635267991001932}
   - component: {fileID: 7687635267991001933}
+  - component: {fileID: 8648633043515796777}
   m_Layer: 0
-  m_Name: TimeTravelController
+  m_Name: LevelController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +53,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 776c8559638f45be98a3c933886ca16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isInPast: 0
 --- !u!223 &7687635267991001930
 Canvas:
   m_ObjectHideFlags: 0
@@ -120,3 +120,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fadeDurationSeconds: 1
+--- !u!114 &8648633043515796777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7687635267991001935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf8ebfe557aab4d49b79f7e23a2ac752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
