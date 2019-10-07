@@ -24,7 +24,8 @@ public class LevelReset : MonoBehaviour
         // Need to persist the black canvas too
         FadeInOut script = GetComponent<FadeInOut>();
 
-        yield return StartCoroutine(script.FadeOutToBlack());
+        script.FadeOutToBlack();
+        yield return new WaitForSeconds(script._fadeDurationSeconds);
         SceneManager.LoadScene(sceneIndex);
     }
 }

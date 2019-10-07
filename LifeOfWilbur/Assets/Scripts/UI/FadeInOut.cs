@@ -27,8 +27,7 @@ public class FadeInOut : MonoBehaviour
 
     public void Start()
     {
-        var image = GetComponent<RawImage>();
-        StartCoroutine(FadeInFromBlack());
+        FadeInFromBlack();
     }
 
     /// <summary>
