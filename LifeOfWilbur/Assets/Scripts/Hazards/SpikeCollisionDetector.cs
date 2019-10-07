@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +12,16 @@ public class SpikeCollisionDetector : MonoBehaviour
         if (otherObj.name == "Spikes")
         {
             TouchedSpike?.Invoke(); // Call listeners (if any)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // temp, subscribe from a level controller thing instead
+            StartCoroutine(ResetScene());
         }
+    }
+
+    IEnumerator ResetScene()
+    {
+        FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
+
+        script.FadeOutToBlack();
+        yield return new WaitForSeconds(script._fadeDurationSeconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
