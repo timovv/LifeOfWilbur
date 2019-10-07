@@ -11,7 +11,7 @@ public class ExitMenu : MonoBehaviour
     
     void Start()
     {
-        TimeText.SetText("Your time is: " + GameTimer.ElapsedTimeSeconds); 
+        TimeText.SetText("Your time is: " + GameTimer.FormattedElapsedTime); 
     }
     
     public void PlayAgain()
