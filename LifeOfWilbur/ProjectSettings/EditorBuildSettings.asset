@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DemoScene.unity
     guid: f502beda3f757794c978d535cdf080e9
   - enabled: 1
-    path: Assets/Scenes/ExitScene.unity
-    guid: 7816f718c13d9544a989bd376173ae91
+    path: Assets/Scenes/DemoSceneWithPause.unity
+    guid: c395bd13f8c79e9449ed658511649745
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}
