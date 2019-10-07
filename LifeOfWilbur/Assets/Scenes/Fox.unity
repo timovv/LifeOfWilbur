@@ -743,6 +743,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 9.83
       objectReference: {fileID: 0}
+    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _nextSceneName
+      value: Complex
+      objectReference: {fileID: 0}
     - target: {fileID: 3326152707801636456, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -9327,6 +9332,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8479126747980071151, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3492873042192759731, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0

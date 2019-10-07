@@ -11,11 +11,12 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.X)) {
-            Debug.Log("X");
+        if(Input.GetKeyDown(KeyCode.X)) 
+        {
            PlayGame();
-        }else if(Input.GetKeyDown(KeyCode.Escape)){
-            Debug.Log("Baboons");
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
             creditsMenu.SetActive(false);
             mainMenu.SetActive(true);
             optionsMenu.SetActive(false);
@@ -31,7 +32,7 @@ public class MainMenu : MonoBehaviour
     private void PlayGame()
     {
         //Queue the next scene in the build order
-        SceneManager.LoadScene("DemoSceneWithPause");
+        SceneManager.LoadScene(1);
     }
 
    public void QuitGame()
