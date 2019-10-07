@@ -23,12 +23,12 @@ public class FadeInOut : MonoBehaviour
     /// <summary>
     /// Records if we are currently faded in or out.
     /// </summary>
-    private bool _fadedOut;
+    private bool _fadedOut = true;
 
     public void Start()
     {
         var image = GetComponent<RawImage>();
-        image.CrossFadeAlpha(0f, 0, true);
+        StartCoroutine(FadeInFromBlack());
     }
 
     /// <summary>

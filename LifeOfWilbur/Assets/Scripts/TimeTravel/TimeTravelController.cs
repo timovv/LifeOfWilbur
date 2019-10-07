@@ -74,7 +74,7 @@ public class TimeTravelController : MonoBehaviour
             timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
         }
 
-        StartCoroutine(UpdateTimeTravelState(IsInPast, fade: false));
+        StartCoroutine(UpdateTimeTravelState(IsInPast));
     }
 
     // Update is called once per frame
@@ -85,20 +85,16 @@ public class TimeTravelController : MonoBehaviour
         if (!_isTransitioning && !TimeTravelDisabled && Input.GetKeyDown(KeyCode.X))
         {
             IsInPast = !IsInPast;
-            StartCoroutine(UpdateTimeTravelState(IsInPast, fade: true));
+            StartCoroutine(UpdateTimeTravelState(IsInPast));
         }
     }
 
-    private IEnumerator UpdateTimeTravelState(bool transitioningToPast, bool fade)
+    private IEnumerator UpdateTimeTravelState(bool transitioningToPast)
     {
         _isTransitioning = true;
 
         var fadeInOut = GetComponent<FadeInOut>();
-        // Fade out for transition
-        if (fade)
-        {
-            yield return StartCoroutine(fadeInOut.FadeOutToBlack());
-        }
+        yield return StartCoroutine(fadeInOut.FadeOutToBlack());
 
         // 1. If we are going to the future, save the state of all time travelling objects; if we are going to the future, restore them.
         if(transitioningToPast)
@@ -147,16 +143,16 @@ public class TimeTravelController : MonoBehaviour
         // 3. Fast-forward physics if we are going into the future to simulate time-travel effect
         if(!transitioningToPast)
         {
+            // Disable player movement so they don't speed away somewhere.
+            CharacterController2D.MovementDisabled = true;
             Time.timeScale = 100;
             // Since timescale is 100x, 10 seconds is only 0.1secs which is not long!
             yield return new WaitForSeconds(10);
             Time.timeScale = 1;
+            CharacterController2D.MovementDisabled = false;
         }
 
-        if (fade)
-        {
-            yield return StartCoroutine(fadeInOut.FadeInFromBlack());
-        }
+        yield return StartCoroutine(fadeInOut.FadeInFromBlack());
 
         _isTransitioning = false;
     }
