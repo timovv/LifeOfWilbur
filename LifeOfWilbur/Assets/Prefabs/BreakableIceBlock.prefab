@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4002941001655589485}
   - component: {fileID: 4002941001655589481}
   - component: {fileID: 4002941001655589480}
-  - component: {fileID: 4090176898127735309}
   m_Layer: 0
   m_Name: BreakableIceBlock
   m_TagString: Untagged
@@ -99,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4002941001655589485}
-  delayTime: 0.35
+  delayTime: 1
 --- !u!95 &4002941001655589485
 Animator:
   serializedVersion: 3
@@ -171,17 +170,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8650161, y: 0.12935495}
   m_EdgeRadius: 0
---- !u!114 &4090176898127735309
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4002941001655589486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5f4ad8203e9264448ee49d9b00410f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 4002941001655589485}
-  delayTime: 0.6
