@@ -196,6 +196,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1065603508}
     m_Modifications:
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].quote
+      value: I don't remember these spikes being here last time...
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].quote
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._quote
+      value: I don't remember these spikes being here last time...
+      objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_Name
@@ -271,31 +311,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].name
-      value: Adult Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].quote
-      value: I don't remember these spikes being here last time...
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].quote
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].name
-      value: Wilbur
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a3d6cab4808ba4aa667ca019217948, type: 3}
@@ -454,11 +469,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _nextSceneName
-      value: Fox
       objectReference: {fileID: 0}
     - target: {fileID: 3326152707801636456, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -7722,6 +7732,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _nextSceneName
+      value: Fox
       objectReference: {fileID: 0}
     - target: {fileID: 3492873042192759731, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}

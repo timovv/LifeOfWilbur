@@ -637,7 +637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9e6370ac91aab247a2be0bf2cac8474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTextField: {fileID: 4664044713261775608}
-  nameTextField: {fileID: 4664044714417757158}
-  continueButtonTextField: {fileID: 4664044712999332746}
-  animator: {fileID: 4664044714462247833}
+  _dialogueTextField: {fileID: 4664044713261775608}
+  _nameTextField: {fileID: 4664044714417757158}
+  _continueButtonTextField: {fileID: 4664044712999332746}
+  _animator: {fileID: 4664044714462247833}

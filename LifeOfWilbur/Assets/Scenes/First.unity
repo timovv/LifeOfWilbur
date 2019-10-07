@@ -626,6 +626,100 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 474349707}
     m_Modifications:
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[2].name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].quote
+      value: That was a good nap... oh bother, I've overslept!
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].quote
+      value: I have to get to the Polar Bear Summit. I should get going quickly or
+        I'll be late.
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[2].quote
+      value: I remember making the same journey 10 years ago. It was a lot cooler
+        back then, I could even wear a scarf.
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[3].name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[3].quote
+      value: (Press X to time travel).
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._quote
+      value: That was a good nap... oh bother, I've overslept!
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[1]._name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[1]._quote
+      value: I have to get to the Polar Bear Summit. I should get going quickly or
+        I'll be late.
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._quote
+      value: I remember making the same journey 10 years ago. It was a lot cooler
+        back then, I could even wear a scarf.
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[3]._name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[3]._quote
+      value: (Press X to time travel).
+      objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_Name
@@ -702,53 +796,6 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].name
-      value: Adult Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].name
-      value: Adult Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[2].name
-      value: Adult Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].quote
-      value: That was a good nap... oh bother, I've overslept!
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].quote
-      value: I have to get to the Polar Bear Summit. I should get going quickly or
-        I'll be late.
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[2].quote
-      value: I remember making the same journey 10 years ago. It was a lot cooler
-        back then, I could even wear a scarf.
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[3].name
-      value: Adult Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[3].quote
-      value: (Press X to time travel).
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a3d6cab4808ba4aa667ca019217948, type: 3}
 --- !u!1001 &926720737
@@ -758,6 +805,76 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867627339}
     m_Modifications:
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].name
+      value: Cub Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].quote
+      value: Oh boy it's time for the Polar Bear Summit meeting!
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].name
+      value: Cub Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].quote
+      value: I can't wait to meet up with my friends.
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[2].quote
+      value: I better get going!
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[2].name
+      value: Cub Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._name
+      value: Cub Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._quote
+      value: Oh boy, it's time for the Polar Bear Summit meeting!
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[1]._name
+      value: Cub Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[1]._quote
+      value: I can't wait to meet up with my friends.
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._name
+      value: Cub Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._quote
+      value: I better get going!
+      objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_Name
@@ -834,41 +951,6 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].name
-      value: Cub Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].quote
-      value: Oh boy it's time for the Polar Bear Summit meeting!
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].name
-      value: Cub Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].quote
-      value: I can't wait to meet up with my friends.
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[2].quote
-      value: I better get going!
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[2].name
-      value: Cub Wilbur
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a3d6cab4808ba4aa667ca019217948, type: 3}
 --- !u!1001 &1853066713
@@ -942,11 +1024,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _nextSceneName
-      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 3326152707801636456, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10079,11 +10156,6 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[6].Array.data[3].y
       value: -4.0000305
       objectReference: {fileID: 0}
-    - target: {fileID: 6408474851507683711, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6408474851507683705, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -10093,6 +10165,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408474851507683711, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _nextSceneName
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 3492873042192759731, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}

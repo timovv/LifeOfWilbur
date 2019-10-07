@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ef25189e82142347a1ee082fcc356e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueTrigger: {fileID: 8117323359198111501}
-  animator: {fileID: 3400250064014621187}
+  _dialogueTrigger: {fileID: 8117323359198111501}
+  _animator: {fileID: 3400250064014621187}
 --- !u!58 &1794719082001139656
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -257,8 +257,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c10f65c0c2b7e1b4c96270d2e7fb4417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    quoteList: []
+  _dialogue:
+    _quoteList: []
 --- !u!95 &3400250064014621187
 Animator:
   serializedVersion: 3
