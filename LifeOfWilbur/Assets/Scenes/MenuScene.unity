@@ -4565,7 +4565,7 @@ MonoBehaviour:
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
-    _loop: 0
+    _loop: 1
 --- !u!4 &2082318516
 Transform:
   m_ObjectHideFlags: 0
