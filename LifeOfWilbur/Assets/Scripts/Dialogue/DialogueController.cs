@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
 /// Controls the dialogue conversation and its display on the dialogue window in the game.
@@ -30,17 +31,17 @@ public class DialogueController : MonoBehaviour
     /// <summary>
     /// The GUI entry holding the current dialogue quote spoken by a character
     /// </summary>
-    public Text _dialogueTextField;
+    public TextMeshProUGUI _dialogueTextField;
 
     /// <summary>
     /// The speaker of the current dialogue quote
     /// </summary>
-    public Text _nameTextField;
+    public TextMeshProUGUI _nameTextField;
 
     /// <summary>
     /// The text field in the GUI inside the continue button. This allows the text to be reassigned to "close" when no more slides exist
     /// </summary>
-    public Text _continueButtonTextField;
+    public TextMeshProUGUI _continueButtonTextField;
 
     /// <summary>
     /// The animator used animate the appearance of the DialogueWindow
