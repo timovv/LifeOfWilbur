@@ -626,6 +626,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 474349707}
     m_Modifications:
+    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: m_Name
+      value: WilburThought
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: dialogue.quoteList.Array.size
@@ -720,16 +730,6 @@ PrefabInstance:
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
       value: (Press X to time travel).
       objectReference: {fileID: 0}
-    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: m_Name
-      value: WilburThought
-      objectReference: {fileID: 0}
-    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -805,6 +805,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 867627339}
     m_Modifications:
+    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: m_Name
+      value: WilburThought
+      objectReference: {fileID: 0}
+    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: dialogue.quoteList.Array.size
@@ -874,16 +884,6 @@ PrefabInstance:
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
       value: I better get going!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: m_Name
-      value: WilburThought
-      objectReference: {fileID: 0}
-    - target: {fileID: 4002941001655589486, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -1020,10 +1020,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7927973698389261309, guid: db3c9888a7c3f604a8f2d96854477215,
+    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 10
+      propertyPath: _nextSceneName
+      value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 3326152707801636456, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10166,20 +10166,20 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6408474851507683711, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _nextSceneName
-      value: Tutorial
-      objectReference: {fileID: 0}
     - target: {fileID: 3492873042192759731, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927973698389261309, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6408474851507683711, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8900107555855130192, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10280,6 +10280,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._name
+      value: BackgroundMusic
+      objectReference: {fileID: 0}
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: a86cd10e87402704488866c114a2b968, type: 3}
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.data[0]._pitch
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}
