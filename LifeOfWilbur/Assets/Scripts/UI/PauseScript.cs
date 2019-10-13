@@ -54,4 +54,30 @@ public class PauseScript : MonoBehaviour
         GameTimer.Paused = false; //Resume the game timer in addition to the 'real time'
         SceneManager.LoadScene("MenuScene");
     }
+
+   
+    public void OptionsMenuButton()
+    {
+        Time.timeScale = 0f;
+        GameTimer.Paused = true;
+        _pauseMenuUI.SetActive(false);
+        FindObjectOfType<OptionsMenu>().SetVisibilityOfUI(true);
+        
+    }
+
+
+    public void SetVisibilityOfPauseUI(bool visibility)
+    {
+        if (visibility)
+        {
+            _pauseMenuUI.SetActive(visibility);
+        }
+        else
+        {
+            _pauseMenuUI.SetActive(visibility);
+        }
+       
+    }
+  
+
 }

@@ -76,6 +76,13 @@ public class CharacterController2D : MonoBehaviour
         {
             _jumpRemember = JumpBuffer;
         }
+
+        //Debug.Log("Velocity is: " + _rigidBody2D.velocity.x);
+        if(_rigidBody2D.velocity.x > 2 || _rigidBody2D.velocity.x < -2)
+        {
+            //Play the 'SnowWalk' audio whenever Wilbur jumps
+            FindObjectOfType<AudioManager>().Play("SnowWalk");
+        }
 	
     }
 

@@ -44,6 +44,14 @@ public class MainMenu : MonoBehaviour
         GameTimer.ElapsedTimeSeconds = 0;
     }
 
+
+    public void LoadOptionsScene()
+    {
+        
+    }
+
+
+
     /// <summary>
     /// Method call of the 'Quit' button which closes the application given that it is running in a window mode
     /// </summary>

@@ -6,9 +6,6 @@ public class AudioManager : MonoBehaviour
 {
     public Sound[] _sounds;
 
-
-
-
     public static AudioManager _instance;
 
     //Use this for initialisation
@@ -37,10 +34,9 @@ public class AudioManager : MonoBehaviour
     }
 
 
-    void Start(){
-
+    void Start()
+    {
         Play("BackgroundMusic");
-
     }
 
 

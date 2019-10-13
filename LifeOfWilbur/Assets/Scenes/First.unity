@@ -10284,7 +10284,7 @@ PrefabInstance:
     - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: _sounds.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10299,7 +10299,7 @@ PrefabInstance:
     - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: _sounds.Array.data[0]._volume
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10309,7 +10309,7 @@ PrefabInstance:
     - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: _sounds.Array.data[1]._name
-      value: MovementSFX
+      value: SnowWalk
       objectReference: {fileID: 0}
     - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
