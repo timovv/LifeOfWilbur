@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _optionsMenu;
     public GameObject _creditsMenu;
     public GameObject _mainMenu;
+    
 
     void Update()
     {
@@ -38,6 +39,7 @@ public class MainMenu : MonoBehaviour
     private void PlayGame()
     {
         //Queue the next scene in the build order
+        _mainMenu.SetActive(false);
         SceneManager.LoadScene(1);
 
         //Setting the GamerTime back to 0 in the case of restarting the game
@@ -47,7 +49,8 @@ public class MainMenu : MonoBehaviour
 
     public void LoadOptionsScene()
     {
-        SceneManager.LoadScene("OptionsScene");
+        _mainMenu.SetActive(false);
+        _optionsMenu.SetActive(true);
     }
 
 

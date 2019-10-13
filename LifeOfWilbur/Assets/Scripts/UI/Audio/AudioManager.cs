@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     //Use this for initialisation
     void Awake()
     {
+
         if(_instance == null)
         {
             _instance = this;
@@ -18,7 +19,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+
         DontDestroyOnLoad(gameObject);
 
         foreach (Sound s in _sounds)
@@ -29,7 +30,6 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s._volume;
             s.source.pitch = s._volume;
             s.source.loop = s._loop;
-
         }
     }
 

@@ -1,12 +1,13 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class OptionsMenu : MonoBehaviour
+public class OptionsMenuMainScene : MonoBehaviour
 {
-
     public GameObject _optionMenuUI;
+    public GameObject _mainMenuUI;
 
     void Awake()
     {
@@ -20,19 +21,17 @@ public class OptionsMenu : MonoBehaviour
         }
         catch (NullReferenceException e)
         {
-            Debug.LogWarning("BackgroundMusic not loaded correctly!" + e);
+            Debug.LogWarning("Sound not loaded correctly! " + e);
         }
-        
+
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Time.timeScale = 1f;
-            GameTimer.Paused = false;
             _optionMenuUI.SetActive(false);
-            FindObjectOfType<PauseScript>()?.SetVisibilityOfPauseUI(true);
+            _mainMenuUI.SetActive(true);
         }
     }
 
@@ -46,11 +45,11 @@ public class OptionsMenu : MonoBehaviour
             s._volume = VolumeSliderGet;
             s.source.volume = s._volume;
         }
-        catch(NullReferenceException e)
+        catch (NullReferenceException e)
         {
             Debug.LogWarning("Sound Source not loaded correctly!: " + e);
         }
-        
+
 
     }
 
@@ -69,29 +68,9 @@ public class OptionsMenu : MonoBehaviour
         {
             Debug.LogWarning("Sound Source not loaded correctly!: " + e);
         }
-        
+
 
     }
-
-
-    public GameObject getOptionsUI()
-    {
-        return _optionMenuUI;
-    }
-
-
-    public void SetVisibilityOfUI(bool visibility)
-    {
-        if (visibility)
-        {
-            _optionMenuUI.SetActive(visibility);
-        }
-        else
-        {
-            _optionMenuUI.SetActive(visibility);
-        }
-    }
-
 
 
 }
