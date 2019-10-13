@@ -10,9 +10,10 @@ public class ScorePanelInit : MonoBehaviour
     [Header("Scoreboard")]
     public Transform _container;
     public Transform _entryTemplate;
+    public Color _userHighlight = new Color(1f, 0.878f, 0.212f);
+    public int _scoresShown = 10;
 
     private string ScoreboardPath => $"{Application.persistentDataPath}/scoreboard.json";
-    private Color userHilight = new Color(1f, 0.878f, 0.212f);
 
     void Awake()
     {
@@ -20,7 +21,6 @@ public class ScorePanelInit : MonoBehaviour
 
         Entry newEntry = new Entry(GameTimer.FormattedElapsedTime);
         entries.Add(newEntry);
-
         UpdateList(entries, newEntry);
 
         SaveScores(entries);
@@ -28,30 +28,27 @@ public class ScorePanelInit : MonoBehaviour
 
     private void UpdateList(List<Entry> entries, Entry newEntry)
     {
+        // Most of this should be on the server when implemented
         entries.Sort();
 
         int userRank = entries.IndexOf(newEntry);
-        int nEntries = entries.Count;
 
-        for (int i = 0; i < Math.Min(nEntries, 10); i++)
+        for (int i = 0; i < Math.Min(entries.Count, _scoresShown); i++)
         {
             AddListItem("#" + (i + 1), entries[i]._time, userRank == i);
         }
 
-        if (userRank >= 20)
+        if (userRank >= _scoresShown * 2)
         {
             AddListItem("...", "...", false);
         }
-        int startIndex = userRank - userRank % 10;
+        int startIndex = Math.Max(userRank - _scoresShown / 2, _scoresShown);
+        int endIndex = Math.Min(startIndex + _scoresShown, entries.Count);
 
-        if (startIndex >= 10)
+        for (int i = startIndex; i < endIndex; i++)
         {
-            for (int i = startIndex; i < Math.Min(nEntries, startIndex + 10); i++)
-            {
-                AddListItem("#" + (i + 1), entries[i]._time, userRank == i);
-            }
+            AddListItem("#" + (i + 1), entries[i]._time, userRank == i);
         }
-
     }
 
     private void AddListItem(string posValue, string timeValue, bool isUsers)
@@ -63,15 +60,16 @@ public class ScorePanelInit : MonoBehaviour
         pos.text = posValue;
         time.text = timeValue;
 
-        if(isUsers)
+        if (isUsers)
         {
-            pos.color = userHilight;
-            time.color = userHilight;
+            pos.color = _userHighlight;
+            time.color = _userHighlight;
         }
     }
 
     private List<Entry> LoadEntries()
     {
+        // Change to a get request
         if (!File.Exists(ScoreboardPath))
         {
             File.Create(ScoreboardPath).Dispose();
@@ -87,6 +85,7 @@ public class ScorePanelInit : MonoBehaviour
 
     private void SaveScores(List<Entry> entries)
     {
+        // Change to POSTing a single score
         using (StreamWriter stream = new StreamWriter(ScoreboardPath))
         {
             string output = JsonUtility.ToJson(new ListWrapper(entries), true);
