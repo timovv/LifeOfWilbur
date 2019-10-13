@@ -47,7 +47,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadOptionsScene()
     {
-        
+        SceneManager.LoadScene("OptionsScene");
     }
 
 
@@ -59,4 +59,21 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    public void SetVisibilityOfMenuUI(bool visibility)
+    {
+        Debug.Log("Running Man!" +  visibility);
+        if (visibility)
+        {
+            _mainMenu.SetActive(true);
+        }
+        else
+        {
+            _mainMenu.SetActive(false);
+        }
+    }
+
+
+
 }

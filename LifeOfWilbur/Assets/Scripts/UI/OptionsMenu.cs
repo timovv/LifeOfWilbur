@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
@@ -38,6 +39,7 @@ public class OptionsMenu : MonoBehaviour
             Time.timeScale = 1f;
             GameTimer.Paused = false;
             _optionMenuUI.SetActive(false);
+            FindObjectOfType<MainMenu>()?.SetVisibilityOfMenuUI(true);
             FindObjectOfType<PauseScript>()?.SetVisibilityOfPauseUI(true);
         }
     }
