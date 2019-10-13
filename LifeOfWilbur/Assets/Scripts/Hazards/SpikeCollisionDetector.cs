@@ -20,8 +20,7 @@ public class SpikeCollisionDetector : MonoBehaviour
             screenShake.Shake(duration);
             _animator.SetTrigger("isDeath");
             StartCoroutine(PauseMovementOnDeath());
-            FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
-            script.ReloadCurrentScene();
+            LifeOfWilbur.GameController.ResetLevel();
         }
     }
 

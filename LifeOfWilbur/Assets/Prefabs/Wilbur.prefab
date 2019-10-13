@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 1195086570321844347}
   - component: {fileID: 4813554848784274909}
   m_Layer: 8
-  m_Name: OldWilburPlaceholder
+  m_Name: OldWilburPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 8522223556523131614}
   - component: {fileID: 8250811111598331765}
   m_Layer: 8
-  m_Name: YoungWilburPlaceholder
+  m_Name: YoungWilburPlayer
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
