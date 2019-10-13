@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCBehaviour : MonoBehaviour
 {
     public GameObject _player;
+
     private Transform _playerPosition;
     private Transform _NPCPosition;
     private SpriteRenderer _NPCSprite;
