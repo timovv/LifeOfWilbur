@@ -2,29 +2,77 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class LevelSelectScript : MonoBehaviour
 {
-    public GameObject _levelHolder;
+    public Camera _mainCamera;
+    public float _smoothTime;
+    public float _newOrthographic;
 
-    // Start is called before the first frame update
-    void Start()
+    private Vector3 _originalPosition;
+    private float _originalOrthographic;
+
+    private void Start()
     {
-        
+        _originalPosition = _mainCamera.transform.position;
+        _originalOrthographic = _mainCamera.orthographicSize;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlayLevel(string levelName)
     {
-        SelectLevel(""); 
-    }
-
-    private void SelectLevel(string levelName)
-    {
-        SceneManager.LoadScene(1);
-
-        //Setting the GamerTime back to 0 in the case of restarting the game
+        SceneManager.LoadScene(levelName);
         GameTimer.ElapsedTimeSeconds = 0;
+    }
+
+    public void SelectLevel(Transform target)
+    {
+        //Selected animation
+        Animator animator = target.GetComponent<Animator>();
+        animator.SetBool("isSelected", true);
+
+        //Resize camera on click
+        StartCoroutine(resizeRoutine(target));
+    }
+
+    //Duplicate code - help
+    public void DeselectLevel(Transform target)
+    {
+        //Selected animation
+        Animator animator = target.GetComponent<Animator>();
+        animator.SetBool("isSelected", false);
+
+        StartCoroutine(deresizeRoutine()); 
+    }
+
+    private IEnumerator resizeRoutine(Transform target)
+    {
+        float elapsed = 0;
+        Vector3 targetPosition = new Vector3(target.position.x, target.position.y, -10); //Position to goto
+
+        while (elapsed <= _smoothTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / _smoothTime);
+
+            _mainCamera.transform.position = Vector3.Lerp(_mainCamera.transform.position, targetPosition, t); //x,y position of camera change
+            _mainCamera.orthographicSize = Mathf.Lerp(_mainCamera.orthographicSize, _newOrthographic, t);//"z" position of camera change
+            yield return null;
+        }
+    }
+
+    private IEnumerator deresizeRoutine()
+    {
+        float elapsed = 0;
+
+        while (elapsed <= _smoothTime)
+        {
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / _smoothTime);
+
+            _mainCamera.orthographicSize = Mathf.Lerp(_mainCamera.orthographicSize, _originalOrthographic, t);//"z" position of camera change
+            _mainCamera.transform.position = Vector3.Lerp(_mainCamera.transform.position, _originalPosition, t); //x,y position of camera change
+            yield return null;
+        }
     }
 }
