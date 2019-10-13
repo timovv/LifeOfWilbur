@@ -84,8 +84,7 @@ public class TimeTravelController : MonoBehaviour
         // TODO: use Input.GetButton instead of checking keys like this
         if (!_isTransitioning && !TimeTravelDisabled && Input.GetKeyDown(KeyCode.X))
         {
-            IsInPast = !IsInPast;
-            StartCoroutine(UpdateTimeTravelState(IsInPast));
+            StartCoroutine(UpdateTimeTravelState(!IsInPast));
         }
     }
 
@@ -101,6 +100,7 @@ public class TimeTravelController : MonoBehaviour
         // 1. If we are going to the future, save the state of all time travelling objects; if we are going to the future, restore them.
         if (transitioningToPast)
         {
+            IsInPast = true;
             // Destroy future objects
             foreach (var toDestroy in _futureTimeTravellingObjects)
             {
@@ -118,6 +118,7 @@ public class TimeTravelController : MonoBehaviour
         } 
         else
         {
+            IsInPast = false;
             _futureTimeTravellingObjects = new GameObject[_timeTravellingObjects.Length];
 
             for (int i = 0; i < _timeTravellingObjects.Length; ++i)
