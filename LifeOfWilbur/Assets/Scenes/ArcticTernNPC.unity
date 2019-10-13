@@ -120,6 +120,25 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &37749720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2932599108682536802, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 836230463}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &37749721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37749720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26bfa0722c81784491e990e9296549f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
 --- !u!1001 &836230463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -130,12 +149,17 @@ PrefabInstance:
     - target: {fileID: 8089151939254619171, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: m_Name
-      value: ArcticFoxNPCFuture
+      value: ArcticTernNPCFuture
       objectReference: {fileID: 0}
     - target: {fileID: 8089151939254619171, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: m_TagString
       value: FutureOnly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089151939254619171, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8089151939254619173, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -145,7 +169,7 @@ PrefabInstance:
     - target: {fileID: 8089151939254619173, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.65
+      value: -0.505
       objectReference: {fileID: 0}
     - target: {fileID: 8089151939254619173, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -196,7 +220,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2623340788500923062, guid: 53f7650b83d3a484f8ad5429c769c744,
+      objectReference: {fileID: 5823144821464300659, guid: 6c9baacf08881094b870754e88f29332,
         type: 3}
     - target: {fileID: 7441809396967201018, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -207,7 +231,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 7f778283812096e47a2c7367cf7021d9, type: 2}
+      objectReference: {fileID: 9100000, guid: 4abfae3291eda1a4f8dbdc0c40ff84e5, type: 2}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.size
@@ -413,31 +437,6 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: caf0ff5e6b514354388ad079d5775fe2, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e, type: 3}
---- !u!1 &1366359776 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2932599108682536802, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1859394633}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1366359778
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1366359776}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: caf0ff5e6b514354388ad079d5775fe2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1554369876
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,12 +530,17 @@ PrefabInstance:
     - target: {fileID: 8089151939254619171, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: m_Name
-      value: ArcticFoxNPCPast
+      value: ArcticTernNPCPast
       objectReference: {fileID: 0}
     - target: {fileID: 8089151939254619171, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: m_TagString
       value: PastOnly
+      objectReference: {fileID: 0}
+    - target: {fileID: 8089151939254619171, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8089151939254619173, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -597,7 +601,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5606885272227756772, guid: b77a23081fc2a384baa4f7859dc630b8,
+      objectReference: {fileID: 2975954248181730470, guid: 6c9baacf08881094b870754e88f29332,
         type: 3}
     - target: {fileID: 7441809396967201018, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -608,7 +612,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 9100000, guid: a1d2601b8cfb837478e09fb3275e2a9e, type: 2}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: dialogue.quoteList.Array.size
@@ -830,8 +834,12 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: caf0ff5e6b514354388ad079d5775fe2, type: 2}
-    m_RemovedComponents:
-    - {fileID: 808215112200878572, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e, type: 3}
+    - target: {fileID: 9206915312827703892, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e, type: 3}
 --- !u!1001 &3621050675320338654
 PrefabInstance:
