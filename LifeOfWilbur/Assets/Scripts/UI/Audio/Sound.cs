@@ -1,6 +1,11 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
 
+
+/// <summary>
+/// Essentially a container class, that keeps track of the attributes of the sound file that is required by
+/// the audio manager.
+/// </summary>
 [System.Serializable]
 public class Sound
 {

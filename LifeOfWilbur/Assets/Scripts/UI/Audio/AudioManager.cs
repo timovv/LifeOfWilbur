@@ -11,7 +11,8 @@ public class AudioManager : MonoBehaviour
     //Use this for initialisation
     void Awake()
     {
-
+        //Adopting the singleton pattern for the AudioManger, since you don't want 
+        //the sound cutting of and new instances of the same sound being created, on scene change.
         if(_instance == null)
         {
             _instance = this;
@@ -20,8 +21,9 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject); 
 
+        //Iterating through all the sounds and assigning their attributes to the source values.
         foreach (Sound s in _sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -36,15 +38,21 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        //Play the background music on scene start up
         Play("BackgroundMusic");
     }
 
-
+    /// <summary>
+    /// This method abstracts and allows the sounds to be played from any other script in the game, by finding
+    /// its object and specifying the name of the sound file.
+    /// </summary>
+    /// <param name="name"></param>
     public void Play(string name)
     {
-        Sound s = Array.Find(_sounds, sound => sound._name == name);
         try
         {
+            //Try to find the sound from its given name, and play it. 
+            Sound s = Array.Find(_sounds, sound => sound._name == name);
             s.source.Play();
         }catch(NullReferenceException e){
             Debug.LogWarning("Sound " + name + " not found!");

@@ -46,7 +46,10 @@ public class MainMenu : MonoBehaviour
         GameTimer.ElapsedTimeSeconds = 0;
     }
 
-
+    /// <summary>
+    /// Method that disables the MainMenu panel and enables the options pane. 
+    /// Essentially, method call for the "Options" button
+    /// </summary>
     public void LoadOptionsScene()
     {
         _mainMenu.SetActive(false);
@@ -64,6 +67,11 @@ public class MainMenu : MonoBehaviour
     }
 
 
+    /// <summary>
+    /// Method to set the visibility of the MenuUI externally. Done in order to not have to make 
+    /// the MainMenu panel static. This ensures that the panel has been instantiated first. 
+    /// </summary>
+    /// <param name="visibility"></param>
     public void SetVisibilityOfMenuUI(bool visibility)
     {
         Debug.Log("Running Man!" +  visibility);
