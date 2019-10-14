@@ -10,10 +10,14 @@ public class SpikeCollisionDetector : MonoBehaviour
 {
     public Animator _animator;
 
+    public ScreenShake screenShake;
+    public float duration;
+
     void OnTriggerEnter2D(Collider2D otherObj)
     {
         if (otherObj.name == "Spikes")
         {
+            screenShake.Shake(duration);
             _animator.SetTrigger("isDeath");
             StartCoroutine(PauseMovementOnDeath());
             FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
