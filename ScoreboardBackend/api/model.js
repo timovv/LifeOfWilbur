@@ -19,6 +19,11 @@ var ScoreSchema = new Schema({
     type: Number,
     min: 0,
     required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now,
+    required: true
   }
 }, { versionKey: false });
 

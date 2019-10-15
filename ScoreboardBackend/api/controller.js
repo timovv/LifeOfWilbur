@@ -1,50 +1,53 @@
-var mongoose = require('mongoose');
-var Score = mongoose.model('Score');
+const mongoose = require('mongoose');
+const Score = mongoose.model('Score');
 
-exports.submitScore = function(req, res) {
-  var newScore = new Score(req.body);
-  newScore.save(function(err, score) {
-    
-    var lt = Score.find({"time" : { $lte : score.time}, "_id" : { $ne : score._id}})
+exports.submitScore = function (req, res) {
+  const newScore = new Score(req.body);
+  newScore.save(function (err, score) {
+
+    const lt = Score.find({ "time": { $lte: score.time }, "_id": { $ne: score._id } })
       .sort("-time -attempts -timeswaps")
       .limit(5)
+      .lean()
       .exec();
 
-    var gt = Score.find({"time" : { $gte : score.time}, "_id" : { $ne : score._id}})
+    const gt = Score.find({ "time": { $gte: score.time }, "_id": { $ne: score._id } })
       .sort("time attempts timeswaps")
       .limit(5)
+      .lean()
       .exec();
 
-    var rank = Score.find({"time" : { $lte : score.time}, "attempts" : { $lte : score.attempts}, "timeswaps" : { $lte : score.timeswaps}})
+    // Maybe swap to estimate - probably wont matter for our small db though
+    const rank = Score.countDocuments({ "time": { $lte: score.time }, "attempts": { $lte: score.attempts }, "timeswaps": { $lte: score.timeswaps } })
       .exec();
 
-    Promise.all([lt, gt, rank]).then(function(results){
-      var info = {};
-      info.lt = results[0].reverse();
-      info.gt = results[1];
-      info.rank = results[2].length;
+    const top = Score.find({})
+      .sort("time attempts timeswaps")
+      .limit(10)
+      .lean()
+      .exec();
+
+    Promise.all([rank, top, lt, gt]).then(function (results) {
+      const info = {};
+      const rank = results[0];
+
+      info.id = score._id;
+
+      info.top = results[1];
+      addRankings(1, info.top);
+
+      info.list = results[2].reverse();
+      info.list.push(score.toObject());
+      info.list = info.list.concat(results[3]);
+      addRankings(rank - results[2].length + 1, info.list);
+
       res.json(info);
     });
   });
 };
 
-exports.listAll = function(req, res) {
-  Score.find({}, function(err, scores) {
-    res.json(scores);
-  });
-};
-
-exports.removeAll = function(req, res) {
-  Score.deleteMany({}, function(err, scores) {
-    res.send("DELETED");
-  });
-};
-
-exports.listTopTen = function(req, res) {
-  Score.find({})
-      .sort("time attempts timeswaps")
-      .limit(10)
-      .exec(function(err, scores) {
-        res.json(scores);
-      });
-};
+function addRankings(startingRank, list) {
+  for (const score of list) {
+    score.rank = startingRank++;
+  }
+}

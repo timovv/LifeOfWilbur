@@ -1,11 +1,6 @@
-module.exports = function(app) {
-  var controller = require('./controller');
+module.exports = function (app) {
+  const controller = require('./controller');
 
-  app.route('/scores') // '/tasks/:taskId'
-    .get(controller.listAll)
-    .post(controller.submitScore)
-    .delete(controller.removeAll);
-
-  app.route('/scores/top10')
-    .get(controller.listTopTen);
+  app.route('/scores')
+    .post(controller.submitScore);
 };
