@@ -83,14 +83,14 @@ public class DialogueController : MonoBehaviour
 
         _quoteQueue = new Queue<Quote>();
         _characterMapper = new Dictionary<string, int> {
-            { "Cub Wilbur", 1 }, //Polar bear
-            { "Adult Wilbur", 2 },
-            { "Young Iris", 3 }, //Fox
-            { "Old Iris", 4 },
-            { "Young Simon", 5 }, //Tern
-            { "Old Simon", 6 },
-            { "Young Wolfgang Amadeus", 7 }, //Whale
-            { "Slightly Old Wolfgang Amadeus", 8}
+            { "Wilbur", 1 }, //Polar bear
+            { "Ol' Wilbur", 2 },
+            { "Iris", 3 }, //Fox
+            { "Ol' Iris", 4 },
+            { "Simon", 5 }, //Tern
+            { "Ol' Simon", 6 },
+            { "Willy", 7 }, //Whale
+            { "Ol' Willy", 8}
         };
     }
 

@@ -145,6 +145,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 3621050675320338654}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &86994347 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4901476925389819091, guid: db3c9888a7c3f604a8f2d96854477215,
+    type: 3}
+  m_PrefabInstance: {fileID: 3621050675320338654}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &836230463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -303,7 +309,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Old Simon
+      value: Ol' Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -313,7 +319,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._name
-      value: Adult Wilbur
+      value: Ol' Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -323,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._name
-      value: Old Simon
+      value: Ol' Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -333,7 +339,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._name
-      value: Old Simon
+      value: Ol' Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -454,6 +460,12 @@ PrefabInstance:
 --- !u!1 &907307484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6946411890359139808, guid: db3c9888a7c3f604a8f2d96854477215,
+    type: 3}
+  m_PrefabInstance: {fileID: 3621050675320338654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &907307485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 431643523120659331, guid: db3c9888a7c3f604a8f2d96854477215,
     type: 3}
   m_PrefabInstance: {fileID: 3621050675320338654}
   m_PrefabAsset: {fileID: 0}
@@ -726,7 +738,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Young Simon
+      value: Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -736,7 +748,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._name
-      value: Young Simon
+      value: Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -746,7 +758,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._name
-      value: Young Simon
+      value: Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -756,7 +768,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._name
-      value: Young Simon
+      value: Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -766,7 +778,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._name
-      value: Cub Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -776,7 +788,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[5]._name
-      value: Young Simon
+      value: Simon
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -9822,5 +9834,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _pastFocusObject
+      value: 
+      objectReference: {fileID: 86994347}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _futureFocusObject
+      value: 
+      objectReference: {fileID: 907307485}
+    - target: {fileID: 2667430984192578031, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1554369878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}

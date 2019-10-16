@@ -239,7 +239,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Adult Wilbur
+      value: Ol' Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -249,7 +249,7 @@ PrefabInstance:
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.5
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -314,6 +314,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a3d6cab4808ba4aa667ca019217948, type: 3}
+--- !u!4 &672963314 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 431643523120659331, guid: db3c9888a7c3f604a8f2d96854477215,
+    type: 3}
+  m_PrefabInstance: {fileID: 1921940451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &894420174
 GameObject:
   m_ObjectHideFlags: 0
@@ -7754,16 +7760,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8479126747980071151, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665811241993722210, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: duration
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4665811241993722210, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
       propertyPath: screenShake
       value: 
       objectReference: {fileID: 894420178}
@@ -7777,8 +7773,34 @@ PrefabInstance:
       propertyPath: duration
       value: 0.2
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 143
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _pastFocusObject
+      value: 
+      objectReference: {fileID: 2064535607}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _futureFocusObject
+      value: 
+      objectReference: {fileID: 672963314}
+    - target: {fileID: 2667430984192578031, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 894420176}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}
+--- !u!4 &2064535607 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4901476925389819091, guid: db3c9888a7c3f604a8f2d96854477215,
+    type: 3}
+  m_PrefabInstance: {fileID: 1921940451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8263224828490669946
 PrefabInstance:
   m_ObjectHideFlags: 0

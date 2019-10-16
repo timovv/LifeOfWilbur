@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogCamera : MonoBehaviour
 {
-    private float _zoomDuration = 0.2f; //Time of zoom in
+    private float _zoomDuration = 0.25f; //Time of zoom in
 
     private float _zoomAmount = 2.5f; //Zoom in amount
     private float _originalZoomAmount;
@@ -29,7 +29,7 @@ public class DialogCamera : MonoBehaviour
     //Camera zoom in 
     public void ZoomInFocus()
     {
-        if (_futureFocusObject.gameObject.activeSelf)
+        if (_futureFocusObject.gameObject.activeInHierarchy)
         {
             _zoomInPosition = _futureFocusObject.position;
         } else
