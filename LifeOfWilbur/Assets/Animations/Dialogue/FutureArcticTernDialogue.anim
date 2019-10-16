@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PastArcticFoxDialogue
+  m_Name: FutureArcticTern
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: -7102846815764760196, guid: 479831f51a15ef6488454ad106a01b1e,
+      value: {fileID: 1593454767820123323, guid: 479831f51a15ef6488454ad106a01b1e,
         type: 3}
     - time: 0.33333334
-      value: {fileID: -4017943316051087025, guid: 479831f51a15ef6488454ad106a01b1e,
+      value: {fileID: 5943066765613614900, guid: 479831f51a15ef6488454ad106a01b1e,
         type: 3}
     - time: 0.6666667
-      value: {fileID: -7102846815764760196, guid: 479831f51a15ef6488454ad106a01b1e,
+      value: {fileID: 1593454767820123323, guid: 479831f51a15ef6488454ad106a01b1e,
         type: 3}
     attribute: m_Sprite
     path: Image
@@ -47,9 +47,9 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: -7102846815764760196, guid: 479831f51a15ef6488454ad106a01b1e, type: 3}
-    - {fileID: -4017943316051087025, guid: 479831f51a15ef6488454ad106a01b1e, type: 3}
-    - {fileID: -7102846815764760196, guid: 479831f51a15ef6488454ad106a01b1e, type: 3}
+    - {fileID: 1593454767820123323, guid: 479831f51a15ef6488454ad106a01b1e, type: 3}
+    - {fileID: 5943066765613614900, guid: 479831f51a15ef6488454ad106a01b1e, type: 3}
+    - {fileID: 1593454767820123323, guid: 479831f51a15ef6488454ad106a01b1e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
