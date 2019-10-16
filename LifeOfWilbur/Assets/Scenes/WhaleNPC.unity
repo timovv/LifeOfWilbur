@@ -308,13 +308,12 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Old Iris
+      value: Slightly Old Wolfgang Amadeus
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: Hey Wilbur! Long time no see. I remember you coming past a long time
-        ago.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -324,18 +323,17 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: Hey Iris! It's good to see you again. How have you been?
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._name
-      value: Old Iris
+      value: Slightly Old Wolfgang Amadeus
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
-      value: It's been rough recently. I'm looking for a new home. It's hard to find
-        a nice place to burrow where there are lots of berries.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -345,17 +343,17 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
-      value: Ah, I hope you find a nice place!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._name
-      value: Old Iris
+      value: Slightly Old Wolfgang Amadeus
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._quote
-      value: Thanks Wilbur! Be careful of treacherous ice ahead.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6925178747244618190, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -748,12 +746,12 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Young Iris
+      value: Young Wolfgang Amadeus
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: Hey! I'm Iris.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -763,28 +761,27 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: Hey! I'm Wilbur. Nice to meet you, what kind of animal are you anyway?
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._name
-      value: Young Iris
+      value: Young Wolfgang Amadeus
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
-      value: I'm an arctic fox. My thick pelt keeps me warm in these harsh climates
-        and helps me blend in.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._name
-      value: Young Iris
+      value: Young Wolfgang Amadeus
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
-      value: I'm looking for some yummy berries to eat. What about you?
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -794,17 +791,17 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._quote
-      value: I'm going to the Polar Bear Summit.
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[5]._name
-      value: Young Iris
+      value: Young Wolfgang Amadeus
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[5]._quote
-      value: Sounds fun, good luck!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6925178747244618190, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}

@@ -63,6 +63,11 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private bool _textAnimating;
 
+    //DialogCamera object
+    private DialogCamera _dialogCamera;
+    public Transform _futureFocusObject;
+    public Transform _pastFocusObject;
+
     // Singleton design pattern used for DialogueManager because only one dialogueWindow can be open at a time
     void Awake()
     {
@@ -72,6 +77,10 @@ public class DialogueController : MonoBehaviour
     // Populates the dictionary with the preset mappings of character to integers.
     public void Start()
     {
+        //Create main camera dialog object with object of focus
+        _dialogCamera = gameObject.AddComponent<DialogCamera>();
+        _dialogCamera.initialize(_futureFocusObject, _pastFocusObject);
+
         _quoteQueue = new Queue<Quote>();
         _characterMapper = new Dictionary<string, int> {
             { "Cub Wilbur", 1 }, //Polar bear
@@ -97,12 +106,13 @@ public class DialogueController : MonoBehaviour
     // Adds all quotes to the queue and opens dialogueWindow
     public void StartDialogue(Dialogue dialogue)
     {
+        _dialogCamera.ZoomInFocus();
+
         _quoteQueue.Clear();
         foreach (Quote quote in dialogue._quoteList)
         {
             _quoteQueue.Enqueue(quote);
         }
-
         StartCoroutine(StartDialogueRoutine(dialogue));
     }
 
@@ -199,6 +209,8 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private void EndDialogue()
     {
+        _dialogCamera.ZoomOutFocus();
+
         CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
         LevelReset.ResetDisabled = false; // enable resetting level
