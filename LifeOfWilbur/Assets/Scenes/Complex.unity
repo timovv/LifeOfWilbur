@@ -8730,6 +8730,25 @@ PrefabInstance:
         type: 3}
       propertyPath: duration
       value: 0.2
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.data[1]._name
+      value: SnowWalk
+      objectReference: {fileID: 0}
+    - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _sounds.Array.data[1]._clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 746f15482a518114ba97858ba8f8a277, type: 3}
+    - target: {fileID: 2882604481015173999, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}

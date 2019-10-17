@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _optionsMenu;
     public GameObject _creditsMenu;
     public GameObject _mainMenu;
+    
 
     void Update()
     {
@@ -38,11 +39,24 @@ public class MainMenu : MonoBehaviour
     private void PlayGame()
     {
         //Queue the next scene in the build order
+        _mainMenu.SetActive(false);
         SceneManager.LoadScene(1);
 
         //Setting the GamerTime back to 0 in the case of restarting the game
         GameTimer.ElapsedTimeSeconds = 0;
     }
+
+    /// <summary>
+    /// Method that disables the MainMenu panel and enables the options pane. 
+    /// Essentially, method call for the "Options" button
+    /// </summary>
+    public void LoadOptionsScene()
+    {
+        _mainMenu.SetActive(false);
+        _optionsMenu.SetActive(true);
+    }
+
+
 
     /// <summary>
     /// Method call of the 'Quit' button which closes the application given that it is running in a window mode
@@ -51,4 +65,26 @@ public class MainMenu : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+    /// <summary>
+    /// Method to set the visibility of the MenuUI externally. Done in order to not have to make 
+    /// the MainMenu panel static. This ensures that the panel has been instantiated first. 
+    /// </summary>
+    /// <param name="visibility"></param>
+    public void SetVisibilityOfMenuUI(bool visibility)
+    {
+        Debug.Log("Running Man!" +  visibility);
+        if (visibility)
+        {
+            _mainMenu.SetActive(true);
+        }
+        else
+        {
+            _mainMenu.SetActive(false);
+        }
+    }
+
+
+
 }
