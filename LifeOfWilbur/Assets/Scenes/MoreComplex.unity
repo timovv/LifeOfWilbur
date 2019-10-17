@@ -463,6 +463,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _nextSceneName
+      value: ExitScene
+      objectReference: {fileID: 0}
     - target: {fileID: 3326152707801636456, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_Tiles.Array.size
@@ -8914,15 +8919,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _nextSceneName
-      value: ExitScene
-      objectReference: {fileID: 0}
     - target: {fileID: 3492873042192759731, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4665811241993722210, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: screenShake
+      value: 
+      objectReference: {fileID: 1750998700}
+    - target: {fileID: 8110315279835208650, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: screenShake
+      value: 
+      objectReference: {fileID: 1750998700}
+    - target: {fileID: 8110315279835208650, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: duration
+      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}
@@ -9529,6 +9544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1750998699}
   - component: {fileID: 1750998698}
+  - component: {fileID: 1750998700}
   - component: {fileID: 1750998697}
   m_Layer: 0
   m_Name: Main Camera
@@ -9602,3 +9618,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1750998700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750998696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82335ddc4e43434783c501a8ebfaaf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intensity: 0.2
