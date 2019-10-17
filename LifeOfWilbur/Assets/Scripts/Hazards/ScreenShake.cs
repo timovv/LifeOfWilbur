@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//For any "death" objects - put this onto Camera and drag the camera onto Wilbur's "death" object scripts
 public class ScreenShake : MonoBehaviour
 {
-    public float _intensity; //Level of screenshake (recommend 0.1-0.3)
+    public float _intensity; //Level of screenshake (recommend 0.1-0.2)
 
     private Transform _target;
     private Vector3 _initialPosition;
-    private float _pendingShakeDuration = 0f;
+    private float _pendingShakeDuration = 0f; //Duration of shake (recommend 0.2)
     
     // Start is called before the first frame update
     void Start()
