@@ -703,7 +703,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Ol' Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -713,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._name
-      value: Ol' Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -724,7 +724,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._name
-      value: Ol' Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -741,6 +741,21 @@ PrefabInstance:
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
       value: (Press X to time travel).
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[1]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._isFuture
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -10198,16 +10213,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 139
       objectReference: {fileID: 0}
-    - target: {fileID: 8900107555855130192, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8248056718297135677, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: _pastFocusObject
@@ -10218,6 +10223,16 @@ PrefabInstance:
       propertyPath: _futureFocusObject
       value: 
       objectReference: {fileID: 573346371}
+    - target: {fileID: 8900107555855130192, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8248056718297135677, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3312714312490669827, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_textInfo.characterCount

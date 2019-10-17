@@ -84,13 +84,9 @@ public class DialogueController : MonoBehaviour
         _quoteQueue = new Queue<Quote>();
         _characterMapper = new Dictionary<string, int> {
             { "Wilbur", 1 }, //Polar bear
-            { "Ol' Wilbur", 2 },
-            { "Iris", 3 }, //Fox
-            { "Ol' Iris", 4 },
-            { "Simon", 5 }, //Tern
-            { "Ol' Simon", 6 },
-            { "Willy", 7 }, //Whale
-            { "Ol' Willy", 8}
+            { "Iris", 2 }, //Fox
+            { "Simon", 3 }, //Tern
+            { "Willy", 4 }, //Whale
         };
     }
 
@@ -154,10 +150,10 @@ public class DialogueController : MonoBehaviour
 
                 // Sets the name property and changes the image animation for the quote speaker
                 _nameTextField.text = quote._name;
-                _animator.SetBool("isWilbur", quote._name == "Cub Wilbur" || quote._name == "Adult Wilbur");
                 int characterInteger;
                 _characterMapper.TryGetValue(quote._name, out characterInteger);
                 _animator.SetInteger("characterInteger", characterInteger);
+                _animator.SetBool("isFuture", quote._isFuture);
 
                 // Sets the dialogue through the animation
                 StartCoroutine(TypeDialogueAnimation(quote._quote));
