@@ -8796,26 +8796,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4665811241993722210, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: screenShake
-      value: 
-      objectReference: {fileID: 1750998700}
-    - target: {fileID: 4665811241993722210, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: duration
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8110315279835208650, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: screenShake
-      value: 
-      objectReference: {fileID: 1750998700}
-    - target: {fileID: 8110315279835208650, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: duration
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 796918962283817531, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: _sounds.Array.size
@@ -8836,12 +8816,47 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7270992394587173862, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3678101291567379369, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7270992394587173862, guid: db3c9888a7c3f604a8f2d96854477215,
+    - target: {fileID: 4665811241993722210, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: screenShake
+      value: 
+      objectReference: {fileID: 1750998700}
+    - target: {fileID: 4665811241993722210, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: duration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110315279835208650, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: screenShake
+      value: 
+      objectReference: {fileID: 1750998700}
+    - target: {fileID: 8110315279835208650, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: duration
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473738626993622061, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473738626993622057, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6473738626659013752, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_IsActive
       value: 1
