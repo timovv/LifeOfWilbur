@@ -16,14 +16,14 @@ public class ScoreboardInit : MonoBehaviour
     void Awake()
     {
         System.Random random = new System.Random(); // For testing, removed when hooked up to rest of game
-        StartCoroutine(PostScore("Player", "74:20:10", random.Next(1, 10), random.Next(1, 10)));
+        StartCoroutine(PostScore("Player", 64.34f, random.Next(1, 10), random.Next(1, 10)));
     }
 
-    private IEnumerator PostScore(string name, string time, int attempts, int timeswaps)
+    private IEnumerator PostScore(string name, float time, int attempts, int timeswaps)
     {
         WWWForm form = new WWWForm();
         form.AddField("name", name);
-        form.AddField("time", time);
+        form.AddField("time", (int)(time * 1000));
         form.AddField("attempts", attempts);
         form.AddField("timeswaps", timeswaps);
 
@@ -73,13 +73,13 @@ public class ScoreboardInit : MonoBehaviour
         TextMeshProUGUI timeswaps = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
 
         rank.text = String.Format("#{0:D6}", entry.rank);
-        time.text = entry.time;
+        float timeSeconds = entry.time / 1000;
+        time.text = string.Format("{0:00}:{1:00}:{2:00}", (int)(timeSeconds / 60), (int)(timeSeconds % 60), (int)(timeSeconds % 1 * 100));
         attempts.text = entry.attempts.ToString();
         timeswaps.text = entry.timeswaps.ToString();
 
         if (shouldHighlight)
         {
-            Debug.Log(entry.rank);
             rank.color = _userHighlight;
             time.color = _userHighlight;
             attempts.color = _userHighlight;
@@ -115,7 +115,7 @@ struct ListEntry
 {
     public string _id;
     public string name;
-    public string time;
+    public int time;
     public int attempts;
     public int timeswaps;
     public int rank;
