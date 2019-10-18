@@ -5,9 +5,8 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 
-public class ScorePanelInit : MonoBehaviour
+public class ScoreboardInit : MonoBehaviour
 {
-    [Header("Scoreboard")]
     public Transform _container;
     public Transform _entryTemplate;
     public Color _userHighlight = new Color(1f, 0.878f, 0.212f);
