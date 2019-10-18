@@ -227,7 +227,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.size
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -289,8 +289,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: Hey Wilbur! Long time no see. I remember you coming past a long time
-        ago.
+      value: 'Long time no see Wilbur! '
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -300,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: Hey Iris! It's good to see you again. How have you been?
+      value: 'You too Iris! How have you been lately? '
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -310,18 +309,17 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
-      value: It's been rough recently. I'm looking for a new home. It's hard to find
-        a nice place to burrow where there are lots of berries.
+      value: It's not been easy...
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._name
-      value: Wilbur
+      value: Iris
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
-      value: Ah, I hope you find a nice place!
+      value: There isn't much to eat around these parts, and I'm down to my last rations...
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -331,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._quote
-      value: Thanks Wilbur! Be careful of treacherous ice ahead.
+      value: 'I think I need to find a new home. '
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -356,6 +354,81 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[5]._name
+      value: Iris
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[5]._quote
+      value: Hopefully somewhere near the *coastline.* Somewhere with more *berries!*
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[5]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[6]._name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[6]._quote
+      value: That sucks to hear...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[6]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[7]._name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[7]._quote
+      value: Oh, actually, I think I know a good place!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[7]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[8]._name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[8]._quote
+      value: I'm in a rush right now. But I'll come back afterwards to show you!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[8]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[9]._name
+      value: Iris
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[9]._quote
+      value: Sweet, catch you around Wilbur!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[9]._isFuture
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6925178747244618190, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
@@ -447,11 +520,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: caf0ff5e6b514354388ad079d5775fe2, type: 2}
-    - target: {fileID: 9206915312827703892, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09
-      objectReference: {fileID: 0}
     - target: {fileID: 4494115967980121155, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -461,6 +529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206915312827703892, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 8965429468351281808, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -786,7 +859,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.size
-      value: 6
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -857,7 +930,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: Hey! I'm Iris.
+      value: You look lost...
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -867,7 +940,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: Hey! I'm Wilbur. Nice to meet you, what kind of animal are you anyway?
+      value: Do you know where the *Polar Bear summit* is?
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -877,8 +950,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
-      value: I'm an arctic fox. My thick pelt keeps me warm in these harsh climates
-        and helps me blend in.
+      value: If I remember, it should be a little bit east from here.
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -888,7 +960,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
-      value: I'm looking for some yummy berries to eat. What about you?
+      value: 'What''s going on there? '
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -898,17 +970,67 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._quote
-      value: I'm going to the Polar Bear Summit.
+      value: Oh, I'm catching up with a few of my relatives. Nothing much.
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[5]._name
-      value: Iris
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[5]._quote
-      value: Sounds fun, good luck!
+      value: 'I''m curious... what are you? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[6]._name
+      value: Iris
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[6]._quote
+      value: I'm a *Vulpes Lagopus.* But my friends call me *Iris*.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[7]._name
+      value: Iris
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[7]._quote
+      value: 'I''m looking for some berries. Have you seen any? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[8]._name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[8]._quote
+      value: Yeah. I saw some nearby...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[9]._name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[9]._quote
+      value: I'm Wilbur by the way. I'm a little late, I'll catch you afterwards Iris!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[10]._name
+      value: Iris
+      objectReference: {fileID: 0}
+    - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[10]._quote
+      value: See you later Wilbur.
       objectReference: {fileID: 0}
     - target: {fileID: 6925178747244618190, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -999,11 +1121,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: caf0ff5e6b514354388ad079d5775fe2, type: 2}
-    - target: {fileID: 9206915312827703892, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.13
-      objectReference: {fileID: 0}
     - target: {fileID: 4494115967980121155, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1013,6 +1130,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9206915312827703892, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.13
       objectReference: {fileID: 0}
     - target: {fileID: 8965429468351281808, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -10288,6 +10410,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.91
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 148
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8285090130309482242, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -10308,6 +10445,16 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 84.883
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _pastFocusObject
+      value: 
+      objectReference: {fileID: 737893799}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _futureFocusObject
+      value: 
+      objectReference: {fileID: 1443727976}
     - target: {fileID: 8285090130309482243, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_Sprite
@@ -10379,40 +10526,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 148
-      objectReference: {fileID: 0}
-    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _pastFocusObject
-      value: 
-      objectReference: {fileID: 737893799}
-    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _futureFocusObject
-      value: 
-      objectReference: {fileID: 1443727976}
-    - target: {fileID: 5999949647324978620, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2667430984192578031, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1554369878}
+    - target: {fileID: 5999949647324978620, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}
