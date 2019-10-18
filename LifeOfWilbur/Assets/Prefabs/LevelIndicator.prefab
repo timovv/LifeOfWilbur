@@ -364,6 +364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _levelIndicatorPanel: {fileID: 807444979356029243}
+  _levelText: {fileID: 807444979016411100}
 --- !u!1 &807444979893811577
 GameObject:
   m_ObjectHideFlags: 0
