@@ -1,121 +1,122 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class ScoreboardInit : MonoBehaviour
 {
     public Transform _container;
     public Transform _entryTemplate;
     public Color _userHighlight = new Color(1f, 0.878f, 0.212f);
-    public int _scoresShown = 10;
 
-    private string ScoreboardPath => $"{Application.persistentDataPath}/scoreboard.json";
+    public string _saveScoreEndPoint = "http://localhost:3000/scores";
 
     void Awake()
     {
-        List<Entry> entries = LoadEntries();
-
-        Entry newEntry = new Entry(GameTimer.FormattedElapsedTime);
-        entries.Add(newEntry);
-        UpdateList(entries, newEntry);
-
-        SaveScores(entries);
+        System.Random random = new System.Random(); // For testing, removed when hooked up to rest of game
+        StartCoroutine(PostScore("Player", "74:20:10", random.Next(1, 10), random.Next(1, 10)));
     }
 
-    private void UpdateList(List<Entry> entries, Entry newEntry)
+    private IEnumerator PostScore(string name, string time, int attempts, int timeswaps)
     {
-        // Most of this should be on the server when implemented
-        entries.Sort();
+        WWWForm form = new WWWForm();
+        form.AddField("name", name);
+        form.AddField("time", time);
+        form.AddField("attempts", attempts);
+        form.AddField("timeswaps", timeswaps);
 
-        int userRank = entries.IndexOf(newEntry);
+        UnityWebRequest request = UnityWebRequest.Post(_saveScoreEndPoint, form);
+        request.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        request.SetRequestHeader("Accept", "application/json");
 
-        for (int i = 0; i < Math.Min(entries.Count, _scoresShown); i++)
+        yield return request.SendWebRequest();
+
+        if (request.isNetworkError || request.isHttpError)
         {
-            AddListItem("#" + (i + 1), entries[i]._time, userRank == i);
+            Debug.LogError("Error sending score: " + request.error);
+            yield break;
         }
 
-        if (userRank >= _scoresShown * 2)
-        {
-            AddListItem("...", "...", false);
-        }
-        int startIndex = Math.Max(userRank - _scoresShown / 2, _scoresShown);
-        int endIndex = Math.Min(startIndex + _scoresShown, entries.Count);
+        Scores recieved = JsonUtility.FromJson<Scores>(request.downloadHandler.text);
+        FillList(recieved);
+    }
 
-        for (int i = startIndex; i < endIndex; i++)
+    private void FillList(Scores data)
+    {
+        foreach (ListEntry entry in data.top)
         {
-            AddListItem("#" + (i + 1), entries[i]._time, userRank == i);
+            AddListItem(entry, entry._id == data.id);
+        }
+        int lastTopRank = data.top.Count;
+        if (lastTopRank < data.near[0].rank)
+        {
+            AddSpacer();
+        }
+
+        foreach (ListEntry entry in data.near)
+        {
+            if (lastTopRank < entry.rank)
+            {
+                AddListItem(entry, entry._id == data.id);
+            }
         }
     }
 
-    private void AddListItem(string posValue, string timeValue, bool isUsers)
+    private void AddListItem(ListEntry entry, bool shouldHighlight)
     {
         Transform listItem = Instantiate<Transform>(_entryTemplate, _container);
-        TextMeshProUGUI pos = listItem.GetChild(0).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI rank = listItem.GetChild(0).GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI time = listItem.GetChild(1).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI attempts = listItem.GetChild(2).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI timeswaps = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
 
-        pos.text = posValue;
-        time.text = timeValue;
+        rank.text = String.Format("#{0:D6}", entry.rank);
+        time.text = entry.time;
+        attempts.text = entry.attempts.ToString();
+        timeswaps.text = entry.timeswaps.ToString();
 
-        if (isUsers)
+        if (shouldHighlight)
         {
-            pos.color = _userHighlight;
+            Debug.Log(entry.rank);
+            rank.color = _userHighlight;
             time.color = _userHighlight;
+            attempts.color = _userHighlight;
+            timeswaps.color = _userHighlight;
         }
     }
 
-    private List<Entry> LoadEntries()
+    private void AddSpacer()
     {
-        // Change to a get request
-        if (!File.Exists(ScoreboardPath))
-        {
-            File.Create(ScoreboardPath).Dispose();
-            return new List<Entry>();
-        }
+        Transform listItem = Instantiate<Transform>(_entryTemplate, _container);
+        TextMeshProUGUI rank = listItem.GetChild(0).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI time = listItem.GetChild(1).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI attempts = listItem.GetChild(2).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI timeswaps = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
 
-        using (StreamReader stream = new StreamReader(ScoreboardPath))
-        {
-            string contents = stream.ReadToEnd();
-            return JsonUtility.FromJson<ListWrapper>(contents)._entries;
-        }
-    }
-
-    private void SaveScores(List<Entry> entries)
-    {
-        // Change to POSTing a single score
-        using (StreamWriter stream = new StreamWriter(ScoreboardPath))
-        {
-            string output = JsonUtility.ToJson(new ListWrapper(entries), true);
-            stream.Write(output);
-        }
-    }
-}
-
-struct ListWrapper
-{
-    public List<Entry> _entries;
-
-    public ListWrapper(List<Entry> entries)
-    {
-        _entries = entries;
+        rank.text = "--------";
+        time.text = "--------";
+        attempts.text = "----";
+        timeswaps.text = "----";
     }
 }
 
 [Serializable]
-struct Entry : IComparable
+struct Scores
 {
-    public string _time;
+    public string id;
+    public List<ListEntry> top;
+    public List<ListEntry> near;
+}
 
-    public Entry(string time)
-    {
-        _time = time;
-    }
-
-    int IComparable.CompareTo(object obj)
-    {
-        Entry other = (Entry)obj;
-        return _time.CompareTo(other._time);
-    }
+[Serializable]
+struct ListEntry
+{
+    public string _id;
+    public string name;
+    public string time;
+    public int attempts;
+    public int timeswaps;
+    public int rank;
 }
