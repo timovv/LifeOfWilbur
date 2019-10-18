@@ -68,6 +68,8 @@ public class DialogueController : MonoBehaviour
     public Transform _futureFocusObject;
     public Transform _pastFocusObject;
 
+    private bool _isBold;
+
     // Singleton design pattern used for DialogueManager because only one dialogueWindow can be open at a time
     void Awake()
     {
@@ -125,6 +127,8 @@ public class DialogueController : MonoBehaviour
         TimeTravelController.TimeTravelDisabled = true; // disable Time Travel
         LevelReset.ResetDisabled = true; // disable resetting level
         Physics2D.autoSimulation = false; // disable physics
+
+        _isBold = false;
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
@@ -187,7 +191,26 @@ public class DialogueController : MonoBehaviour
         {
             if (_textAnimating == true)
             {
-                _dialogueTextField.text += character;
+                if (character == '*')
+                {
+                    _isBold = !_isBold;
+                    if (_isBold == true)
+                    {
+                        _dialogueTextField.text += "<b></b>";
+                    }
+                }
+                else
+                {
+                    if (_isBold)
+                    {
+                        _dialogueTextField.text = _dialogueTextField.text.Substring(0, _dialogueTextField.text.Length - 4);
+                        _dialogueTextField.text += character + "</b>";
+                    }
+                    else
+                    {
+                        _dialogueTextField.text += character;
+                    }
+                }
                 yield return null;
             }
             else
