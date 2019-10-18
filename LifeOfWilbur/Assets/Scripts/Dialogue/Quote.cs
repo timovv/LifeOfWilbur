@@ -22,4 +22,8 @@ public class Quote {
     [TextArea(3, 5)]
     public string _quote;
 
+    /// <summary>
+    /// Represents whether the speaker is a future character. If false, it means speaker is past character
+    /// </summary>
+    public bool _isFuture;
 }

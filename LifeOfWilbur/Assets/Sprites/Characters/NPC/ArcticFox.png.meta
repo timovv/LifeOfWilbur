@@ -163,7 +163,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 48
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -172,7 +172,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e54a38468c138f46aa6fa83be0fed4c
+      spriteID: cb474c94f7dd0bd45ad3f178489f0cb4
       internalID: -6364162845145023018
       vertices: []
       indices: 
@@ -182,9 +182,9 @@ TextureImporter:
       name: ArcticFox_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 32
         y: 48
-        width: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -193,7 +193,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c50e24600127ce543a7eed2655d41b0f
+      spriteID: ac383b8798b014642a540efe36407388
       internalID: -5989422508411284737
       vertices: []
       indices: 
@@ -203,9 +203,9 @@ TextureImporter:
       name: ArcticFox_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 48
-        width: 16
+        x: 0
+        y: 32
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -214,7 +214,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42ed7c92a2db7c54593c8b5d7ecf6a6b
+      spriteID: 257fce95ef394b74caa639d09b33728d
       internalID: -1834708625087808189
       vertices: []
       indices: 
@@ -224,9 +224,9 @@ TextureImporter:
       name: ArcticFox_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 48
-        width: 16
+        x: 32
+        y: 32
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -235,7 +235,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79f08692ee57deb45b9d6174647e5cd7
+      spriteID: 316c5f3bba903f8488aa9005ee7d76f9
       internalID: -1735666741110477164
       vertices: []
       indices: 
@@ -246,8 +246,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 16
+        y: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -256,7 +256,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4765e497b8e0164bac09c1456966533
+      spriteID: 98e1bd7b157ee3243bcc9f43a3c51abf
       internalID: 5606885272227756772
       vertices: []
       indices: 
@@ -266,9 +266,9 @@ TextureImporter:
       name: ArcticFox_5
       rect:
         serializedVersion: 2
-        x: 16
-        y: 32
-        width: 16
+        x: 32
+        y: 16
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -277,7 +277,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 698e9d0909108b9409278c0030fdcca4
+      spriteID: 4e61b7420eca92541a72f5cb584eed59
       internalID: 4740249572954675758
       vertices: []
       indices: 
@@ -287,9 +287,9 @@ TextureImporter:
       name: ArcticFox_6
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 16
+        x: 0
+        y: 0
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -298,7 +298,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a718e52fc897f174bba2869b894eaca8
+      spriteID: b0ec195ee2e522742997ffdb703ed50e
       internalID: 5981902976032564874
       vertices: []
       indices: 
@@ -308,72 +308,9 @@ TextureImporter:
       name: ArcticFox_7
       rect:
         serializedVersion: 2
-        x: 48
-        y: 32
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 447087733f4069f419b0bd4cddaccd78
-      internalID: -1763074772617966438
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArcticFox_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3c911ddd929976044a37339f011bbe36
-      internalID: 2623340788500923062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArcticFox_9
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6c6e7580006a4f34db24a7f51941cbec
-      internalID: 6837016260697285933
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArcticFox_10
-      rect:
-        serializedVersion: 2
         x: 32
-        y: 16
-        width: 16
+        y: 0
+        width: 32
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -382,29 +319,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b6a647d59e32584eacd783787251f45
-      internalID: -5681123391302521774
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ArcticFox_11
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f05d9ebe007cab141af7c5168c5ba697
-      internalID: 1902568710893299547
+      spriteID: ade23fd1f6bf0b74fb5572fd9716fa2e
+      internalID: -1763074772617966438
       vertices: []
       indices: 
       edges: []

@@ -221,6 +221,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &435846028 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4901476925389819091, guid: db3c9888a7c3f604a8f2d96854477215,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853066713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &447625517
 GameObject:
   m_ObjectHideFlags: 0
@@ -411,6 +417,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &573346371 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 431643523120659331, guid: db3c9888a7c3f604a8f2d96854477215,
+    type: 3}
+  m_PrefabInstance: {fileID: 1853066713}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &681508470
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +656,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -691,33 +703,32 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Adult Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: That was a good nap... oh bother, I've overslept!
+      value: Uh oh... I think I overslept.
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._name
-      value: Adult Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: I have to get to the Polar Bear Summit. I should get going quickly or
-        I'll be late.
+      value: I hope I'm not late for today's *Polar Bear summit* meeting.
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._name
-      value: Adult Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
-      value: I remember making the same journey 10 years ago. It was a lot cooler
+      value: I remember making the same journey 10 years ago. It was a lot *colder*
         back then, I could even wear a scarf.
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
@@ -730,10 +741,25 @@ PrefabInstance:
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
       value: (Press X to time travel).
       objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[1]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -823,7 +849,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -858,37 +884,37 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Cub Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: Oh boy, it's time for the Polar Bear Summit meeting!
+      value: 'Did mum leave without me? '
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._name
-      value: Cub Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: I can't wait to meet up with my friends.
+      value: I hope I'm not late for the meeting...
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._name
-      value: Cub Wilbur
+      value: Wilbur
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
-      value: I better get going!
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -10176,10 +10202,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 139
+      objectReference: {fileID: 0}
     - target: {fileID: 6408474851507683711, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8900107555855130192, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10191,6 +10222,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _pastFocusObject
+      value: 
+      objectReference: {fileID: 435846028}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _futureFocusObject
+      value: 
+      objectReference: {fileID: 573346371}
     - target: {fileID: 3312714312490669827, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_textInfo.characterCount

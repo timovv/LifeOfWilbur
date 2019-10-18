@@ -63,6 +63,13 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private bool _textAnimating;
 
+    //DialogCamera object
+    private DialogCamera _dialogCamera;
+    public Transform _futureFocusObject;
+    public Transform _pastFocusObject;
+
+    private bool _isBold;
+
     // Singleton design pattern used for DialogueManager because only one dialogueWindow can be open at a time
     void Awake()
     {
@@ -72,12 +79,16 @@ public class DialogueController : MonoBehaviour
     // Populates the dictionary with the preset mappings of character to integers.
     public void Start()
     {
+        //Create main camera dialog object with object of focus
+        _dialogCamera = gameObject.AddComponent<DialogCamera>();
+        _dialogCamera.initialize(_futureFocusObject, _pastFocusObject);
+
         _quoteQueue = new Queue<Quote>();
         _characterMapper = new Dictionary<string, int> {
-            { "Cub Wilbur", 1 },
-            { "Adult Wilbur", 2 },
-            { "Young Iris", 3 },
-            { "Old Iris", 4 }
+            { "Wilbur", 1 }, //Polar bear
+            { "Iris", 2 }, //Fox
+            { "Simon", 3 }, //Tern
+            { "Willy", 4 }, //Whale
         };
     }
 
@@ -93,12 +104,13 @@ public class DialogueController : MonoBehaviour
     // Adds all quotes to the queue and opens dialogueWindow
     public void StartDialogue(Dialogue dialogue)
     {
+        _dialogCamera.ZoomInFocus();
+
         _quoteQueue.Clear();
         foreach (Quote quote in dialogue._quoteList)
         {
             _quoteQueue.Enqueue(quote);
         }
-
         StartCoroutine(StartDialogueRoutine(dialogue));
     }
 
@@ -116,6 +128,8 @@ public class DialogueController : MonoBehaviour
         LevelReset.ResetDisabled = true; // disable resetting level
         Physics2D.autoSimulation = false; // disable physics
 
+        _isBold = false;
+
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
         _continueButtonTextField.text = "Press C to continue";
@@ -127,6 +141,7 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     public void DisplayNextSentence()
     {
+        _isBold = false;
         if (_textAnimating)
         {
             // If already printing a line then sets it to false - this makes TypeDialogueAnimation routine print entire line
@@ -140,10 +155,10 @@ public class DialogueController : MonoBehaviour
 
                 // Sets the name property and changes the image animation for the quote speaker
                 _nameTextField.text = quote._name;
-                _animator.SetBool("isWilbur", quote._name == "Cub Wilbur" || quote._name == "Adult Wilbur");
                 int characterInteger;
                 _characterMapper.TryGetValue(quote._name, out characterInteger);
                 _animator.SetInteger("characterInteger", characterInteger);
+                _animator.SetBool("isFuture", quote._isFuture);
 
                 // Sets the dialogue through the animation
                 StartCoroutine(TypeDialogueAnimation(quote._quote));
@@ -177,13 +192,53 @@ public class DialogueController : MonoBehaviour
         {
             if (_textAnimating == true)
             {
-                _dialogueTextField.text += character;
+                if (character == '*')
+                {
+                    _isBold = !_isBold;
+                    if (_isBold == true)
+                    {
+                        _dialogueTextField.text += "<b></b>";
+                    }
+                }
+                else
+                {
+                    if (_isBold)
+                    {
+                        _dialogueTextField.text = _dialogueTextField.text.Substring(0, _dialogueTextField.text.Length - 4);
+                        _dialogueTextField.text += character + "</b>";
+                    }
+                    else
+                    {
+                        _dialogueTextField.text += character;
+                    }
+                }
                 yield return null;
             }
             else
             {
                 // If _textAnimating variable set to false, will print the entire line at once and end animation
-                _dialogueTextField.text = text;
+                string formattedText = "";
+                _isBold = false;
+                foreach (char fullTextCharacter in text.ToCharArray())
+                {
+                    if (fullTextCharacter == '*')
+                    {
+                        if (_isBold)
+                        {
+                            formattedText += "</b>";
+                        }
+                        else
+                        {
+                            formattedText += "<b>";
+                        }
+                        _isBold = !_isBold;
+                    }
+                    else
+                    {
+                        formattedText += fullTextCharacter;
+                    }
+                }
+                _dialogueTextField.text = formattedText;
                 break;
             }
         }
@@ -195,6 +250,8 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private void EndDialogue()
     {
+        _dialogCamera.ZoomOutFocus();
+
         CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
         LevelReset.ResetDisabled = false; // enable resetting level
