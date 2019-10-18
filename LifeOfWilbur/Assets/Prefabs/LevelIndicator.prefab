@@ -264,6 +264,7 @@ GameObject:
   - component: {fileID: 807444979690637672}
   - component: {fileID: 807444979690637675}
   - component: {fileID: 7844303752475719681}
+  - component: {fileID: 907079261736611266}
   m_Layer: 5
   m_Name: LevelIndicator
   m_TagString: Untagged
@@ -365,6 +366,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _levelIndicatorPanel: {fileID: 807444979356029243}
   _levelText: {fileID: 807444979016411100}
+  _canvasGroup: {fileID: 907079261736611266}
+--- !u!225 &907079261736611266
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807444979690637674}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &807444979893811577
 GameObject:
   m_ObjectHideFlags: 0
