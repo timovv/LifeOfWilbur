@@ -7,15 +7,6 @@ using UnityEngine.UI;
 
 public class ExitMenu : MonoBehaviour
 {
-    public TextMeshProUGUI _timeText;
-    
-    
-    void Start()
-    {
-        //Set the time text as soon as the the scene gets loaded.
-        _timeText.SetText("Your time is: " + GameTimer.FormattedElapsedTime); 
-    }
-    
     /// <summary>
     /// Method call for the 'Play Again' button. Reloads the first screen in the build queue. It loads the Menu Screen.
     /// </summary>
