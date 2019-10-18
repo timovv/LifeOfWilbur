@@ -141,6 +141,7 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     public void DisplayNextSentence()
     {
+        _isBold = false;
         if (_textAnimating)
         {
             // If already printing a line then sets it to false - this makes TypeDialogueAnimation routine print entire line
@@ -216,7 +217,28 @@ public class DialogueController : MonoBehaviour
             else
             {
                 // If _textAnimating variable set to false, will print the entire line at once and end animation
-                _dialogueTextField.text = text;
+                string formattedText = "";
+                _isBold = false;
+                foreach (char fullTextCharacter in text.ToCharArray())
+                {
+                    if (fullTextCharacter == '*')
+                    {
+                        if (_isBold)
+                        {
+                            formattedText += "</b>";
+                        }
+                        else
+                        {
+                            formattedText += "<b>";
+                        }
+                        _isBold = !_isBold;
+                    }
+                    else
+                    {
+                        formattedText += fullTextCharacter;
+                    }
+                }
+                _dialogueTextField.text = formattedText;
                 break;
             }
         }
