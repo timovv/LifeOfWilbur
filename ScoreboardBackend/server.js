@@ -18,10 +18,13 @@ app.listen(port);
 
 //Debug
 Score.deleteMany({}).then(function () {
-  for (var i = 0; i < 10; i += 2) {
-    new Score({ name: '0' + i, time: '0' + i, attempts: 0, timeswaps: 0 }).save();
-  }
-  for (var i = 10; i < 100; i += 2) {
-    new Score({ name: '' + i, time: '' + i, attempts: 0, timeswaps: 0 }).save();
+  for (var i = 0; i < 1300; i++) {
+    new Score({ name: '62', time: i * 600, attempts: i % 30, timeswaps: i % 40 }).save();
+    if (i > 300) new Score({ name: '62', time: i * 600, attempts: i % 55, timeswaps: i % 55 }).save();
+    if (i > 600) new Score({ name: '62', time: i * 600, attempts: i % 55, timeswaps: i % 55 }).save();
+    if (i > 900) new Score({ name: '62', time: i * 600, attempts: i % 55, timeswaps: i % 55 }).save();
+    if (i > 1200) new Score({ name: '62', time: i * 600, attempts: i % 55, timeswaps: i % 55 }).save();
+    if (i > 1300) new Score({ name: '62', time: i * 600, attempts: i % 55, timeswaps: i % 55 }).save();
+
   }
 });

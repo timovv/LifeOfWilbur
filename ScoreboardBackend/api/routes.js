@@ -3,4 +3,7 @@ module.exports = function (app) {
 
   app.route('/scores')
     .post(controller.submitScore);
+
+  app.route('/scores/graph/:field')
+    .get(controller.getGraphData);
 };
