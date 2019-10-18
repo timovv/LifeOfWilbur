@@ -16,23 +16,8 @@ public class LevelIndicator : MonoBehaviour
         //_animator.SetBool("IsHidden", false);
     }
 
-   public void Hide()
-    {
-        Debug.Log("Hide Run");
-       // _animator.SetBool("IsHidden", true);
-    }
-
-
-    public void HidePanel()
-    {
-        Debug.Log("Hide Panel Run");
-        //StartCoroutine(WaitAndHidePanel());
-    }
-
-
     public IEnumerator WaitAndHidePanel()
     {
-        Debug.Log("Hide wait");
         yield return new WaitForSeconds(15);
         _levelIndicatorPanel.SetActive(false);
     }
