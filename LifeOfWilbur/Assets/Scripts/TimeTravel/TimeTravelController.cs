@@ -78,7 +78,7 @@ public class TimeTravelController : MonoBehaviour
 
         _isTransitioning = true;
 
-        var fadeInOut = GetComponent<LevelTransitionController>();
+        var fadeInOut = GetComponent<TransitionController>();
         // 1. If we are going to the future, save the state of all time travelling objects; if we are going to the future, restore them.
         if (transitioningToPast)
         {

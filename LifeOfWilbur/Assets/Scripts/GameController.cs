@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 /// <summary>
 /// Singleton that manages game state.
 /// </summary>
-[RequireComponent(typeof(LevelTransitionController))]
+[RequireComponent(typeof(TransitionController))]
 [RequireComponent(typeof(TimeTravelController))]
 [RequireComponent(typeof(LevelReset))]
 public class GameController : MonoBehaviour
@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         GetComponent<TimeTravelController>().enabled = false;
-        GetComponent<LevelTransitionController>().enabled = true;
+        GetComponent<TransitionController>().enabled = true;
 
         SceneManager.activeSceneChanged += OnSceneLoad;
     }
@@ -58,16 +58,16 @@ public class GameController : MonoBehaviour
         if(CurrentGameMode.IsInGame())
         {
             _movingToNextLevel = false;
-            StartCoroutine(GetComponent<LevelTransitionController>().FadeInFromBlackCoroutine());
+            StartCoroutine(GetComponent<TransitionController>().FadeInFromBlackCoroutine());
             GetComponent<TimeTravelController>().enabled = true;
             GetComponent<TimeTravelController>().RegisterGameObjects();
             GetComponent<TimeTravelController>().UpdateTimeTravelState(true);
-            GetComponent<LevelTransitionController>().enabled = true;
+            GetComponent<TransitionController>().enabled = true;
         }
         else
         {
             GetComponent<TimeTravelController>().enabled = false;
-            GetComponent<LevelTransitionController>().enabled = false;
+            GetComponent<TransitionController>().enabled = false;
         }
     }
 
@@ -93,7 +93,7 @@ public class GameController : MonoBehaviour
     private IEnumerator DoTimeTravelWithEffect()
     {
         _isTimeTravelling = true;
-        var transitionController = GetComponent<LevelTransitionController>();
+        var transitionController = GetComponent<TransitionController>();
         var timeTravelController = GetComponent<TimeTravelController>();
         yield return StartCoroutine(transitionController.FadeOutToBlack());
         yield return StartCoroutine(timeTravelController.UpdateTimeTravelState(!TimeTravelController.IsInPast));
@@ -157,7 +157,7 @@ public class GameController : MonoBehaviour
 
         _movingToNextLevel = true;
 
-        yield return StartCoroutine(GetComponent<LevelTransitionController>().FadeOutToBlack());
+        yield return StartCoroutine(GetComponent<TransitionController>().FadeOutToBlack());
 
         if (_levelIterator.MoveNext())
         {
@@ -168,7 +168,7 @@ public class GameController : MonoBehaviour
         {
             // Going to menu.
             GetComponent<TimeTravelController>().enabled = false;
-            GetComponent<LevelTransitionController>().enabled = false;
+            GetComponent<TransitionController>().enabled = false;
             CurrentGameMode = GameMode.NotInGame;
 
             SceneManager.LoadScene(END_SCENE_NAME);

@@ -11,7 +11,7 @@ using UnityEngine.UI;
 /// that allows for it to be faded in and out as needed to support level transitions.
 /// </summary>
 [RequireComponent(typeof(RawImage))]
-public class LevelTransitionController : MonoBehaviour
+public class TransitionController : MonoBehaviour
 {
     /// <summary>
     /// How long in seconds it should take for the fade transition to occur.
