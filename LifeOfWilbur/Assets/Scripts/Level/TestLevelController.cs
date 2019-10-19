@@ -22,7 +22,7 @@ public class TestLevelController : MonoBehaviour, ILevelController
         }
     }
 
-    public void NextLevel()
+    public void NextRoom()
     {
         Debug.Log("If this was a real playthrough, you would have completed this level!");
     }

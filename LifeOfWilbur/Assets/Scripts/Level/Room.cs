@@ -1,6 +1,11 @@
-﻿public struct Room
+﻿using System;
+
+[Serializable]
+public struct Room
 {
-    public int _roomNumber;
+    public string _readableName;
 
     public string _sceneName;
+
+    public bool _playInSpeedRunMode;
 }

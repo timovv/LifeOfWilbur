@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,24 +23,10 @@ public class GameController : MonoBehaviour, ILevelController
 
     // TODO(timo): I have defined Level and Room structs for this stuff, so can use that stuff in here.
     // Those structs can also be used for level information prompts etc
-    private readonly IReadOnlyDictionary<GameMode, List<string>> GAME_MODE_LEVELS = new Dictionary<GameMode, List<string>>
-    {
-        [GameMode.Story] = new List<string> 
-        {
-            "Level1_1",
-            "Level1_2",
-            "Level1_3",
-            "Level1_4",
-            "Level1_5",
-        },
-        [GameMode.SpeedRun] = new List<string>
-        {
-            "Level1_1",
-            "Level1_2",
-        },
-    };
+    public Level[] _levels;
 
-    private IEnumerator<string> _levelIterator;
+    private IEnumerator<Level> _levelEnumerator;
+    private IEnumerator<Room> _roomEnumerator;
 
     private bool _movingToNextLevel = false;
     private bool _resettingLevel;
@@ -48,7 +35,6 @@ public class GameController : MonoBehaviour, ILevelController
     /// The current game mode.
     /// </summary>
     public GameMode CurrentGameMode { get; private set; } = GameMode.NotInGame;
-    public string CurrentSceneName { get { return _levelIterator.Current; } }
 
     void Awake()
     {
@@ -74,7 +60,7 @@ public class GameController : MonoBehaviour, ILevelController
             }
             GetComponent<TimeTravelController>().enabled = true;
             GetComponent<TransitionController>().enabled = true;
-            StartCoroutine(FindObjectOfType<LevelIndicator>().SetUpPanel("Level X-X"));
+            StartCoroutine(FindObjectOfType<LevelIndicator>().SetUpPanel(_roomEnumerator.Current._readableName));
         }
         else
         {
@@ -96,8 +82,8 @@ public class GameController : MonoBehaviour, ILevelController
         }
 
         CurrentGameMode = gameMode;
-        _levelIterator = GAME_MODE_LEVELS[gameMode].GetEnumerator();
-        NextLevel();
+        ResetRoomEnumerators();
+        NextRoom();
     }
 
     public void StartGameAt(GameMode gameMode, string sceneName)
@@ -109,11 +95,11 @@ public class GameController : MonoBehaviour, ILevelController
 
         CurrentGameMode = gameMode;
 
-        _levelIterator = GAME_MODE_LEVELS[gameMode].GetEnumerator();
+        ResetRoomEnumerators();
 
-        while(_levelIterator.MoveNext())
+        while(AdvanceRoomEnumerators())
         {
-            if(_levelIterator.Current == sceneName)
+            if(_roomEnumerator.Current._sceneName == sceneName)
             {
                 SceneManager.LoadScene(sceneName);
                 return;
@@ -124,12 +110,38 @@ public class GameController : MonoBehaviour, ILevelController
         throw new ArgumentException(nameof(sceneName));
     }
 
-    public void NextLevel()
+    private void ResetRoomEnumerators()
     {
-        StartCoroutine(NextLevelCoroutine());
+        _levelEnumerator = ((IEnumerable<Level>)_levels).GetEnumerator();
+        _levelEnumerator.MoveNext();
+        _roomEnumerator = ((IEnumerable<Room>)_levelEnumerator.Current._rooms)
+            .Where(x => x._playInSpeedRunMode || CurrentGameMode == GameMode.Story)
+            .GetEnumerator();
     }
 
-    private IEnumerator NextLevelCoroutine()
+    private bool AdvanceRoomEnumerators()
+    {
+        if(_roomEnumerator.MoveNext())
+        {
+            return true;
+        }
+        else if(_levelEnumerator.MoveNext())
+        {
+            _roomEnumerator = ((IEnumerable<Room>)_levelEnumerator.Current._rooms)
+                .Where(x => x._playInSpeedRunMode || CurrentGameMode == GameMode.Story)
+                .GetEnumerator();
+            return true;
+        }
+
+        return false;
+    }
+
+    public void NextRoom()
+    {
+        StartCoroutine(NextRoomCoroutine());
+    }
+
+    private IEnumerator NextRoomCoroutine()
     {
         if (_movingToNextLevel || _resettingLevel)
         {
@@ -142,10 +154,10 @@ public class GameController : MonoBehaviour, ILevelController
 
         yield return StartCoroutine(GetComponent<TransitionController>().FadeOutToBlack());
 
-        if (_levelIterator.MoveNext())
+        if(AdvanceRoomEnumerators())
         {
-            Debug.Log($"Loading level: ${_levelIterator.Current}");
-            SceneManager.LoadScene(_levelIterator.Current);
+            Debug.Log($"Loading room: ${_roomEnumerator.Current}");
+            SceneManager.LoadScene(_roomEnumerator.Current._sceneName);
         }
         else
         {
@@ -174,7 +186,7 @@ public class GameController : MonoBehaviour, ILevelController
         Resets++;
 
         yield return StartCoroutine(GetComponent<TransitionController>().FadeOutToBlack());
-        SceneManager.LoadScene(_levelIterator.Current);
+        SceneManager.LoadScene(_roomEnumerator.Current._sceneName);
 
     }
 
