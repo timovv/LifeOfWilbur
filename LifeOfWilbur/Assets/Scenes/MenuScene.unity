@@ -3162,6 +3162,12 @@ MonoBehaviour:
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
+  - _name: ButtonHover
+    _clip: {fileID: 8300000, guid: 8f95474d6ff4d0247a2c862967e2fee9, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
 --- !u!4 &2082318516
 Transform:
   m_ObjectHideFlags: 0

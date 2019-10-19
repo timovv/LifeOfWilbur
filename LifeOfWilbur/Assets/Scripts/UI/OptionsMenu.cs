@@ -64,14 +64,17 @@ public class OptionsMenu : MonoBehaviour
             //Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
             Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalkTrimmed");
             Sound s1 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "DeathSFX");
+            Sound s2 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "ButtonHover");
 
             //Update the field in the sound object
             s._volume = volume;
             s1._volume = volume;
+            s2._volume = volume;
 
             //Update the source of the audio
             s.source.volume = s._volume;
             s1.source.volume = s1._volume;
+            s2.source.volume = s2._volume;
 
             //Set the field to the slider volume
             _sfxVolume = volume;
