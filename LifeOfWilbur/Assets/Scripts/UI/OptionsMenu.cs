@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
@@ -16,7 +15,7 @@ public class OptionsMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //Resume real time and Gamer time
-            Time.timeScale = 1f; 
+            Time.timeScale = 1f;
             GameTimer.Paused = false;
 
             //Hide the opttions UI and show the Pause Panel
@@ -44,11 +43,11 @@ public class OptionsMenu : MonoBehaviour
             //Update the source of the audio
             s.source.volume = s._volume;
         }
-        catch(NullReferenceException e)
+        catch (NullReferenceException e)
         {
             Debug.LogWarning("Sound Source not loaded correctly!: " + e);
         }
-        
+
 
     }
 
@@ -81,10 +80,7 @@ public class OptionsMenu : MonoBehaviour
         {
             Debug.LogWarning("Sound Source not loaded correctly!: " + e);
         }
-        
-
     }
-
 
     /// <summary>
     /// Getter to get the instance of the OptionsUI
@@ -95,7 +91,6 @@ public class OptionsMenu : MonoBehaviour
         //TODO: Can potentially delete, as it might not be being used.
         return _optionMenuUI;
     }
-
 
     /// <summary>
     /// Sets the visibiility of the Options Menu, this is done as a method to ensure that the 
@@ -116,7 +111,4 @@ public class OptionsMenu : MonoBehaviour
             _optionMenuUI.SetActive(visibility);
         }
     }
-
-
-
 }

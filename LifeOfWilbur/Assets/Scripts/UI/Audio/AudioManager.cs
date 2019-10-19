@@ -13,15 +13,17 @@ public class AudioManager : MonoBehaviour
     {
         //Adopting the singleton pattern for the AudioManger, since you don't want 
         //the sound cutting of and new instances of the same sound being created, on scene change.
-        if(_instance == null)
+        if (_instance == null)
         {
             _instance = this;
-        }else {
+        }
+        else
+        {
             Destroy(gameObject);
             return;
         }
 
-        DontDestroyOnLoad(gameObject); 
+        DontDestroyOnLoad(gameObject);
 
         //Iterating through all the sounds and assigning their attributes to the source values.
         foreach (Sound s in _sounds)
@@ -33,12 +35,7 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s._volume;
             s.source.loop = s._loop;
         }
-
-
-
-
     }
-
 
     void Start()
     {
@@ -61,28 +58,23 @@ public class AudioManager : MonoBehaviour
             {
                 s.source.Play();
             }
-            
-        }catch(NullReferenceException e){
+        }
+        catch (NullReferenceException e)
+        {
             Debug.LogWarning("Sound " + name + " not found!");
             return;
         }
-        
     }
-
 
     public void Pause(string name)
     {
         try
         {
-            Debug.Log("Pause Called on name: " + name);
             //Try to find the sound from its given name, and play it. 
             Sound s = Array.Find(_sounds, sound => sound._name == name);
-            Debug.Log("Is Media Playing? : " + s.source.isPlaying);
             if (s.source.isPlaying)
             {
-                Debug.Log("Pausing!!! " + s._name);
                 s.source.Stop();
-                Debug.Log("After Stopiing");
             }
 
         }
@@ -93,13 +85,11 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
     public void PlayWalking(string name)
     {
         RandomisePitch(name);
         Play(name);
     }
-
 
     private void RandomisePitch(string name)
     {
@@ -109,5 +99,4 @@ public class AudioManager : MonoBehaviour
         s.source.pitch = s._pitch;
 
     }
-
 }
