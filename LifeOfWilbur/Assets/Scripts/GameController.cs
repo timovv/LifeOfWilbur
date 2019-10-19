@@ -15,6 +15,11 @@ public class GameController : MonoBehaviour, ILevelController
     private const string MENU_SCENE_NAME = "MainMenu";
     private const string END_SCENE_NAME = "ExitScene";
 
+    /// <summary>
+    /// Value indicating number of resets/deaths/attempts.
+    /// </summary>
+    public static int Resets { get; private set; }
+
     // TODO(timo): I have defined Level and Room structs for this stuff, so can use that stuff in here.
     // Those structs can also be used for level information prompts etc
     private readonly IReadOnlyDictionary<GameMode, List<string>> GAME_MODE_LEVELS = new Dictionary<GameMode, List<string>>
@@ -155,6 +160,7 @@ public class GameController : MonoBehaviour, ILevelController
 
     public void ResetLevel()
     {
+        Resets++;
         StartCoroutine(ResetLevelCoroutine());
     }
 

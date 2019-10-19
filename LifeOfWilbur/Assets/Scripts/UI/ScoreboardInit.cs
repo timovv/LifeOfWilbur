@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -15,20 +16,21 @@ public class ScoreboardInit : MonoBehaviour
 
     void Awake()
     {
-        System.Random random = new System.Random(); // For testing, removed when hooked up to rest of game
-        StartCoroutine(PostScore("Player", 64.34f, random.Next(1, 10), random.Next(1, 10)));
+        NewScore score = new NewScore {
+            name = "P",
+            time = GameTimer.ElapsedTimeSeconds,
+            attempts = GameController.Resets,
+            timeswaps = TimeTravelController.Timeswaps
+        };
+        StartCoroutine(PostScore(score));
     }
 
-    private IEnumerator PostScore(string name, float time, int attempts, int timeswaps)
+    private IEnumerator PostScore(NewScore score)
     {
-        WWWForm form = new WWWForm();
-        form.AddField("name", name);
-        form.AddField("time", (int)(time * 1000));
-        form.AddField("attempts", attempts);
-        form.AddField("timeswaps", timeswaps);
-
-        UnityWebRequest request = UnityWebRequest.Post(_saveScoreEndPoint, form);
-        request.SetRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        byte[] data = Encoding.UTF8.GetBytes(JsonUtility.ToJson(score));
+        UnityWebRequest request = UnityWebRequest.Post(_saveScoreEndPoint, "");
+        request.uploadHandler = new UploadHandlerRaw(data);
+        request.SetRequestHeader("Content-Type", "application/json");
         request.SetRequestHeader("Accept", "application/json");
 
         yield return request.SendWebRequest();
@@ -73,8 +75,7 @@ public class ScoreboardInit : MonoBehaviour
         TextMeshProUGUI timeswaps = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
 
         rank.text = String.Format("#{0:D6}", entry.rank);
-        float timeSeconds = entry.time / 1000;
-        time.text = string.Format("{0:00}:{1:00}:{2:00}", (int)(timeSeconds / 60), (int)(timeSeconds % 60), (int)(timeSeconds % 1 * 100));
+        time.text = GameTimer.FormatTime(entry.time);
         attempts.text = entry.attempts.ToString();
         timeswaps.text = entry.timeswaps.ToString();
 
@@ -99,6 +100,23 @@ public class ScoreboardInit : MonoBehaviour
         time.text = "--------";
         attempts.text = "----";
         timeswaps.text = "----";
+    }
+}
+
+[Serializable]
+struct NewScore
+{
+    public string name;
+    public float time;
+    public int attempts;
+    public int timeswaps;
+
+    public NewScore(string name, float time, int attempts, int timeswaps)
+    {
+        this.name = name;
+        this.time = time;
+        this.attempts = attempts;
+        this.timeswaps = timeswaps;
     }
 }
 
