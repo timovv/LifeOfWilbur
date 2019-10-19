@@ -17,7 +17,8 @@ public class TestLevelController : MonoBehaviour, ILevelController
         else
         {
             StartCoroutine(GetComponent<TransitionController>().FadeInFromBlack());
-            GetComponent<TimeTravelController>().UpdateTimeTravelState(true);
+            StartCoroutine(GetComponent<TimeTravelController>().UpdateTimeTravelState(true));
+            FindObjectOfType<LevelIndicator>().TogglePanelVisibility(false);
         }
     }
 

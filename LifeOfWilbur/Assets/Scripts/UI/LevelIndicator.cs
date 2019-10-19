@@ -11,8 +11,7 @@ public class LevelIndicator : MonoBehaviour
     public TextMeshProUGUI _levelText;
     public CanvasGroup _canvasGroup;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         //Ensure that the panel is activated and is visible at startup
         _levelIndicatorPanel.SetActive(true);
@@ -38,6 +37,7 @@ public class LevelIndicator : MonoBehaviour
 
     public IEnumerator SetUpPanel(string levelText)
     {
+        Debug.Log("Setup Panel called!");
         SetLevelText(levelText); //Preset the text for the levels
         yield return new WaitForSeconds(13); //Display the text for a bit and then start the fade and the hiding of the panel
         StartCoroutine(StartFade());
@@ -63,6 +63,13 @@ public class LevelIndicator : MonoBehaviour
     private void SetLevelText(string levelText)
     {
         _levelText.SetText(levelText);
+    }
+
+
+    public void TogglePanelVisibility(bool value)
+    {
+        Debug.Log("Visibility called");
+        _levelIndicatorPanel.SetActive(value);
     }
 
 }

@@ -69,6 +69,7 @@ public class GameController : MonoBehaviour, ILevelController
             }
             GetComponent<TimeTravelController>().enabled = true;
             GetComponent<TransitionController>().enabled = true;
+            StartCoroutine(FindObjectOfType<LevelIndicator>().SetUpPanel("Level X-X"));
         }
         else
         {
