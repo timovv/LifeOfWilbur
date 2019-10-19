@@ -20,7 +20,7 @@ public class OneWayPlatform : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
             _platformEffector.rotationalOffset = 180f;
         }
