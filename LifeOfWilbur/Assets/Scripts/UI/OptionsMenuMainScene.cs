@@ -9,27 +9,6 @@ public class OptionsMenuMainScene : MonoBehaviour
     public GameObject _optionMenuUI;
     public GameObject _mainMenuUI;
 
-    //Run before the scene loads (before start)
-    void Awake()
-    {
-        // Get the current volume and set it to the sliders in the options menu
-        try
-        {
-            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "BackgroundMusic");
-            GameObject.Find("BackgroundVolumeSlider").GetComponent<Slider>().value = s._volume;
-
-            Sound s1 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
-            GameObject.Find("SFXVolumeSlider").GetComponent<Slider>().value = s1._volume;
-        }
-        catch (NullReferenceException e)
-        {
-            // Ensure that the game does not crash in the case that a Sound File was not correctly loaded in the prefab,
-            // instead present a warning.
-            Debug.LogWarning("Sound not loaded correctly! " + e);
-        }
-
-    }
-
     // Gets called every frame
     void Update()
     {
