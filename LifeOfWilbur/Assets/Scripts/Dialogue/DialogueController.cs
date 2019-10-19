@@ -124,10 +124,13 @@ public class DialogueController : MonoBehaviour
     {
         _animator.SetBool("isOpen", true);
 
-        CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
+        Debug.Log("Poped up!!");
+        FindObjectOfType<AudioManager>().Pause("SnowWalkTrimmed"); //Pause Sound movement
+        //CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = true; // disable Time Travel
         LevelReset.ResetDisabled = true; // disable resetting level
         Physics2D.autoSimulation = false; // disable physics
+        
 
         _isBold = false;
 
@@ -253,7 +256,7 @@ public class DialogueController : MonoBehaviour
     {
         _dialogCamera.ZoomOutFocus();
 
-        CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
+        //CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
         LevelReset.ResetDisabled = false; // enable resetting level
         Physics2D.autoSimulation = true; // enable physcis

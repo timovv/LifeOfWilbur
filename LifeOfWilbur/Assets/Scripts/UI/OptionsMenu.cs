@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OptionsMenu : MonoBehaviour
@@ -8,7 +7,7 @@ public class OptionsMenu : MonoBehaviour
 
     public GameObject _optionMenuUI;
     private static float _backgroundVolume = 0.8f;
-    private static float _sfxVolume = 0.8f;
+    private static float _sfxVolume = 0.5f;
 
     // Gets called every frame
     void Update()
@@ -16,7 +15,7 @@ public class OptionsMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             //Resume real time and Gamer time
-            Time.timeScale = 1f; 
+            Time.timeScale = 1f;
             GameTimer.Paused = false;
 
             //Hide the opttions UI and show the Pause Panel
@@ -44,11 +43,11 @@ public class OptionsMenu : MonoBehaviour
             //Update the source of the audio
             s.source.volume = s._volume;
         }
-        catch(NullReferenceException e)
+        catch (NullReferenceException e)
         {
             Debug.LogWarning("Sound Source not loaded correctly!: " + e);
         }
-        
+
 
     }
 
@@ -62,7 +61,8 @@ public class OptionsMenu : MonoBehaviour
         try
         {
             //Find the slider in the object hierarchy
-            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
+            //Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
+            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalkTrimmed");
             Sound s1 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "DeathSFX");
 
             //Update the field in the sound object
@@ -80,10 +80,7 @@ public class OptionsMenu : MonoBehaviour
         {
             Debug.LogWarning("Sound Source not loaded correctly!: " + e);
         }
-        
-
     }
-
 
     /// <summary>
     /// Getter to get the instance of the OptionsUI
@@ -94,7 +91,6 @@ public class OptionsMenu : MonoBehaviour
         //TODO: Can potentially delete, as it might not be being used.
         return _optionMenuUI;
     }
-
 
     /// <summary>
     /// Sets the visibiility of the Options Menu, this is done as a method to ensure that the 
@@ -115,7 +111,4 @@ public class OptionsMenu : MonoBehaviour
             _optionMenuUI.SetActive(visibility);
         }
     }
-
-
-
 }
