@@ -38,7 +38,7 @@ public class LevelIndicator : MonoBehaviour
     public IEnumerator SetUpPanel(string levelText)
     {
         SetLevelText(levelText); //Preset the text for the levels
-        yield return new WaitForSecondsRealtime(3); //Display the text for a bit and then start the fade and the hiding of the panel
+        yield return new WaitForSecondsRealtime(1); //Display the text for a bit and then start the fade and the hiding of the panel
         StartCoroutine(StartFade());
         StartCoroutine(HidePanel());
     }
@@ -50,7 +50,7 @@ public class LevelIndicator : MonoBehaviour
     /// <returns></returns>
     private IEnumerator HidePanel()
     {
-        yield return new WaitForSecondsRealtime(5); // Wait for the fade animation to finish before deactivating the panel
+        yield return new WaitForSecondsRealtime(4); // Wait for the fade animation to finish before deactivating the panel
         _levelIndicatorPanel.SetActive(false);
     }
 

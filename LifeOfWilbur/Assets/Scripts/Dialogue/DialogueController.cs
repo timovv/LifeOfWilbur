@@ -39,11 +39,6 @@ public class DialogueController : MonoBehaviour
     public TextMeshProUGUI _nameTextField;
 
     /// <summary>
-    /// The text field in the GUI inside the continue button. This allows the text to be reassigned to "close" when no more slides exist
-    /// </summary>
-    public TextMeshProUGUI _continueButtonTextField;
-
-    /// <summary>
     /// The animator used animate the appearance of the DialogueWindow
     /// </summary>
     public Animator _animator;
@@ -134,7 +129,6 @@ public class DialogueController : MonoBehaviour
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
-        _continueButtonTextField.text = "Press C to continue";
         DisplayNextSentence();
     }
 
@@ -165,11 +159,6 @@ public class DialogueController : MonoBehaviour
                 // Sets the dialogue through the animation
                 StartCoroutine(TypeDialogueAnimation(quote._quote));
 
-                // Sets the "Continue" button text to "Close" if it is on the last quote
-                if (_quoteQueue.Count == 0)
-                {
-                    _continueButtonTextField.text = "Press C to close";
-                }
                 IsOpen = true;
             }
             else
@@ -258,7 +247,6 @@ public class DialogueController : MonoBehaviour
         TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
         LevelReset.ResetDisabled = false; // enable resetting level
         Physics2D.autoSimulation = true; // enable physcis
-        _continueButtonTextField.text = "";
         _dialogueTextField.text = "";
         _nameTextField.text = "";
         _animator.SetBool("isOpen", false);
