@@ -38,6 +38,7 @@ public class GameController : MonoBehaviour
 
     private bool _isTimeTravelling = false;
     private bool _movingToNextLevel = false;
+    private bool _resettingLevel;
 
     /// <summary>
     /// The current game mode.
@@ -61,6 +62,7 @@ public class GameController : MonoBehaviour
         if(CurrentGameMode.IsInGame())
         {
             _movingToNextLevel = false;
+            _resettingLevel = false;
             StartCoroutine(GetComponent<TransitionController>().FadeInFromBlack());
             GetComponent<TimeTravelController>().enabled = true;
             GetComponent<TimeTravelController>().RegisterGameObjects();
@@ -140,7 +142,7 @@ public class GameController : MonoBehaviour
 
     private IEnumerator NextLevelCoroutine()
     {
-        if (_movingToNextLevel)
+        if (_movingToNextLevel || _resettingLevel)
         {
             // don't let this happen multiple times
             // this can happen and would lead to a scene being skipped.
@@ -169,7 +171,21 @@ public class GameController : MonoBehaviour
 
     public void ResetLevel()
     {
+        StartCoroutine(ResetLevelCoroutine());
+    }
+
+    private IEnumerator ResetLevelCoroutine()
+    {
+        if(_movingToNextLevel || _resettingLevel)
+        {
+            yield break;
+        }
+
+        _resettingLevel = true;
+
+        yield return StartCoroutine(GetComponent<TransitionController>().FadeOutToBlack());
         SceneManager.LoadScene(_levelIterator.Current);
+
     }
 
     /// <summary>
