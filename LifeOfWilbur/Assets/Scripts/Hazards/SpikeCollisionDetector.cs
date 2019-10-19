@@ -15,7 +15,7 @@ public class SpikeCollisionDetector : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otherObj)
     {
-        if (otherObj.name == "Spikes")
+        if (otherObj.name == "Spikes" || otherObj.name == "Water")
         {
             screenShake.Shake(duration);
             _animator.SetTrigger("isDeath");
