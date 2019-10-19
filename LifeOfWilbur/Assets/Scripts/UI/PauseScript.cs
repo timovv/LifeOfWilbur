@@ -52,7 +52,7 @@ public class PauseScript : MonoBehaviour
     {
         Time.timeScale = 1f; //Re-enable the time, in the case of restarting the game.
         GameTimer.Paused = false; //Resume the game timer in addition to the 'real time'
-        SceneManager.LoadScene("MenuScene");
+        LifeOfWilbur.GameController.ReturnToMenu();
     }
 
    

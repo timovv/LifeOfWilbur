@@ -12,7 +12,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(LevelReset))]
 public class GameController : MonoBehaviour, ILevelController
 {
-    private const string MENU_SCENE_NAME = "MainMenu";
+    private const string MENU_SCENE_NAME = "MenuScene";
     private const string END_SCENE_NAME = "ExitScene";
 
     // TODO(timo): I have defined Level and Room structs for this stuff, so can use that stuff in here.
@@ -177,6 +177,7 @@ public class GameController : MonoBehaviour, ILevelController
     /// </summary>
     public void ReturnToMenu()
     {
+        CurrentGameMode = GameMode.NotInGame;
         SceneManager.LoadScene(MENU_SCENE_NAME);
     }
 }

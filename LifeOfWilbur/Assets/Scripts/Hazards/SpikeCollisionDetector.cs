@@ -18,6 +18,7 @@ public class SpikeCollisionDetector : MonoBehaviour
         if (otherObj.name == "Spikes" || otherObj.name == "Water")
         {
             screenShake.Shake(duration);
+            FindObjectOfType<AudioManager>().Play("DeathSFX");
             _animator.SetTrigger("isDeath");
             StartCoroutine(PauseMovementOnDeath());
             LifeOfWilbur.LevelController.ResetLevel();
