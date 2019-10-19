@@ -87,14 +87,8 @@ public class PauseScript : MonoBehaviour
        
     }
 
-
     public void OnButtonHoverSound()
     {
-        Debug.Log("Button Hover!");
         FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
     }
-
-
-  
-
 }

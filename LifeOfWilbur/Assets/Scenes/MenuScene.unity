@@ -3150,24 +3150,42 @@ MonoBehaviour:
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
+    _isSFX: 0
   - _name: SnowWalkTrimmed
     _clip: {fileID: 8300000, guid: cc2e8b14169bb934c8062656aca1c902, type: 3}
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
+    _isSFX: 1
   - _name: DeathSFX
     _clip: {fileID: 8300000, guid: 1b17605bd890596458645c1190bfcd60, type: 3}
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
+    _isSFX: 1
   - _name: ButtonHover
     _clip: {fileID: 8300000, guid: 8f95474d6ff4d0247a2c862967e2fee9, type: 3}
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
+    _isSFX: 1
+  - _name: ExitSign1
+    _clip: {fileID: 8300000, guid: 18835f9a1e2879643b2b34509359443c, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: ExitSign2
+    _clip: {fileID: 8300000, guid: ac4fdba9c9a4dc54eb8f5ffef67d92ae, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
 --- !u!4 &2082318516
 Transform:
   m_ObjectHideFlags: 0

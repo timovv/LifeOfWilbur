@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -60,22 +61,18 @@ public class OptionsMenu : MonoBehaviour
 
         try
         {
-            //Find the slider in the object hierarchy
             //Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
-            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalkTrimmed");
-            Sound s1 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "DeathSFX");
-            Sound s2 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "ButtonHover");
 
-            //Update the field in the sound object
-            s._volume = volume;
-            s1._volume = volume;
-            s2._volume = volume;
+            AudioManager audioManager = AudioManager._instance;
 
-            //Update the source of the audio
-            s.source.volume = s._volume;
-            s1.source.volume = s1._volume;
-            s2.source.volume = s2._volume;
-
+            foreach (Sound s in audioManager._sounds)
+            {
+                if (s._isSFX)
+                {
+                    s._volume = volume;
+                    s.source.volume = s._volume;
+                }
+            }
             //Set the field to the slider volume
             _sfxVolume = volume;
         }
