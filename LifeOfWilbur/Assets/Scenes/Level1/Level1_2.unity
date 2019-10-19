@@ -206,46 +206,6 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: _dialogue._quoteList.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].name
-      value: Adult Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[0].quote
-      value: I don't remember these spikes being here last time...
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].quote
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: dialogue.quoteList.Array.data[1].name
-      value: Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: _dialogue._quoteList.Array.data[0]._name
-      value: Adult Wilbur
-      objectReference: {fileID: 0}
-    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
-        type: 3}
-      propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: I don't remember these spikes being here last time...
-      objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -311,6 +271,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[0].quote
+      value: I don't remember these spikes being here last time...
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].quote
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: dialogue.quoteList.Array.data[1].name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._name
+      value: Adult Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[0]._quote
+      value: I don't remember these spikes being here last time...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a3d6cab4808ba4aa667ca019217948, type: 3}
@@ -417,6 +417,33 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1921940451}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1387179257 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 661093921167461986, guid: db3c9888a7c3f604a8f2d96854477215,
+    type: 3}
+  m_PrefabInstance: {fileID: 1921940451}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &1387179264
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387179257}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1001 &1921940451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7752,7 +7779,7 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8479126747980071151, guid: db3c9888a7c3f604a8f2d96854477215,
+    - target: {fileID: 2882604481015173999, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
@@ -7776,6 +7803,21 @@ PrefabInstance:
         type: 3}
       propertyPath: duration
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8479126747980071151, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 661093921167461986, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_Name
+      value: TestLevelController
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698244493736428471, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _fadeDurationSeconds
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}

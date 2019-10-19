@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(TransitionController))]
 [RequireComponent(typeof(TimeTravelController))]
 [RequireComponent(typeof(LevelReset))]
-public class GameController : MonoBehaviour
+public class GameController : MonoBehaviour, ILevelController
 {
     private const string MENU_SCENE_NAME = "MainMenu";
     private const string END_SCENE_NAME = "ExitScene";
@@ -36,7 +36,6 @@ public class GameController : MonoBehaviour
 
     private IEnumerator<string> _levelIterator;
 
-    private bool _isTimeTravelling = false;
     private bool _movingToNextLevel = false;
     private bool _resettingLevel;
 
@@ -76,24 +75,6 @@ public class GameController : MonoBehaviour
         }
     }
 
-    void Update()
-    {
-        // TODO: we should move this to a dedicated "InputController" component
-        // along with other input events
-        // this is better design(TM)
-
-        if(!CurrentGameMode.IsInGame())
-        {
-            return;
-        }
-
-        if(Input.GetKey(KeyCode.X) && !_isTimeTravelling)
-        {
-            // User requests TIME TRAVEL.
-            // change their time as applicable. The action should not be able to be performed while another time travel event is happening.
-            StartCoroutine(GetComponent<TimeTravelController>().TimeTravelWithFade(GetComponent<TransitionController>()));
-        }
-    }
 
     /// <summary>
     /// Starts a new game. If a game is currently in progress, the game will not be 

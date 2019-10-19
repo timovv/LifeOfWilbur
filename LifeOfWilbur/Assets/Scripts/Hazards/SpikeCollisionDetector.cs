@@ -20,7 +20,7 @@ public class SpikeCollisionDetector : MonoBehaviour
             screenShake.Shake(duration);
             _animator.SetTrigger("isDeath");
             StartCoroutine(PauseMovementOnDeath());
-            LifeOfWilbur.GameController.ResetLevel();
+            LifeOfWilbur.LevelController.ResetLevel();
         }
     }
 

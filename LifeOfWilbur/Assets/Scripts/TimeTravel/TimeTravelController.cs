@@ -17,6 +17,7 @@ using UnityEngine.SceneManagement;
 ///     time travel. When returning to the past, the original object is reenabled and the copy destroyed.
 ///     This causes the object to appear to return to its original position before the time travel happened.
 /// </summary>
+[RequireComponent(typeof(TransitionController))]
 public class TimeTravelController : MonoBehaviour
 {
 
@@ -66,7 +67,21 @@ public class TimeTravelController : MonoBehaviour
 
     private void OnEnable()
     {
+        RegisterGameObjects();
         UpdateTimeTravelState(IsInPast);
+    }
+    void Update()
+    {
+        // TODO: we should move this to a dedicated "InputController" component
+        // along with other input events
+        // this is better design(TM)
+
+        if (Input.GetKey(KeyCode.X) && !_isTransitioning)
+        {
+            // User requests TIME TRAVEL.
+            // change their time as applicable. The action should not be able to be performed while another time travel event is happening.
+            StartCoroutine(GetComponent<TimeTravelController>().TimeTravelWithFade(GetComponent<TransitionController>()));
+        }
     }
 
     public IEnumerator TimeTravelWithFade(TransitionController transitionController)

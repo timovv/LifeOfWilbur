@@ -58,7 +58,7 @@ public class ExitSign : MonoBehaviour
 
         if(IsYoungWilburAtExit && IsOldWilburAtExit)
         {
-            LifeOfWilbur.GameController.NextLevel();
+            LifeOfWilbur.LevelController.NextLevel();
         }
     }
     private void OnTriggerExit2D(Collider2D other)
