@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Networking;
 
 public class GraphInit : MonoBehaviour
@@ -10,6 +11,8 @@ public class GraphInit : MonoBehaviour
     public RectTransform _timeContianer;
     public RectTransform _attemptsContianer;
     public RectTransform _timeswapContianer;
+
+    public RectTransform _tooltip;
 
     public string _graphEndPoint = "http://localhost:3000/scores/graph";
 
@@ -61,8 +64,43 @@ public class GraphInit : MonoBehaviour
 
         for (int i = 0; i < histogram.childCount; i++)
         {
-            RectTransform bar = (RectTransform)histogram.GetChild(i);;
-            bar.sizeDelta = new Vector2(bar.sizeDelta.x, histogram.sizeDelta.y * barData.bars[i].percentage);
+            RectTransform bg = (RectTransform)histogram.GetChild(i);
+            RectTransform fill = (RectTransform)bg.GetChild(0);
+
+            Bar data = barData.bars[i];
+            fill.sizeDelta = new Vector2(fill.sizeDelta.x, histogram.sizeDelta.y * data.percentage);
+            string tooltipText;
+            if (container.name == "Time")
+            {
+                tooltipText = string.Format("{0} - {1}", GameTimer.FormatTime(data.range[0] / 1000f), GameTimer.FormatTime(data.range[1] / 1000f));
+            }
+            else
+            {
+                tooltipText = string.Format("{0} - {1}", data.range[0], data.range[1]);
+            }
+            bg.GetComponent<BarTooltip>().Text = tooltipText;
+        }
+    }
+
+    public void Update()
+    {
+        PointerEventData eventData = new PointerEventData(EventSystem.current);                            // This section prepares a list for all objects hit with the raycast
+        eventData.position = Input.mousePosition;
+        List<RaycastResult> uiHit = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventData, uiHit);
+
+        if(uiHit.Count > 0)
+        {
+            GameObject target = uiHit[0].gameObject;
+            if (target.name.StartsWith("Bar"))
+            {
+                _tooltip.position = target.transform.position;
+                _tooltip.GetComponent<TextMeshProUGUI>().text = target.GetComponent<BarTooltip>().Text;
+            }
+        }
+        else
+        {
+                _tooltip.position = Vector3.up * 10;
         }
     }
 }
