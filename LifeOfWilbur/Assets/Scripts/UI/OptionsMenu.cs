@@ -7,8 +7,8 @@ public class OptionsMenu : MonoBehaviour
 {
 
     public GameObject _optionMenuUI;
-    private static float _backgroundVolume = 0f;
-    private static float _sfxVolume = 0.8f;
+    private static float _backgroundVolume = 0.8f;
+    private static float _sfxVolume = 0.5f;
 
     // Gets called every frame
     void Update()
