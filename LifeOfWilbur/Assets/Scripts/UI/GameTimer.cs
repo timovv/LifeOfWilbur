@@ -28,11 +28,18 @@ public class GameTimer : MonoBehaviour
     {
         get
         {
-            return string.Format("{0:00}:{1:00}:{2:00}",
-                (int)(ElapsedTimeSeconds / 60), (int)(ElapsedTimeSeconds % 60), (int)(ElapsedTimeSeconds % 1 * 100));
+            return FormatTime(ElapsedTimeSeconds);
         }
     }
 
+    /// <summary>
+    /// Formats the given time to mm:ss:ii
+    /// </summary>
+    public static string FormatTime(float seconds)
+    {
+        return string.Format("{0:00}:{1:00}:{2:00}",
+                (int)(seconds / 60), (int)(seconds % 60), (int)(seconds % 1 * 100));
+    }
 
     // Update is called once per frame
     void Update()
