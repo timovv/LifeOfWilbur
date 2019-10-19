@@ -1,35 +1,60 @@
+/**
+ * Endpoint handlers
+ */
+
 const mongoose = require('mongoose');
 const Score = mongoose.model('Score');
 
+/**
+ * Field boundaries for bucketing. Must be linear / equally sized.
+ */
 const fieldBoundaries = {
   "time": [0, 60000, 120000, 180000, 240000, 300000, 360000, 420000, 480000, 540000, 600000, 660000],
   "attempts": [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55],
   "timeswaps": [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
 }
 
+/**
+ * Handles POSTing of new scores
+ * Add score to db and returns:
+ *  - Top 10 Scores
+ *  - Scores +/- 5 ranks of the new score
+ */
 exports.submitScore = function (req, res) {
   const newScore = new Score(req.body);
-  newScore.save(function (err, score) {
 
-    // Maybe swap to estimate - probably wont matter for our small db though
+  // Check required fields
+  const check = newScore.toObject();
+  if (!("name" in check && "time" in check && "attempts" in check && "timeswaps" in check)) {
+    res.sendStatus(400);
+    return;
+  }
+
+  newScore.save(function (err, score) {
+    console.log(score);
+    // Maybe swap to estimate - probably wont matter for our small-ish db though
     const rank = Score.countDocuments({ "time": { $lte: score.time } })
       .exec();
 
+    // Gets top ten entries
     const top = Score.find({})
       .sort("time attempts timeswaps")
       .limit(10)
       .lean()
       .exec();
 
+    // 5 scores below
     const lt = Score.find({ "time": { $lte: score.time }, "_id": { $ne: score._id } })
       .sort("-time -attempts -timeswaps")
       .limit(5)
       .lean()
       .exec()
       .then(function (ltRes) {
+        // To exclude duplicate 5 below results, occurs on ties
         const ids = ltRes.map(a => a._id);
         ids.push(score._id);
 
+        // 5 scores above
         const gt = Score.find({ "time": { $gte: score.time }, "_id": { $nin: ids } })
           .sort("time attempts timeswaps")
           .limit(5)
@@ -49,6 +74,7 @@ exports.submitScore = function (req, res) {
           info.near.push(score.toObject());
           info.near = info.near.concat(results[2]);
 
+          // One final sort incase times are tied.
           info.near.sort(function (a, b) {
             return a.time - b.time || a.attempts - b.attempts || a.timeswaps - b.timeswaps;
           });
@@ -61,12 +87,18 @@ exports.submitScore = function (req, res) {
   });
 };
 
+/**
+ * Adds ranks to each element in the list starting from the given rank. 
+ */
 function addRankings(startingRank, list) {
   for (const score of list) {
     score.rank = startingRank++;
   }
 }
 
+/**
+ * GETS data for the specified statistic. Results  
+ */
 exports.getGraphData = function (req, res) {
   if (!(req.params.field in fieldBoundaries)) {
     res.sendStatus(404);
@@ -74,7 +106,8 @@ exports.getGraphData = function (req, res) {
   }
   const boundaries = fieldBoundaries[req.params.field];
 
-  const count = Score.countDocuments().exec();
+  const count = Score.countDocuments()
+    .exec();
 
   const graph = Score.aggregate([
     {
@@ -92,6 +125,8 @@ exports.getGraphData = function (req, res) {
 
   Promise.all([count, graph]).then(function (results) {
     const count = results[0];
+
+    // Converts [{id:string, count:int}] to {id:count}
     const buckets = {};
     for (const bucket of results[1]) {
       buckets[bucket._id] = bucket.count;
@@ -106,6 +141,7 @@ exports.getGraphData = function (req, res) {
       const bar = {};
       bar.range = [boundaries[i], boundaries[i + 1]];
 
+      // DB results doesn't include empty buckets, manually set counts to 0
       if (boundaries[i] in buckets) {
         bar.count = buckets[boundaries[i]];
         bar.percentage = bar.count / count;
@@ -116,6 +152,7 @@ exports.getGraphData = function (req, res) {
       bars.push(bar);
     }
 
+    // Adds out of bound counts to the max bucket
     if ("default" in buckets) {
       const finalBar = bars[bars.length - 1]
       finalBar.count += buckets["default"];

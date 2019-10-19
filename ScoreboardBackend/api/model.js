@@ -1,3 +1,6 @@
+/**
+ * Sets up DB table with teh correct schema
+ */
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 

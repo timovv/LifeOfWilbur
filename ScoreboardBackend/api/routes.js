@@ -1,3 +1,6 @@
+/**
+ * Maps endpoints to functions
+ */
 module.exports = function (app) {
   const controller = require('./controller');
 
