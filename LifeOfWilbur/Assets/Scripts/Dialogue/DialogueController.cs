@@ -123,13 +123,11 @@ public class DialogueController : MonoBehaviour
     {
         _animator.SetBool("isOpen", true);
 
-        Debug.Log("Poped up!!");
         FindObjectOfType<AudioManager>().Pause("SnowWalkTrimmed"); //Pause Sound movement
         //CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = true; // disable Time Travel
         LevelReset.ResetDisabled = true; // disable resetting level
-        Physics2D.autoSimulation = false; // disable physics
-        
+        Physics2D.autoSimulation = false; // disable physics        
 
         _isBold = false;
 
