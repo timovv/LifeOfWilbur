@@ -15,7 +15,8 @@ public class GameController : MonoBehaviour
     private const string MENU_SCENE_NAME = "MainMenu";
     private const string END_SCENE_NAME = "ExitScene";
 
-    // TODO(timo): I have defined Level and Room structs for this stuff, so can use that stuff in
+    // TODO(timo): I have defined Level and Room structs for this stuff, so can use that stuff in here.
+    // Those structs can also be used for level information prompts etc
     private readonly IReadOnlyDictionary<GameMode, List<string>> GAME_MODE_LEVELS = new Dictionary<GameMode, List<string>>
     {
         [GameMode.Story] = new List<string> 
@@ -23,6 +24,8 @@ public class GameController : MonoBehaviour
             "Level1_1",
             "Level1_2",
             "Level1_3",
+            "Level1_4",
+            "Level1_5",
         },
         [GameMode.SpeedRun] = new List<string>
         {
@@ -58,7 +61,7 @@ public class GameController : MonoBehaviour
         if(CurrentGameMode.IsInGame())
         {
             _movingToNextLevel = false;
-            StartCoroutine(GetComponent<TransitionController>().FadeInFromBlackCoroutine());
+            StartCoroutine(GetComponent<TransitionController>().FadeInFromBlack());
             GetComponent<TimeTravelController>().enabled = true;
             GetComponent<TimeTravelController>().RegisterGameObjects();
             GetComponent<TimeTravelController>().UpdateTimeTravelState(true);
@@ -86,19 +89,8 @@ public class GameController : MonoBehaviour
         {
             // User requests TIME TRAVEL.
             // change their time as applicable. The action should not be able to be performed while another time travel event is happening.
-            StartCoroutine(DoTimeTravelWithEffect());
+            StartCoroutine(GetComponent<TimeTravelController>().TimeTravelWithFade(GetComponent<TransitionController>()));
         }
-    }
-
-    private IEnumerator DoTimeTravelWithEffect()
-    {
-        _isTimeTravelling = true;
-        var transitionController = GetComponent<TransitionController>();
-        var timeTravelController = GetComponent<TimeTravelController>();
-        yield return StartCoroutine(transitionController.FadeOutToBlack());
-        yield return StartCoroutine(timeTravelController.UpdateTimeTravelState(!TimeTravelController.IsInPast));
-        yield return StartCoroutine(transitionController.FadeInFromBlackCoroutine());
-        _isTimeTravelling = false;
     }
 
     /// <summary>

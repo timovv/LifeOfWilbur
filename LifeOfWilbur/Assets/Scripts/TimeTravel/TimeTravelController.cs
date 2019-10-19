@@ -69,6 +69,26 @@ public class TimeTravelController : MonoBehaviour
         UpdateTimeTravelState(IsInPast);
     }
 
+    public IEnumerator TimeTravelWithFade(TransitionController transitionController)
+    {
+        if (!isActiveAndEnabled)
+        {
+            yield break;
+        }
+
+        if (_isTransitioning)
+        {
+            yield break;
+        }
+
+        _isTransitioning = true;
+        
+        yield return StartCoroutine(transitionController.FadeOutToBlack());
+        yield return StartCoroutine(UpdateTimeTravelState(!IsInPast));
+        yield return StartCoroutine(transitionController.FadeInFromBlack());
+        _isTransitioning = false;
+    }
+
     public IEnumerator UpdateTimeTravelState(bool transitioningToPast)
     {
         if(!isActiveAndEnabled)

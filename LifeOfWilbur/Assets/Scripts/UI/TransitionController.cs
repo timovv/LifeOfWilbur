@@ -38,7 +38,7 @@ public class TransitionController : MonoBehaviour
     public void Awake()
     {
         GetComponent<RawImage>().color = Color.black;
-        StartCoroutine(FadeInFromBlackCoroutine());
+        StartCoroutine(FadeInFromBlack());
     }
 
     public IEnumerator FadeOutToBlack()
@@ -56,7 +56,7 @@ public class TransitionController : MonoBehaviour
         yield return new WaitForSeconds(_fadeDurationSeconds);
     }
 
-    public IEnumerator FadeInFromBlackCoroutine()
+    public IEnumerator FadeInFromBlack()
     {
         if(!_fadedOut)
         {
