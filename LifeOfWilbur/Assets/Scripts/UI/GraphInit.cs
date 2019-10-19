@@ -18,9 +18,9 @@ public class GraphInit : MonoBehaviour
 
     private void Awake()
     {
-        int time = 0;
-        int attempts = 0;
-        int timeswaps = 0;
+        float time = GameTimer.ElapsedTimeSeconds;
+        int attempts = GameController.Resets;
+        int timeswaps = TimeTravelController.Timeswaps;
 
         StartCoroutine(GetGraphData("time", _timeContianer, time));
         StartCoroutine(GetGraphData("attempts", _attemptsContianer, attempts));
@@ -30,12 +30,12 @@ public class GraphInit : MonoBehaviour
         TextMeshProUGUI attemptValue = _attemptsContianer.Find("Value").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI timeswapValue = _timeswapContianer.Find("Value").GetComponent<TextMeshProUGUI>();
 
-        timeValue.text = "12:23:34";
-        attemptValue.text = "123";
-        timeswapValue.text = "456";
+        timeValue.text = GameTimer.FormattedElapsedTime;
+        attemptValue.text = attempts.ToString();
+        timeswapValue.text = timeswaps.ToString();
     }
 
-    private IEnumerator GetGraphData(string field, RectTransform container, int value)
+    private IEnumerator GetGraphData(string field, RectTransform container, float value)
     {
         UnityWebRequest request = UnityWebRequest.Get(_graphEndPoint + "/" + field);
         request.SetRequestHeader("Accept", "application/json");
@@ -52,7 +52,7 @@ public class GraphInit : MonoBehaviour
         FillGraph(recieved, container, value);
     }
 
-    private void FillGraph(GraphBars barData, RectTransform container, int value)
+    private void FillGraph(GraphBars barData, RectTransform container, float value)
     {
         RectTransform histogram = (RectTransform)container.Find("Histogram");
         RectTransform line = (RectTransform)container.Find("Line");
@@ -62,17 +62,24 @@ public class GraphInit : MonoBehaviour
         linePos.x += histogram.sizeDelta.x * horizontalPercentage;
         line.position = linePos;
 
+        float highestPercentage = 0;
+        foreach(Bar bar in barData.bars)
+        {
+            highestPercentage = Math.Max(highestPercentage, bar.percentage);
+        }
+
         for (int i = 0; i < histogram.childCount; i++)
         {
             RectTransform bg = (RectTransform)histogram.GetChild(i);
             RectTransform fill = (RectTransform)bg.GetChild(0);
 
             Bar data = barData.bars[i];
-            fill.sizeDelta = new Vector2(fill.sizeDelta.x, histogram.sizeDelta.y * data.percentage);
+            float yPos = bg.sizeDelta.y * 0.8f * data.percentage / highestPercentage;
+            fill.sizeDelta = new Vector2(fill.sizeDelta.x, yPos);
             string tooltipText;
             if (container.name == "Time")
             {
-                tooltipText = string.Format("{0} - {1}", GameTimer.FormatTime(data.range[0] / 1000f), GameTimer.FormatTime(data.range[1] / 1000f));
+                tooltipText = string.Format("{0} - {1}", GameTimer.FormatTime(data.range[0]), GameTimer.FormatTime(data.range[1]));
             }
             else
             {
