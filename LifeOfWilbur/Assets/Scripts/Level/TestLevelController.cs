@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(TimeTravelController))]
 public class TestLevelController : MonoBehaviour, ILevelController
 {
-    public void Start()
+    public void Awake()
     {
         if(LifeOfWilbur.GameController != null)
         {

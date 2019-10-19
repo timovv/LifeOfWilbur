@@ -53,10 +53,10 @@ public class GameController : MonoBehaviour, ILevelController
         GetComponent<TimeTravelController>().enabled = false;
         GetComponent<TransitionController>().enabled = true;
 
-        SceneManager.activeSceneChanged += OnSceneLoad;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void OnSceneLoad(Scene previous, Scene next)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         if(CurrentGameMode.IsInGame())
         {
@@ -64,8 +64,6 @@ public class GameController : MonoBehaviour, ILevelController
             _resettingLevel = false;
             StartCoroutine(GetComponent<TransitionController>().FadeInFromBlack());
             GetComponent<TimeTravelController>().enabled = true;
-            GetComponent<TimeTravelController>().RegisterGameObjects();
-            GetComponent<TimeTravelController>().UpdateTimeTravelState(true);
             GetComponent<TransitionController>().enabled = true;
         }
         else

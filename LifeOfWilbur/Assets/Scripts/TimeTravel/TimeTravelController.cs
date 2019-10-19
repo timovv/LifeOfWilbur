@@ -68,8 +68,8 @@ public class TimeTravelController : MonoBehaviour
     private void OnEnable()
     {
         RegisterGameObjects();
-        UpdateTimeTravelState(IsInPast);
     }
+
     void Update()
     {
         // TODO: we should move this to a dedicated "InputController" component
@@ -80,7 +80,7 @@ public class TimeTravelController : MonoBehaviour
         {
             // User requests TIME TRAVEL.
             // change their time as applicable. The action should not be able to be performed while another time travel event is happening.
-            StartCoroutine(GetComponent<TimeTravelController>().TimeTravelWithFade(GetComponent<TransitionController>()));
+            StartCoroutine(TimeTravelWithFade(GetComponent<TransitionController>()));
         }
     }
 
