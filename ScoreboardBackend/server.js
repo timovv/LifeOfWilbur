@@ -24,7 +24,7 @@ app.listen(port);
 //Debug - remove
 Score.deleteMany({}).then(function () {
   for (var i = 0; i < 100; i++)
-    new Score({ name: '62', time: randn_bm() * 600000, attempts: randn_bm() * 50, timeswaps: randn_bm() * 50 }).save();
+    new Score({ name: '62', time: randn_bm() * 600, attempts: randn_bm() * 50, timeswaps: randn_bm() * 50 }).save();
 });
 
 // Retrived from https://stackoverflow.com/questions/25582882

@@ -27,6 +27,11 @@ public class TimeTravelController : MonoBehaviour
     public static bool IsInPast { get; private set; }
 
     /// <summary>
+    /// Value indicating number of triggers.
+    /// </summary>
+    public static int Timeswaps { get; private set; }
+
+    /// <summary>
     /// 
     /// </summary>
     private bool _isTransitioning = false;

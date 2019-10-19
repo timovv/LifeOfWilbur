@@ -9,7 +9,7 @@ const Score = mongoose.model('Score');
  * Field boundaries for bucketing. Must be linear / equally sized.
  */
 const fieldBoundaries = {
-  "time": [0, 60000, 120000, 180000, 240000, 300000, 360000, 420000, 480000, 540000, 600000, 660000],
+  "time": [0, 60, 120, 180, 240, 300, 360, 420, 480, 540, 600, 660],
   "attempts": [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55],
   "timeswaps": [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55]
 }
@@ -31,7 +31,6 @@ exports.submitScore = function (req, res) {
   }
 
   newScore.save(function (err, score) {
-    console.log(score);
     // Maybe swap to estimate - probably wont matter for our small-ish db though
     const rank = Score.countDocuments({ "time": { $lte: score.time } })
       .exec();
