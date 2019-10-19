@@ -75,7 +75,6 @@ public class MainMenu : MonoBehaviour
     /// <param name="visibility"></param>
     public void SetVisibilityOfMenuUI(bool visibility)
     {
-        Debug.Log("Running Man!" +  visibility);
         if (visibility)
         {
             _mainMenu.SetActive(true);

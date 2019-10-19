@@ -7,6 +7,8 @@ public class OptionsMenu : MonoBehaviour
 {
 
     public GameObject _optionMenuUI;
+    private static float _backgroundVolume = 0.8f;
+    private static float _sfxVolume = 0.8f;
 
     // Gets called every frame
     void Update()
@@ -37,6 +39,7 @@ public class OptionsMenu : MonoBehaviour
 
             //Update the field in the sound object
             s._volume = VolumeSliderGet;
+            _backgroundVolume = VolumeSliderGet;
 
             //Update the source of the audio
             s.source.volume = s._volume;
@@ -60,12 +63,18 @@ public class OptionsMenu : MonoBehaviour
         {
             //Find the slider in the object hierarchy
             Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
+            Sound s1 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "DeathSFX");
 
             //Update the field in the sound object
             s._volume = volume;
+            s1._volume = volume;
 
             //Update the source of the audio
             s.source.volume = s._volume;
+            s1.source.volume = s1._volume;
+
+            //Set the field to the slider volume
+            _sfxVolume = volume;
         }
         catch (NullReferenceException e)
         {
@@ -97,6 +106,9 @@ public class OptionsMenu : MonoBehaviour
         if (visibility)
         {
             _optionMenuUI.SetActive(visibility);
+            GameObject.Find("BackgroundVolumeSlider").GetComponent<Slider>().value = _backgroundVolume;
+            GameObject.Find("SFXVolumeSlider").GetComponent<Slider>().value = _sfxVolume;
+
         }
         else
         {

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LevelIndicator : MonoBehaviour
 {
-    private const double FADETIME_COEFFICIENT =  0.5;
+    private const double FADETIME_COEFFICIENT = 0.5;
 
     public GameObject _levelIndicatorPanel;
     public TextMeshProUGUI _levelText;
@@ -25,9 +25,9 @@ public class LevelIndicator : MonoBehaviour
     /// <returns></returns>
     IEnumerator StartFade()
     {
-        while(_canvasGroup.alpha > 0) 
+        while (_canvasGroup.alpha > 0)
         {
-            _canvasGroup.alpha -= (float)(Time.deltaTime  / FADETIME_COEFFICIENT);
+            _canvasGroup.alpha -= (float)(Time.deltaTime / FADETIME_COEFFICIENT);
             yield return null; //Waiting for the next frame
         }
         _canvasGroup.interactable = false; //Ensure that everything in the canvas is no longer interactable
@@ -37,9 +37,8 @@ public class LevelIndicator : MonoBehaviour
 
     public IEnumerator SetUpPanel(string levelText)
     {
-        Debug.Log("Setup Panel called!");
         SetLevelText(levelText); //Preset the text for the levels
-        yield return new WaitForSeconds(13); //Display the text for a bit and then start the fade and the hiding of the panel
+        yield return new WaitForSecondsRealtime(3); //Display the text for a bit and then start the fade and the hiding of the panel
         StartCoroutine(StartFade());
         StartCoroutine(HidePanel());
     }
@@ -51,7 +50,7 @@ public class LevelIndicator : MonoBehaviour
     /// <returns></returns>
     private IEnumerator HidePanel()
     {
-        yield return new WaitForSeconds(15); // Wait for the fade animation to finish before deactivating the panel
+        yield return new WaitForSecondsRealtime(5); // Wait for the fade animation to finish before deactivating the panel
         _levelIndicatorPanel.SetActive(false);
     }
 
@@ -68,7 +67,6 @@ public class LevelIndicator : MonoBehaviour
 
     public void TogglePanelVisibility(bool value)
     {
-        Debug.Log("Visibility called");
         _levelIndicatorPanel.SetActive(value);
     }
 

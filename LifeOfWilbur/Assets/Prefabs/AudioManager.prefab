@@ -49,4 +49,16 @@ MonoBehaviour:
     _volume: 0.8
     _pitch: 0
     source: {fileID: 0}
+    _loop: 1
+  - _name: DeathSFX
+    _clip: {fileID: 8300000, guid: 1b17605bd890596458645c1190bfcd60, type: 3}
+    _volume: 0.8
+    _pitch: 0
+    source: {fileID: 0}
+    _loop: 0
+  - _name: SnowWalk
+    _clip: {fileID: 0}
+    _volume: 0.8
+    _pitch: 0
+    source: {fileID: 0}
     _loop: 0
