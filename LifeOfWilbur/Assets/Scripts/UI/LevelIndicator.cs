@@ -37,7 +37,6 @@ public class LevelIndicator : MonoBehaviour
 
     public IEnumerator SetUpPanel(string levelText)
     {
-        Debug.Log("Setup Panel called!");
         SetLevelText(levelText); //Preset the text for the levels
         yield return new WaitForSecondsRealtime(3); //Display the text for a bit and then start the fade and the hiding of the panel
         StartCoroutine(StartFade());
@@ -68,7 +67,6 @@ public class LevelIndicator : MonoBehaviour
 
     public void TogglePanelVisibility(bool value)
     {
-        Debug.Log("Visibility called");
         _levelIndicatorPanel.SetActive(value);
     }
 

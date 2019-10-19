@@ -32,7 +32,6 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s._volume;
             s.source.pitch = s._volume;
             s.source.loop = s._loop;
-            Debug.Log(s._name);
         }
 
 
