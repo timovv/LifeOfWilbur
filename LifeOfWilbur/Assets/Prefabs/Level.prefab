@@ -873,7 +873,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 15
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3768,7 +3768,7 @@ ParticleSystem:
       emitter: {fileID: 6207800770866622603}
       type: 2
       properties: 0
-      emitProbability: 1
+      emitProbability: 0.6
   LightsModule:
     enabled: 0
     ratio: 0
