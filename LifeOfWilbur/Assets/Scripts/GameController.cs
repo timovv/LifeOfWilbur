@@ -63,6 +63,10 @@ public class GameController : MonoBehaviour, ILevelController
             _movingToNextLevel = false;
             _resettingLevel = false;
             StartCoroutine(GetComponent<TransitionController>().FadeInFromBlack());
+            if(GetComponent<TimeTravelController>().enabled)
+            {
+                GetComponent<TimeTravelController>().RegisterGameObjects();
+            }
             GetComponent<TimeTravelController>().enabled = true;
             GetComponent<TransitionController>().enabled = true;
         }
