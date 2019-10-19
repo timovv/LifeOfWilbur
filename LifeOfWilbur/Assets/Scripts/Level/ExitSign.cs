@@ -54,7 +54,6 @@ public class ExitSign : MonoBehaviour
                 IsOldWilburAtExit = true;
                 _oldWilburIndicator.SetActive(true);
             }
-            FindObjectOfType<AudioManager>().Play("ExitSign1");
         }
 
         if(IsYoungWilburAtExit && IsOldWilburAtExit)
