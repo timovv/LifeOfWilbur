@@ -11,16 +11,18 @@ public class DialogCamera : MonoBehaviour
 
     private Vector3 _zoomInPosition;
     private Vector3 _originalPosition;
+    private Vector3 _offsetPosition = new Vector3(0,0,0);
 
     private Camera _camera;
     private Transform _futureFocusObject; //Future wilbur
     private Transform _pastFocusObject; //Past wilbur
 
-    public void initialize(Transform futureFocusObject, Transform pastFocusObject)
+    public void initialize(Transform futureFocusObject, Transform pastFocusObject, Vector3 offsetPosition)
     {
         _camera = Camera.main;
         _originalPosition = _camera.transform.position;
         _originalZoomAmount = _camera.orthographicSize;
+        _offsetPosition = offsetPosition;
 
         _futureFocusObject = futureFocusObject;
         _pastFocusObject = pastFocusObject;
@@ -37,13 +39,13 @@ public class DialogCamera : MonoBehaviour
             _zoomInPosition = _pastFocusObject.position;
         }
 
-        StartCoroutine(resizeRoutine(_zoomInPosition, _originalPosition, _zoomAmount, _originalZoomAmount));
+        StartCoroutine(resizeRoutine(_zoomInPosition + _offsetPosition, _originalPosition, _zoomAmount, _originalZoomAmount));
     }
 
     //Camera zoom out
     public void ZoomOutFocus()
     {
-        StartCoroutine(resizeRoutine(_originalPosition, _zoomInPosition, _originalZoomAmount, _zoomAmount));
+        StartCoroutine(resizeRoutine(_originalPosition, _zoomInPosition + _offsetPosition, _originalZoomAmount, _zoomAmount));
     }
 
     private IEnumerator resizeRoutine(Vector3 toPosition, Vector3 fromPosition, float toZoom, float fromZoom)

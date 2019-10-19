@@ -65,6 +65,7 @@ public class DialogueController : MonoBehaviour
 
     //DialogCamera object
     private DialogCamera _dialogCamera;
+    public Vector3 _offsetPosition = new Vector3(0,0,0);
     public Transform _futureFocusObject;
     public Transform _pastFocusObject;
 
@@ -81,7 +82,7 @@ public class DialogueController : MonoBehaviour
     {
         //Create main camera dialog object with object of focus
         _dialogCamera = gameObject.AddComponent<DialogCamera>();
-        _dialogCamera.initialize(_futureFocusObject, _pastFocusObject);
+        _dialogCamera.initialize(_futureFocusObject, _pastFocusObject, _offsetPosition);
 
         _quoteQueue = new Queue<Quote>();
         _characterMapper = new Dictionary<string, int> {
