@@ -84,7 +84,7 @@ public class CharacterController2D : MonoBehaviour
         if(_rigidBody2D.velocity.x > 2 || _rigidBody2D.velocity.x < -2)
         {
             //Play the 'SnowWalk' audio whenever Wilbur jumps
-            FindObjectOfType<AudioManager>().Play("SnowWalk");
+            FindObjectOfType<AudioManager>().PlayWalking("SnowWalkTrimmed");
         }
 	
     }

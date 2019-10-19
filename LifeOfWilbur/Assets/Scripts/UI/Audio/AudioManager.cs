@@ -57,11 +57,57 @@ public class AudioManager : MonoBehaviour
         {
             //Try to find the sound from its given name, and play it. 
             Sound s = Array.Find(_sounds, sound => sound._name == name);
-            s.source.Play();
+            if (!s.source.isPlaying)
+            {
+                s.source.Play();
+            }
+            
         }catch(NullReferenceException e){
             Debug.LogWarning("Sound " + name + " not found!");
             return;
         }
         
     }
+
+
+    public void Pause(string name)
+    {
+        try
+        {
+            Debug.Log("Pause Called on name: " + name);
+            //Try to find the sound from its given name, and play it. 
+            Sound s = Array.Find(_sounds, sound => sound._name == name);
+            Debug.Log("Is Media Playing? : " + s.source.isPlaying);
+            if (s.source.isPlaying)
+            {
+                Debug.Log("Pausing!!! " + s._name);
+                s.source.Stop();
+                Debug.Log("After Stopiing");
+            }
+
+        }
+        catch (NullReferenceException e)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            return;
+        }
+    }
+
+
+    public void PlayWalking(string name)
+    {
+        RandomisePitch(name);
+        Play(name);
+    }
+
+
+    private void RandomisePitch(string name)
+    {
+        Sound s = Array.Find(_sounds, sound => sound._name == name);
+        float newPitch = UnityEngine.Random.Range(1f, 3f);
+        s._pitch = newPitch;
+        s.source.pitch = s._pitch;
+
+    }
+
 }

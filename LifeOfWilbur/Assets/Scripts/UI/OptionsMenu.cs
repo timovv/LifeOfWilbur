@@ -7,7 +7,7 @@ public class OptionsMenu : MonoBehaviour
 {
 
     public GameObject _optionMenuUI;
-    private static float _backgroundVolume = 0.8f;
+    private static float _backgroundVolume = 0f;
     private static float _sfxVolume = 0.8f;
 
     // Gets called every frame
@@ -62,7 +62,8 @@ public class OptionsMenu : MonoBehaviour
         try
         {
             //Find the slider in the object hierarchy
-            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
+            //Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
+            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalkTrimmed");
             Sound s1 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "DeathSFX");
 
             //Update the field in the sound object
