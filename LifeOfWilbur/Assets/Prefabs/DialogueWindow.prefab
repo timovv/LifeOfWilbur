@@ -954,6 +954,8 @@ MonoBehaviour:
   _nameTextField: {fileID: 4357981097285107785}
   _continueButtonTextField: {fileID: 5205750796564716035}
   _animator: {fileID: 4664044714462247833}
+  _futureFocusObject: {fileID: 0}
+  _pastFocusObject: {fileID: 0}
 --- !u!1 &7985257250792133814
 GameObject:
   m_ObjectHideFlags: 0
