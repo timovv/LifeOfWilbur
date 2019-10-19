@@ -21,11 +21,6 @@ public class ExitSign : MonoBehaviour
     /// </summary>
     public static bool IsYoungWilburAtExit { get; private set; }
 
-    /// <summary>
-    /// Name for the next scene.
-    /// </summary>
-    public string _nextSceneName;
-
     private GameObject _youngWilburIndicator;
     private GameObject _oldWilburIndicator;
 
@@ -63,9 +58,7 @@ public class ExitSign : MonoBehaviour
 
         if(IsYoungWilburAtExit && IsOldWilburAtExit)
         {
-            // we're done
-            FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
-            script.LoadSceneByName(_nextSceneName);
+            LifeOfWilbur.LevelController.NextLevel();
         }
     }
     private void OnTriggerExit2D(Collider2D other)

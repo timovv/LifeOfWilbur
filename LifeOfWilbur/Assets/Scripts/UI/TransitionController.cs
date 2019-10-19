@@ -8,12 +8,10 @@ using UnityEngine.UI;
 
 /// <summary>
 /// Behaviour that can be applied to a game object with a raw image component
-/// that allows for it to be faded in and out as needed.
-/// 
-/// This is used to fade out the scene.
+/// that allows for it to be faded in and out as needed to support level transitions.
 /// </summary>
 [RequireComponent(typeof(RawImage))]
-public class FadeInOut : MonoBehaviour
+public class TransitionController : MonoBehaviour
 {
     /// <summary>
     /// How long in seconds it should take for the fade transition to occur.
@@ -24,53 +22,51 @@ public class FadeInOut : MonoBehaviour
     /// <summary>
     /// Records if we are currently faded in or out.
     /// </summary>
-    private bool _fadedOut = true;
-
-    public void Start()
-    {
-        StartCoroutine(FadeInFromBlackAfterDelay());
-    }
+    public bool _fadedOut = true;
 
     /// <summary>
-    /// Fades in from black after a 5 second (game time) delay. Used at the start of the level to allow initialisation.
+    /// Flag to determine whether a transition is currently occuring.
     /// </summary>
-    /// <returns></returns>
-    private IEnumerator FadeInFromBlackAfterDelay()
+    public bool IsTransitioning { get; private set; }
+
+    public event EventHandler OnFadingOut;
+    public event EventHandler OnFadedOut;
+
+    public event EventHandler OnFadingIn;
+    public event EventHandler OnFadedIn;
+
+    public void Awake()
     {
-        yield return new WaitForSeconds(5);
-        FadeInFromBlack();
+        GetComponent<RawImage>().color = Color.black;
+        StartCoroutine(FadeInFromBlack());
     }
 
-    /// <summary>
-    /// Fade the scene out to black.
-    /// </summary>
-    public void FadeOutToBlack()
+    public IEnumerator FadeOutToBlack()
     {
-        if(_fadedOut)
+        if (_fadedOut)
         {
-            return;
+            yield break;
         }
 
+        OnFadingOut?.Invoke(this, EventArgs.Empty);
         _fadedOut = true;
 
         var image = GetComponent<RawImage>();
         image.CrossFadeAlpha(alpha: 1f, duration: _fadeDurationSeconds * .75f, ignoreTimeScale: true);
+        yield return new WaitForSeconds(_fadeDurationSeconds);
     }
 
-    /// <summary>
-    /// Fade the scene back in from black.
-    /// </summary>
-    public void FadeInFromBlack()
+    public IEnumerator FadeInFromBlack()
     {
         if(!_fadedOut)
         {
-            return;
+            yield break;
         }
 
         _fadedOut = false;
-
         var image = GetComponent<RawImage>();
         image.CrossFadeAlpha(alpha: 0f, duration: _fadeDurationSeconds * .75f, ignoreTimeScale: true);
+        yield return new WaitForSeconds(_fadeDurationSeconds);  
     }
 
     /// <summary>
@@ -97,8 +93,7 @@ public class FadeInOut : MonoBehaviour
     /// <param name="sceneName"></param>
     private IEnumerator LoadScene(string sceneName)
     {
-        FadeOutToBlack();
-        yield return new WaitForSeconds(_fadeDurationSeconds);
+        yield return StartCoroutine(FadeOutToBlack());
         SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 }

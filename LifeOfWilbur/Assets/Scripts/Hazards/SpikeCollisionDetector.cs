@@ -20,15 +20,15 @@ public class SpikeCollisionDetector : MonoBehaviour
             screenShake.Shake(duration);
             _animator.SetTrigger("isDeath");
             StartCoroutine(PauseMovementOnDeath());
-            FadeInOut script = GameObject.Find("LevelController").GetComponent<FadeInOut>();
-            script.ReloadCurrentScene();
+            LifeOfWilbur.LevelController.ResetLevel();
         }
     }
 
     IEnumerator PauseMovementOnDeath()
     {
         DisableMovement();
-        yield return new WaitForSeconds(1.0f);
+        // TODO (timo): We should just make it so that movement, physics, etc. are re-enabled on scene load.
+        yield return new WaitForSeconds(0.1f);
         EnableMovement();
     }
 

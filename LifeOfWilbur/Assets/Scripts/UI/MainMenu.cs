@@ -14,8 +14,9 @@ public class MainMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.X)) 
         {
-           PlayGame();
+            LifeOfWilbur.GameController.StartGame(GameMode.Story);
         }
+
         else if(Input.GetKeyDown(KeyCode.Escape))
         {
             //Disable the Credits menu and go back to the main menu

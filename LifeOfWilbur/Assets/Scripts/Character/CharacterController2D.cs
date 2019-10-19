@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
+
 // Adapted from https://github.com/Brackeys/2D-Character-Controller
 /// <summary>
 /// Controller for Wilburs movement.
@@ -15,24 +16,26 @@ public class CharacterController2D : MonoBehaviour
     /// How much to smooth out the movement
     /// </summary>							
 	[Range(0, .3f)] [SerializeField] private float _movementSmoothing = 0.05f;
-	/// <summary>
+    /// <summary>
     /// Whether or not a player can steer while jumping;
     /// </summary>	
-	[SerializeField] private bool _airControl = false;		
-	/// <summary>
+    [SerializeField] private bool _airControl = false;
+#pragma warning disable 649 // disable 'field not set' warning as these values are set by Unity.
+    /// <summary>
     /// A mask determining what is ground to the character
-    /// </summary>						
-	[SerializeField] private LayerMask _whatIsGround;
-	/// <summary>
+    /// </summary>
+    [SerializeField] private LayerMask _whatIsGround;
+    /// <summary>
     /// A position marking where to check if the player is grounded.
-    /// </summary>								
-	[SerializeField] private Transform _groundCheck;
-	/// <summary>
+    /// </summary>
+    [SerializeField] private Transform _groundCheck;
+#pragma warning restore 649
+    /// <summary>
     /// A position marking where to check for ceilings
     /// </summary>								    
-	[SerializeField] private Transform _ceilingCheck;							
-	
-	/// <summary>
+    [SerializeField] private Transform _ceilingCheck;
+
+    /// <summary>
     /// Radius of the overlap circle to determine if grounded
     /// </summary>	
 	const float GroundedRadius = 0.05f; 

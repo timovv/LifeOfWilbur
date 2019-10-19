@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Behaviour that controls the time travel mechanic seen in Life of Wilbur.
@@ -16,6 +17,7 @@ using UnityEngine;
 ///     time travel. When returning to the past, the original object is reenabled and the copy destroyed.
 ///     This causes the object to appear to return to its original position before the time travel happened.
 /// </summary>
+[RequireComponent(typeof(TransitionController))]
 public class TimeTravelController : MonoBehaviour
 {
 
@@ -54,49 +56,64 @@ public class TimeTravelController : MonoBehaviour
     /// </summary>
     private GameObject[] _futureTimeTravellingObjects = new GameObject[0];
 
-    // Start is called before the first frame update
-    void Start()
+    public void RegisterGameObjects()
     {
-        IsInPast = false;
-
-        if (_pastOnlyObjects == null)
-        {
-            _pastOnlyObjects = GameObject.FindGameObjectsWithTag("PastOnly");
-        }
-
-        if (_futureOnlyObjects == null)
-        {
-            _futureOnlyObjects = GameObject.FindGameObjectsWithTag("FutureOnly");
-        }
-
-        if(_timeTravellingObjects == null)
-        {
-            _timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
-        }
+        _pastOnlyObjects = GameObject.FindGameObjectsWithTag("PastOnly");
+        _futureOnlyObjects = GameObject.FindGameObjectsWithTag("FutureOnly");
+        _timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
 
         StartCoroutine(UpdateTimeTravelState(IsInPast));
     }
 
-    // Update is called once per frame
+    private void OnEnable()
+    {
+        RegisterGameObjects();
+    }
+
     void Update()
     {
-        // do time travel when they press x
-        // TODO: use Input.GetButton instead of checking keys like this
-        if (!_isTransitioning && !TimeTravelDisabled && Input.GetKeyDown(KeyCode.X))
+        // TODO: we should move this to a dedicated "InputController" component
+        // along with other input events
+        // this is better design(TM)
+
+        if (Input.GetKey(KeyCode.X) && !_isTransitioning)
         {
-            StartCoroutine(UpdateTimeTravelState(!IsInPast));
+            // User requests TIME TRAVEL.
+            // change their time as applicable. The action should not be able to be performed while another time travel event is happening.
+            StartCoroutine(TimeTravelWithFade(GetComponent<TransitionController>()));
         }
     }
 
-    private IEnumerator UpdateTimeTravelState(bool transitioningToPast)
+    public IEnumerator TimeTravelWithFade(TransitionController transitionController)
     {
+        if (!isActiveAndEnabled)
+        {
+            yield break;
+        }
+
+        if (_isTransitioning)
+        {
+            yield break;
+        }
+
+        _isTransitioning = true;
+        
+        yield return StartCoroutine(transitionController.FadeOutToBlack());
+        yield return StartCoroutine(UpdateTimeTravelState(!IsInPast));
+        yield return StartCoroutine(transitionController.FadeInFromBlack());
+        _isTransitioning = false;
+    }
+
+    public IEnumerator UpdateTimeTravelState(bool transitioningToPast)
+    {
+        if(!isActiveAndEnabled)
+        {
+            yield break;
+        }
+
         _isTransitioning = true;
 
-        var fadeInOut = GetComponent<FadeInOut>();
-
-        fadeInOut.FadeOutToBlack();
-        yield return new WaitForSeconds(fadeInOut._fadeDurationSeconds);
-
+        var fadeInOut = GetComponent<TransitionController>();
         // 1. If we are going to the future, save the state of all time travelling objects; if we are going to the future, restore them.
         if (transitioningToPast)
         {
@@ -150,7 +167,7 @@ public class TimeTravelController : MonoBehaviour
         }
 
         // 3. Fast-forward physics if we are going into the future to simulate time-travel effect
-        if(!transitioningToPast)
+        if (!transitioningToPast)
         {
             // Disable player movement so they don't speed away somewhere.
             CharacterController2D.MovementDisabled = true;
@@ -161,9 +178,8 @@ public class TimeTravelController : MonoBehaviour
             CharacterController2D.MovementDisabled = false;
         }
 
-        fadeInOut.FadeInFromBlack();
-        yield return new WaitForSeconds(fadeInOut._fadeDurationSeconds);
-
         _isTransitioning = false;
+
+        IsInPast = transitioningToPast;
     }
 }
