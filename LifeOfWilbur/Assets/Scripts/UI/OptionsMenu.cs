@@ -116,9 +116,7 @@ public class OptionsMenu : MonoBehaviour
 
         //Hide the opttions UI and show the Pause Panel
         _optionMenuUI.SetActive(false);
-        Debug.Log(FindObjectOfType<PauseScript>());
         FindObjectOfType<PauseScript>()?.SetVisibilityOfPauseUI(true);
-        Debug.Log("Escape Menu Ran!");
     }
 
 
