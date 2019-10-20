@@ -81,11 +81,11 @@ public class CharacterController2D : MonoBehaviour
         }
 
         //Debug.Log("Velocity is: " + _rigidBody2D.velocity.x);
-        if(_rigidBody2D.velocity.x > 2 || _rigidBody2D.velocity.x < -2)
-        {
-            //Play the 'SnowWalk' audio whenever Wilbur jumps
-            FindObjectOfType<AudioManager>().PlayWalking("SnowWalkTrimmed");
-        }
+        //if(_rigidBody2D.velocity.x > 2 || _rigidBody2D.velocity.x < -2)
+        //{
+        //    //Play the 'SnowWalk' audio whenever Wilbur jumps
+        //    FindObjectOfType<AudioManager>().PlayWalking("SnowWalkTrimmed");
+        //}
 	
     }
 

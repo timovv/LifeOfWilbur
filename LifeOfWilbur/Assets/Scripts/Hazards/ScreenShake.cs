@@ -2,18 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//For any "death" objects - put this onto Camera and drag the camera onto Wilbur's "death" object scripts
+/// <summary>
+/// For any "death" objects - put this onto Camera and drag the camera onto Wilbur's "death" object scripts
+/// </summary>
 public class ScreenShake : MonoBehaviour
 {
-    public float _intensity; //Level of screenshake (recommend 0.1-0.2)
+    /// <summary>
+    /// Level of screenshake (recommend 0.1-0.2)
+    /// </summary>
+    public float _intensity;
 
+    /// <summary>
+    /// The position of the player on death
+    /// </summary>
     private Transform _target;
+
+    /// <summary>
+    /// The initial vector position of the player on death
+    /// </summary>
     private Vector3 _initialPosition;
-    private float _pendingShakeDuration = 0f; //Duration of shake (recommend 0.2)
+
+    /// <summary>
+    /// Duration of shake (recommend 0.2)
+    /// </summary>
+    private float _pendingShakeDuration = 0f;
     
     // Start is called before the first frame update
     void Start()
     {
+        // Assigns the death location/vector of the platform
         _target = GetComponent<Transform>();
         _initialPosition = _target.localPosition;
     }
@@ -22,6 +39,7 @@ public class ScreenShake : MonoBehaviour
     {
         if (_pendingShakeDuration > 0)
         {
+            // Starts DoShake of rotine
             StartCoroutine(DoShake());
         }
     }
@@ -34,6 +52,9 @@ public class ScreenShake : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// The routine of shaking the screen
+    /// </summary>
     IEnumerator DoShake()
     {
         //Do shake

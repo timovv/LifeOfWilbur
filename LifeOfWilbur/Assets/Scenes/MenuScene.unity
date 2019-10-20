@@ -2511,6 +2511,16 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: EscapeMenuButtonClick
       objectReference: {fileID: 0}
+    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1479519498}
+    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonHover
+      objectReference: {fileID: 0}
     - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -2530,16 +2540,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1479519498}
-    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
-        type: 3}
-      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnButtonHover
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5885356949671907577, guid: da553e23214ce9049a3e26cefcf73768, type: 3}
@@ -3196,13 +3196,6 @@ MonoBehaviour:
     source: {fileID: 0}
     _loop: 1
     _isSFX: 0
-  - _name: SnowWalkTrimmed
-    _clip: {fileID: 8300000, guid: cc2e8b14169bb934c8062656aca1c902, type: 3}
-    _volume: 1
-    _pitch: 1
-    source: {fileID: 0}
-    _loop: 0
-    _isSFX: 1
   - _name: DeathSFX
     _clip: {fileID: 8300000, guid: 1b17605bd890596458645c1190bfcd60, type: 3}
     _volume: 1
