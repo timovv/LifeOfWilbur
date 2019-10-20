@@ -23,9 +23,12 @@ public class LevelReset : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R) && !_pressed && !ResetDisabled) //TODO: change to button, not keycode
         {
-            _pressed = true; // Disable further requests in case the button was spammed
-            TransitionController script = GameObject.FindWithTag("GameController") .GetComponent<TransitionController>();
-            script.ReloadCurrentScene();
+            //_pressed = true; // Disable further requests in case the button was spammed
+            //TransitionController script = GameObject.FindWithTag("GameController") .GetComponent<TransitionController>();
+            //script.ReloadCurrentScene();
+
+            GetComponent<GameController>().ResetLevel();
+
         }
     }
 }
