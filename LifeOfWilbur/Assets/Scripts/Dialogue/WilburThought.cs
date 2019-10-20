@@ -22,7 +22,7 @@ public class WilburThought : MonoBehaviour
     /// </summary>
     /// <param name="other">The object which has entered the collision region</param>
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player") && !_playerHasRead && !DialogueController.Instance.IsOpen) {
+        if (!PauseScript.IsPaused && other.CompareTag("Player") && !_playerHasRead && !DialogueController.Instance.IsOpen) {
             _dialogueTrigger.TriggerDialogue();
             _playerHasRead = true;
         }

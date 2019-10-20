@@ -14,6 +14,9 @@ public class MainMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.X)) 
         {
+            TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
+            LevelReset.ResetDisabled = false; // enable resetting level
+            Physics2D.autoSimulation = true; // enable physcis
             LifeOfWilbur.GameController.StartGame(GameMode.Story);
         }
 

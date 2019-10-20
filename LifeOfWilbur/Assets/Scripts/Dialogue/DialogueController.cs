@@ -167,6 +167,10 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     public void DisplayNextSentence()
     {
+        if (PauseScript.IsPaused)
+        {
+            return;
+        }
         _isBold = false;
         if (_textAnimating)
         {
