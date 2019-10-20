@@ -632,7 +632,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.05
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1210,11 +1210,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _nextSceneName
-      value: Complex
       objectReference: {fileID: 0}
     - target: {fileID: 3326152707801636456, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10403,12 +10398,27 @@ PrefabInstance:
     - target: {fileID: 7927973698389261309, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.83
+      value: 10.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882604481015173999, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646635651002276840, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4901476924931370889, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 6.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999949647324978620, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10424,6 +10434,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2667430984192578031, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1554369878}
+    - target: {fileID: 7146124962192934426, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _nextSceneName
+      value: Complex
       objectReference: {fileID: 0}
     - target: {fileID: 8285090130309482242, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10522,16 +10542,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6838551112487271852, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2667430984192578031, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1554369878}
-    - target: {fileID: 5999949647324978620, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
