@@ -138,13 +138,11 @@ public class AudioManager : MonoBehaviour
 
         if (TimeTravelController.IsInPast) //Set YoungWilbur soundtrack to slider volume
         {
-            Debug.Log("YoungWilbur");
             StartCoroutine(FadeAudio(youngWilburSound, 0.5f, youngWilburSound._volume));
             StartCoroutine(FadeAudio(oldWilburSound, 0.5f, 0));
         }
         else //Set AdultWilbur sound track to slider volume
         {
-            Debug.Log("Old Wilbur");
             StartCoroutine(FadeAudio(youngWilburSound, 0.5f, 0));
             StartCoroutine(FadeAudio(oldWilburSound, 0.5f, oldWilburSound._volume));
         }
