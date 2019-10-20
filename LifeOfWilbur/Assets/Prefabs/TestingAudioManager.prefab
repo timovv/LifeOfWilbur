@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5390926609665593030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5390926609665593024}
+  - component: {fileID: 5390926609665593031}
+  m_Layer: 0
+  m_Name: AudioManager 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5390926609665593024
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390926609665593030}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5390926609665593031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5390926609665593030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2852bdf7cba70ca44a10fa2729b74818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sounds:
+  - _name: BackgroundMusic
+    _clip: {fileID: 8300000, guid: a86cd10e87402704488866c114a2b968, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 1
+    _isSFX: 0
+  - _name: DeathSFX
+    _clip: {fileID: 8300000, guid: 1b17605bd890596458645c1190bfcd60, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: ButtonHover
+    _clip: {fileID: 8300000, guid: 8f95474d6ff4d0247a2c862967e2fee9, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: ExitSign1
+    _clip: {fileID: 8300000, guid: 18835f9a1e2879643b2b34509359443c, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: ExitSign2
+    _clip: {fileID: 8300000, guid: ac4fdba9c9a4dc54eb8f5ffef67d92ae, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: IceBreak
+    _clip: {fileID: 8300000, guid: 033810ff140e36a4babbfbc1f3b2c8c7, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1

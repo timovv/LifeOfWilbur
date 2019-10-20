@@ -67,7 +67,7 @@ public class TimeTravelController : MonoBehaviour
         _futureOnlyObjects = GameObject.FindGameObjectsWithTag("FutureOnly");
         _timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
 
-        StartCoroutine(UpdateTimeTravelState(IsInPast));
+        StartCoroutine(UpdateTimeTravelState(true));
     }
 
     private void OnEnable()
@@ -136,8 +136,6 @@ public class TimeTravelController : MonoBehaviour
                 objectToRestore.SetActive(true);
             }
 
-            // set background color
-            Camera.main.backgroundColor = new Color(0.51f, 0.69f, 0.87f, 1f);
         } 
         else
         {
@@ -155,8 +153,6 @@ public class TimeTravelController : MonoBehaviour
                 objectToSave.SetActive(false);
             }
 
-            // set background color
-             Camera.main.backgroundColor = new Color(0.60f, 0.63f, 0.82f, 1f);
         }
 
 

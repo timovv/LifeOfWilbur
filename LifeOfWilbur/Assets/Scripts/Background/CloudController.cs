@@ -66,7 +66,7 @@ public class CloudController : MonoBehaviour
         for(; ; )
         {
             yield return new WaitForSeconds(Mathf.Clamp(RandomGaussian(_meanCloudSpawnTimeSec, _cloudSpawnTimeStdDevSec), 0, float.PositiveInfinity));
-            Debug.Log("Spawning a cloud"); 
+
             // Create a cloud
             var cloud = Instantiate(_cloudObject);
             cloud.transform.parent = transform;

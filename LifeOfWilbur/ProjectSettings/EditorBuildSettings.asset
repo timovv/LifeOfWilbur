@@ -6,21 +6,54 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MenuScene_TimoChangedIt.unity
-    guid: a832489000684014d93deb1135b24d8d
+    path: Assets/Scenes/MenuScene.unity
+    guid: 694bd9876b9258845a0b9ec9f1fe54d5
   - enabled: 1
-    path: Assets/Scenes/Level1/Level1_1.unity
-    guid: fbe5bf8a69b3a0b4dbee0cb17cf3ae3c
+    path: Assets/Scenes/LevelSelectScene.unity
+    guid: 78fd79d011727034caaef15f4b02dea8
   - enabled: 1
-    path: Assets/Scenes/Level1/Level1_2.unity
-    guid: 5cdac4687df49fb4c9b9ed6fe9cb37da
+    path: Assets/Scenes/Level1/Level1_1_Crib.unity
+    guid: f31cb447121c6e0408e5d365ee8a66ee
   - enabled: 1
-    path: Assets/Scenes/Level1/Level1_3.unity
-    guid: 340df8d0bc816a2449f2dc0db6559222
+    path: Assets/Scenes/Level1/Level1_2_Tutorial.unity
+    guid: 0cbb8e9a0e6ddfa478df42449f4825eb
   - enabled: 1
-    path: Assets/Scenes/Level1/Level1_4.unity
-    guid: e8e3b1cdc6d18a44a9f526c8ce2ae4ea
+    path: Assets/Scenes/Level1/Level1_3_Water.unity
+    guid: 175364a6e101200429ece7532693836c
   - enabled: 1
-    path: Assets/Scenes/Level1/Level1_5.unity
-    guid: 00b4a25baf13a58419dba90a9f6770d2
+    path: Assets/Scenes/Level1/Level1_4_Whale.unity
+    guid: 5e2773229f3a9a245b3596879d8e6dab
+  - enabled: 1
+    path: Assets/Scenes/Level1/Level1_5_Water2.unity
+    guid: ceef8b2b1658e0949b9a070e9e4b9bee
+  - enabled: 1
+    path: Assets/Scenes/Level1/Level1_6_SpikeDrop.unity
+    guid: 90885b486af2a7f4eacd663cd6412e63
+  - enabled: 1
+    path: Assets/Scenes/Level2/Level2_1_Complex.unity
+    guid: f50f6672637fb294e88834ef81bb67cc
+  - enabled: 1
+    path: Assets/Scenes/Level2/Level2_2_Stairs.unity
+    guid: 1a03a9a1b1d8b9844a167f20f8e62222
+  - enabled: 1
+    path: Assets/Scenes/Level2/Level2_3_Fox.unity
+    guid: bf503c7e6806f2e4eb0b9b79fe729041
+  - enabled: 1
+    path: Assets/Scenes/Level2/Level2_4_Stairs2.unity
+    guid: d4fe47e0d42f5574c92b93c6f3b10322
+  - enabled: 1
+    path: Assets/Scenes/Level2/Level2_5_MoreComplex.unity
+    guid: fbfba6fe6f1b29c47925ca033203fe5c
+  - enabled: 1
+    path: Assets/Scenes/Level3/Level3_1_Bird.unity
+    guid: 465e2f5cd12a81744b451b6fd025dde8
+  - enabled: 1
+    path: Assets/Scenes/Level3/Level3_2_Storm.unity
+    guid: b23e9f41924c9764fa6404a318925c31
+  - enabled: 1
+    path: Assets/Scenes/LeaderboardExit.unity
+    guid: 44811c79866db20448fe27d0738fec95
+  - enabled: 1
+    path: Assets/Scenes/ExitScene.unity
+    guid: 7816f718c13d9544a989bd376173ae91
   m_configObjects: {}
