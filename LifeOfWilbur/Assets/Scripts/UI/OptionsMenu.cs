@@ -130,4 +130,9 @@ public class OptionsMenu : MonoBehaviour
         FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
     }
 
+    public float GetBackgroundSliderValue()
+    {
+        return _backgroundVolume;
+    }
+
 }
