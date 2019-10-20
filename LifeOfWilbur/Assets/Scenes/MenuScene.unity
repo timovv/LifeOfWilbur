@@ -3149,7 +3149,7 @@ MonoBehaviour:
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
-    _loop: 0
+    _loop: 1
     _isSFX: 0
   - _name: SnowWalkTrimmed
     _clip: {fileID: 8300000, guid: cc2e8b14169bb934c8062656aca1c902, type: 3}
