@@ -151,7 +151,6 @@ public class DialogueController : MonoBehaviour
         IsOpen = true;
         _animator.SetBool("isOpen", true);
 
-        FindObjectOfType<AudioManager>().Pause("SnowWalkTrimmed"); //Pause Sound movement
         CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
         TimeTravelController.TimeTravelDisabled = true; // disable Time Travel
         LevelReset.ResetDisabled = true; // disable resetting level
