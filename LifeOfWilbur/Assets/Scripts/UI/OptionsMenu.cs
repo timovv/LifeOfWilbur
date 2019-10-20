@@ -28,15 +28,17 @@ public class OptionsMenu : MonoBehaviour
         float VolumeSliderGet = GameObject.Find("BackgroundVolumeSlider").GetComponent<Slider>().value;
         try
         {
-            //Find the slider in the object hierarchy
-            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "BackgroundMusic");
+            AudioManager audioManager = AudioManager._instance;
 
-            //Update the field in the sound object
-            s._volume = VolumeSliderGet;
-            _backgroundVolume = VolumeSliderGet;
-
-            //Update the source of the audio
-            s.source.volume = s._volume;
+            foreach(Sound sound in audioManager._sounds)
+            {
+                if (!sound._isSFX)
+                {
+                    sound._volume = VolumeSliderGet;
+                    sound.source.volume = sound._volume;
+                }
+                _backgroundVolume = VolumeSliderGet;
+            }
         }
         catch (NullReferenceException e)
         {
@@ -126,6 +128,11 @@ public class OptionsMenu : MonoBehaviour
     public void OnButtonHover()
     {
         FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
+    }
+
+    public float GetBackgroundSliderValue()
+    {
+        return _backgroundVolume;
     }
 
 }

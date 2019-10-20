@@ -41,8 +41,7 @@ public class BreakBlock : MonoBehaviour
     {
         gameObject.SetActive(true);
         yield return new WaitForSeconds(delayTime);
-        //FindObjectOfType<AudioManager>().Play("IceBreak");
-        AudioManager._instance.Play("IceBreak");
+        AudioManager._instance.ForcePlay("IceBreak");
         gameObject.SetActive(false);
     }
 }
