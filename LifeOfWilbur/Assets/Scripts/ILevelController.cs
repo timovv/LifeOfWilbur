@@ -1,7 +1,7 @@
 ﻿
 public interface ILevelController
 {
-    void NextLevel();
+    void NextRoom();
 
     void ResetLevel();
 }
