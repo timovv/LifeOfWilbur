@@ -15,13 +15,7 @@ public class OptionsMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //Resume real time and Gamer time
-            Time.timeScale = 1f;
-            GameTimer.Paused = false;
-
-            //Hide the opttions UI and show the Pause Panel
-            _optionMenuUI.SetActive(false);
-            FindObjectOfType<PauseScript>()?.SetVisibilityOfPauseUI(true);
+            EscapeMenu();
         }
     }
 
@@ -111,4 +105,31 @@ public class OptionsMenu : MonoBehaviour
             _optionMenuUI.SetActive(visibility);
         }
     }
+
+
+    private void EscapeMenu()
+    {
+        
+        //Resume real time and Gamer time
+        Time.timeScale = 1f;
+        GameTimer.Paused = false;
+
+        //Hide the opttions UI and show the Pause Panel
+        _optionMenuUI.SetActive(false);
+        Debug.Log(FindObjectOfType<PauseScript>());
+        FindObjectOfType<PauseScript>()?.SetVisibilityOfPauseUI(true);
+        Debug.Log("Escape Menu Ran!");
+    }
+
+
+    public void EscapeButtonClick()
+    {
+        EscapeMenu();
+    }
+
+    public void OnButtonHover()
+    {
+        FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
+    }
+
 }

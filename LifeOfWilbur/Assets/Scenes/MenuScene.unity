@@ -549,6 +549,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569984, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac7c951352c001b42b1232ff18acd7e5, type: 3}
 --- !u!1 &306810067
@@ -2495,6 +2500,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8499605765198960581, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1479519498}
+    - target: {fileID: 8499605765198960581, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EscapeMenuButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1479519498}
+    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonHover
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5885356949671907577, guid: da553e23214ce9049a3e26cefcf73768, type: 3}
