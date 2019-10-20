@@ -134,6 +134,7 @@ public class GameController : MonoBehaviour, ILevelController
             _roomEnumerator = ((IEnumerable<Room>)_levelEnumerator.Current._rooms)
                 .Where(x => x._playInSpeedRunMode || CurrentGameMode == GameMode.Story)
                 .GetEnumerator();
+            _roomEnumerator.MoveNext();
             return true;
         }
 
