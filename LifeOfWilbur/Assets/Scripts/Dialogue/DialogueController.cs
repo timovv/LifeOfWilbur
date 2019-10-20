@@ -109,10 +109,14 @@ public class DialogueController : MonoBehaviour
     private void InitaliseCharacterMapper()
     {
         _characterMapper = new Dictionary<string, int> {
-            { "Wilbur", 1 }, //Polar bear
-            { "Iris", 2 }, //Fox
-            { "Simon", 3 }, //Tern
-            { "Willy", 4 }, //Whale
+            { "Wilbur", 1 }, // Polar bear
+            { "Iris", 2 }, // Fox
+            { "Simon", 3 }, // Tern
+            { "Willy", 4 }, // Whale
+            { "Greta", 5 }, // Pink Bow
+            { "Reginald", 6 }, // Workout/Tie
+            { "Ol' Joe", 7 }, // Elder
+            { "Tim", 8 } // Brown
         };
     }
 

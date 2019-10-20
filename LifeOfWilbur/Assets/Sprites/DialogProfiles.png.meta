@@ -50,6 +50,42 @@ TextureImporter:
   - first:
       213: -8008681833322524561
     second: DialogProfiles_15
+  - first:
+      213: 1145014505979964563
+    second: DialogProfiles_16
+  - first:
+      213: 171807916768043589
+    second: DialogProfiles_17
+  - first:
+      213: -6730763267405220025
+    second: DialogProfiles_18
+  - first:
+      213: 4315834377109990304
+    second: DialogProfiles_19
+  - first:
+      213: 3618044207808429460
+    second: DialogProfiles_20
+  - first:
+      213: 894856659933371260
+    second: DialogProfiles_21
+  - first:
+      213: -2723599695012137629
+    second: DialogProfiles_22
+  - first:
+      213: -2081070389630112970
+    second: DialogProfiles_23
+  - first:
+      213: 6347672425194727897
+    second: DialogProfiles_24
+  - first:
+      213: 4326631565094231974
+    second: DialogProfiles_25
+  - first:
+      213: 6681815227932320118
+    second: DialogProfiles_26
+  - first:
+      213: -574253090228609415
+    second: DialogProfiles_27
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -174,7 +210,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 224
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -184,7 +220,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 524cfa79df1e4de4fb9d799dd606f038
+      spriteID: 996a432688829734baa031e2948cfc0b
       internalID: -6489678315287019253
       vertices: []
       indices: 
@@ -195,7 +231,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 224
+        y: 480
         width: 32
         height: 32
       alignment: 0
@@ -205,7 +241,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8a8fc2c438aa93478f9b9478ba60b71
+      spriteID: c48630b8803f0134c964ff40eaf6aa72
       internalID: 9156098312727134622
       vertices: []
       indices: 
@@ -216,7 +252,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -226,7 +262,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b1df581c7418fd419994d036d5e7ba3
+      spriteID: 79ff5f67cdedb6644b5f7516fb19eb53
       internalID: 2850153890789202538
       vertices: []
       indices: 
@@ -237,7 +273,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 192
+        y: 448
         width: 32
         height: 32
       alignment: 0
@@ -247,7 +283,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb97c92903da15f46be8bf73b5a63f93
+      spriteID: 78f33c129d1bd524d86c7c3d51eda2d6
       internalID: -2579858833700855327
       vertices: []
       indices: 
@@ -258,7 +294,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 160
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -268,7 +304,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e392a0f664a4748b5f072ea9323391
+      spriteID: ff3644d62b36ef0479db57eb7d5a3c63
       internalID: -7102846815764760196
       vertices: []
       indices: 
@@ -279,7 +315,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 160
+        y: 416
         width: 32
         height: 32
       alignment: 0
@@ -289,7 +325,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3003a98dc86d8cd4d82f002d759ce51d
+      spriteID: 50a2a546a3755e245a2ef5d064a6c77e
       internalID: -4017943316051087025
       vertices: []
       indices: 
@@ -300,7 +336,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -310,7 +346,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9bd466753cc93a40812a1620bd559c7
+      spriteID: 2f7b112bcdcac2144acb8b32d0c16d78
       internalID: -8771358767400355891
       vertices: []
       indices: 
@@ -321,7 +357,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 128
+        y: 384
         width: 32
         height: 32
       alignment: 0
@@ -331,7 +367,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 23bcb86c03704d74c81b841bfe7917f7
+      spriteID: f6019b34d2e0dd24295634e23523a1ed
       internalID: 145897862320139785
       vertices: []
       indices: 
@@ -342,7 +378,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -352,7 +388,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e67aec47978d7354b8f17cb6deb83c22
+      spriteID: b995565022c837543b2f4ae1eddce82c
       internalID: 1593454767820123323
       vertices: []
       indices: 
@@ -363,7 +399,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 352
         width: 32
         height: 32
       alignment: 0
@@ -373,7 +409,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21f5fdae4cbcc64eb62c48dcd1fd387
+      spriteID: 7906fd21497f485479ab13736aaec14f
       internalID: 5943066765613614900
       vertices: []
       indices: 
@@ -384,7 +420,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 64
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -394,7 +430,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 548f83593dcbffa479f424f6829df248
+      spriteID: 1250e227841a79d4690035f2d9e3a660
       internalID: 7584238292194870205
       vertices: []
       indices: 
@@ -405,7 +441,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 64
+        y: 320
         width: 32
         height: 32
       alignment: 0
@@ -415,7 +451,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8ca16f70eb6bef041a574b0002d51722
+      spriteID: f0013a1339a87a64b880f3d547dcb510
       internalID: -2137601066246861970
       vertices: []
       indices: 
@@ -426,7 +462,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -436,7 +472,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1a2307b08225324e97500db5365ae83
+      spriteID: ec88574f6db538245bc0ba06b674bb01
       internalID: 346089917636362080
       vertices: []
       indices: 
@@ -447,7 +483,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 288
         width: 32
         height: 32
       alignment: 0
@@ -457,7 +493,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b598897b850ca614a9cae82bab6de1b2
+      spriteID: 83e47565d72e2e14992da8ad6150b123
       internalID: 1292804668169606516
       vertices: []
       indices: 
@@ -468,7 +504,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -478,7 +514,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e68c568004daec64790336ff6c55ff8e
+      spriteID: 5f1a39d67c8aef8458624209b0fbdeff
       internalID: -1559856261321324381
       vertices: []
       indices: 
@@ -489,7 +525,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 256
         width: 32
         height: 32
       alignment: 0
@@ -499,8 +535,260 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6008edc3b47e804f872a41e23008a5a
+      spriteID: 1a0d213d6b425e64eba543b6f2c1acf9
       internalID: -8008681833322524561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b902e449a19357c43adca5f75b6edf68
+      internalID: 1145014505979964563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fad7adea82db7f341a891fe1e04a5963
+      internalID: 171807916768043589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb24c961ad51744295ebaf9c24f6355
+      internalID: -6730763267405220025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2290d69dd24d1214092a2c12a913f9a5
+      internalID: 4315834377109990304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4744a9a6cee78404ab35bc8f60a1c068
+      internalID: 3618044207808429460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 177b352533abcf7458c5282b72c29ddb
+      internalID: 894856659933371260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e27930f65a67e44c8dd101070645186
+      internalID: -2723599695012137629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_23
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd787a1313ba4449953f830b70526dc
+      internalID: -2081070389630112970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b15a96d9cf8c0542a64c5a34453fc43
+      internalID: 6347672425194727897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dc7cbf83121ff45bc736ecdb49ec10
+      internalID: 4326631565094231974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9ba5ff8b9bb2a41bbed3768a93d294
+      internalID: 6681815227932320118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogProfiles_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ca1a39847c5694b80b088ffb816c00
+      internalID: -574253090228609415
       vertices: []
       indices: 
       edges: []
