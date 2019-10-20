@@ -205,4 +205,14 @@ public class GameController : MonoBehaviour, ILevelController
         CurrentGameMode = GameMode.NotInGame;
         SceneManager.LoadScene(MENU_SCENE_NAME);
     }
+
+    public void StartStoryMode()
+    {
+        StartGame(GameMode.Story);
+    }
+
+    public void StartSpeedrunMode()
+    {
+        StartGame(GameMode.SpeedRun);
+    }
 }

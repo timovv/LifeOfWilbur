@@ -45,6 +45,11 @@ public class LevelSelectScript : MonoBehaviour
         StartCoroutine(deresizeRoutine()); 
     }
 
+    public void GoBackButtonClick()
+    {
+        SceneManager.LoadScene("MenuScene");
+    }
+
     private IEnumerator resizeRoutine(Transform target)
     {
         float elapsed = 0;
