@@ -6,18 +6,36 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
+/// <summary>
+/// Submits user's scores and grabs leaderboard data
+/// </summary>
 public class ScoreboardInit : MonoBehaviour
 {
+    /// <summary>
+    /// Scoreboard base container
+    /// </summary>
     public Transform _container;
+
+    /// <summary>
+    /// Scoreboard entry/list prefab template
+    /// </summary>
     public Transform _entryTemplate;
+
+    /// <summary>
+    /// Colour to highlight user's entry in leaderboard list
+    /// </summary>
     public Color _userHighlight = new Color(1f, 0.878f, 0.212f);
 
+    /// <summary>
+    /// API endpoint to send score and get leaderboard data.
+    /// </summary>
     public string _saveScoreEndPoint = "http://localhost:3000/scores";
 
     void Awake()
     {
+        // Get stats from the various controllers
         NewScore score = new NewScore {
-            name = "P",
+            name = "Player", // Unused
             time = GameTimer.ElapsedTimeSeconds,
             attempts = GameController.Resets,
             timeswaps = TimeTravelController.Timeswaps
@@ -25,8 +43,12 @@ public class ScoreboardInit : MonoBehaviour
         StartCoroutine(PostScore(score));
     }
 
+    /// <summary>
+    /// Sends scores to the defined API endpoing
+    /// </summary>
     private IEnumerator PostScore(NewScore score)
     {
+        // Had to use a custom raw upload handler as defalut escapes certain characters
         byte[] data = Encoding.UTF8.GetBytes(JsonUtility.ToJson(score));
         UnityWebRequest request = UnityWebRequest.Post(_saveScoreEndPoint, "");
         request.uploadHandler = new UploadHandlerRaw(data);
@@ -45,18 +67,26 @@ public class ScoreboardInit : MonoBehaviour
         FillList(recieved);
     }
 
+    /// <summary>
+    /// Adds entries from the API call to the scoreboard list
+    /// </summary>
     private void FillList(Scores data)
     {
+        // Always show top 10
         foreach (ListEntry entry in data.top)
         {
             AddListItem(entry, entry._id == data.id);
         }
+
+        // We want to add a spacer if scores around the user's rank
+        // isn't top 20
         int lastTopRank = data.top.Count;
         if (lastTopRank < data.near[0].rank)
         {
             AddSpacer();
         }
 
+        // Entries that are +/- 5 ranks of the user's rank
         foreach (ListEntry entry in data.near)
         {
             if (lastTopRank < entry.rank)
@@ -66,6 +96,9 @@ public class ScoreboardInit : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instantiates a new scoreboard list entry
+    /// </summary>
     private void AddListItem(ListEntry entry, bool shouldHighlight)
     {
         Transform listItem = Instantiate<Transform>(_entryTemplate, _container);
@@ -88,6 +121,9 @@ public class ScoreboardInit : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Instantiates a spacer scoreboard entry
+    /// </summary>
     private void AddSpacer()
     {
         Transform listItem = Instantiate<Transform>(_entryTemplate, _container);
@@ -103,6 +139,8 @@ public class ScoreboardInit : MonoBehaviour
     }
 }
 
+// DTOs for API
+// Send
 [Serializable]
 struct NewScore
 {
@@ -120,6 +158,7 @@ struct NewScore
     }
 }
 
+// Recieve
 [Serializable]
 struct Scores
 {
