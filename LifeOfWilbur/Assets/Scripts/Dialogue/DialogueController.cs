@@ -113,14 +113,9 @@ public class DialogueController : MonoBehaviour
             { "Iris", 2 }, // Fox
             { "Simon", 3 }, // Tern
             { "Willy", 4 }, // Whale
-            { "Ginnie", 5 }, // Copyright
-            { "Sans", 6 }, // Ness
-            { "Reginald", 7 }, // Workout/Tie
-            { "Timothy", 8 }, // Brown
-            { "Greta", 9 }, // Pink Bow
-            { "Billy", 10 }, // Red Boots
-            { "Old Man Joe", 11 }, // Elder
-            { "Plain", 12 } // Elder
+            { "Greta", 5 }, // Pink Bow
+            { "Reginald", 6 }, // Workout/Tie
+            { "Old Man Joe", 7 }, // Elder
         };
     }
 
