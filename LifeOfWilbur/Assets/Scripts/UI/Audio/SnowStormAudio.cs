@@ -22,7 +22,7 @@ public class SnowStormAudio : MonoBehaviour
         OldWilbur.source.Stop();
         YoungWilbur.source.Stop();
 
-        Sound SnowStormLevel = Array.Find(audioManager._sounds, sound => sound._name == "YoungWilbur");
+        Sound SnowStormLevel = Array.Find(audioManager._sounds, sound => sound._name == "SnowStormLevel");
         SnowStormLevel._volume = FindObjectOfType<OptionsMenu>().GetBackgroundSliderValue();
         SnowStormLevel.source.volume = SnowStormLevel._volume;
 

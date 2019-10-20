@@ -10,6 +10,12 @@ public class MainMenu : MonoBehaviour
     public GameObject _mainMenu;
     
 
+    void Awake()
+    {
+        AudioManager audioManager = AudioManager._instance;
+        audioManager.Restart();
+    }
+
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.X)) 

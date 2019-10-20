@@ -58,6 +58,14 @@ public class AudioManager : MonoBehaviour
         FindObjectOfType<TransitionController>().OnFadingIn += ChangeVolumeTense;
     }
 
+
+    public void Restart()
+    {
+        Sound SnowStorm = Array.Find(_sounds, sound => sound._name == "SnowStormLevel");
+        SnowStorm.source?.Stop();
+        Start();
+    }
+
     /// <summary>
     /// This method abstracts and allows the sounds to be played from any other script in the game, by finding
     /// its object and specifying the name of the sound file.
@@ -138,13 +146,11 @@ public class AudioManager : MonoBehaviour
 
         if (TimeTravelController.IsInPast) //Set YoungWilbur soundtrack to slider volume
         {
-            Debug.Log("Young Wilbur");
             StartCoroutine(FadeAudio(youngWilburSound, 0.5f, youngWilburSound._volume));
             StartCoroutine(FadeAudio(oldWilburSound, 0.5f, 0));
         }
         else //Set AdultWilbur sound track to slider volume
         {
-            Debug.Log("Adult Wilbur");
             StartCoroutine(FadeAudio(youngWilburSound, 0.5f, 0));
             StartCoroutine(FadeAudio(oldWilburSound, 0.5f, oldWilburSound._volume));
         }
