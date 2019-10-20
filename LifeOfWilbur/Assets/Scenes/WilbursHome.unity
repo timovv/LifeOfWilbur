@@ -14812,16 +14812,26 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2882604481015173999, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7927973698389261309, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 148
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _pastFocusObject
+      value: 
+      objectReference: {fileID: 998351475}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _futureFocusObject
+      value: 
+      objectReference: {fileID: 197743156}
     - target: {fileID: 4901476924931370889, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14831,6 +14841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 5.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2882604481015173999, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6646635651002276840, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -14872,16 +14887,6 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _pastFocusObject
-      value: 
-      objectReference: {fileID: 998351475}
-    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _futureFocusObject
-      value: 
-      objectReference: {fileID: 197743156}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db3c9888a7c3f604a8f2d96854477215, type: 3}
 --- !u!4 &1398513166 stripped
