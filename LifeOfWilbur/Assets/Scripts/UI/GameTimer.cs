@@ -21,6 +21,8 @@ public class GameTimer : MonoBehaviour
     /// </summary>
     public static bool Paused { get; set; } = false;
 
+    private Text _text;
+
     /// <summary>
     /// Elapsed game time in seconds, formatted in the form mm:ss:ii
     /// </summary>
@@ -41,9 +43,19 @@ public class GameTimer : MonoBehaviour
                 (int)(seconds / 60), (int)(seconds % 60), (int)(seconds % 1 * 100));
     }
 
+    private void Awake()
+    {
+        _text = GetComponent<Text>();
+    }
+
     // Update is called once per frame
     void Update()
     {
+        if (LifeOfWilbur.GameController != null)
+        {
+            _text.enabled = LifeOfWilbur.GameController.CurrentGameMode == GameMode.SpeedRun;
+        }
+
         if (!Paused)
         {
             ElapsedTimeSeconds += Time.unscaledDeltaTime;
