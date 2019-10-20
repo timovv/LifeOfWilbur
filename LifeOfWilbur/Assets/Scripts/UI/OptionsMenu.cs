@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,13 +15,7 @@ public class OptionsMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //Resume real time and Gamer time
-            Time.timeScale = 1f;
-            GameTimer.Paused = false;
-
-            //Hide the opttions UI and show the Pause Panel
-            _optionMenuUI.SetActive(false);
-            FindObjectOfType<PauseScript>()?.SetVisibilityOfPauseUI(true);
+            EscapeMenu();
         }
     }
 
@@ -60,19 +55,16 @@ public class OptionsMenu : MonoBehaviour
 
         try
         {
-            //Find the slider in the object hierarchy
-            //Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
-            Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalkTrimmed");
-            Sound s1 = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "DeathSFX");
+            AudioManager audioManager = AudioManager._instance;
 
-            //Update the field in the sound object
-            s._volume = volume;
-            s1._volume = volume;
-
-            //Update the source of the audio
-            s.source.volume = s._volume;
-            s1.source.volume = s1._volume;
-
+            foreach (Sound s in audioManager._sounds)
+            {
+                if (s._isSFX)
+                {
+                    s._volume = volume;
+                    s.source.volume = s._volume;
+                }
+            }
             //Set the field to the slider volume
             _sfxVolume = volume;
         }
@@ -111,4 +103,29 @@ public class OptionsMenu : MonoBehaviour
             _optionMenuUI.SetActive(visibility);
         }
     }
+
+
+    private void EscapeMenu()
+    {
+        
+        //Resume real time and Gamer time
+        Time.timeScale = 1f;
+        GameTimer.Paused = false;
+
+        //Hide the opttions UI and show the Pause Panel
+        _optionMenuUI.SetActive(false);
+        FindObjectOfType<PauseScript>()?.SetVisibilityOfPauseUI(true);
+    }
+
+
+    public void EscapeButtonClick()
+    {
+        EscapeMenu();
+    }
+
+    public void OnButtonHover()
+    {
+        FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
+    }
+
 }

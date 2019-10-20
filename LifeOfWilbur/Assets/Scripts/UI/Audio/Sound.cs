@@ -22,4 +22,6 @@ public class Sound
     public AudioSource source;
 
     public bool _loop;
+
+    public bool _isSFX;
 }

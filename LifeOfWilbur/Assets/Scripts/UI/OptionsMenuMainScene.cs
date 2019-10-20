@@ -14,9 +14,7 @@ public class OptionsMenuMainScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //Enable main menu panel and disable the option menu panel
-            _optionMenuUI.SetActive(false);
-            _mainMenuUI.SetActive(true);
+            EscapeMenu();
         }
     }
 
@@ -73,5 +71,22 @@ public class OptionsMenuMainScene : MonoBehaviour
 
     }
 
+
+    private void EscapeMenu()
+    {
+        //Enable main menu panel and disable the option menu panel
+        _optionMenuUI.SetActive(false);
+        _mainMenuUI.SetActive(true);
+    }
+
+    public void EscapeMenuButtonClick()
+    {
+        EscapeMenu();
+    }
+
+    public void OnButtonHover()
+    {
+        FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
+    }
 
 }

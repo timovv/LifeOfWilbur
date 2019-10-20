@@ -549,6 +549,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569984, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac7c951352c001b42b1232ff18acd7e5, type: 3}
 --- !u!1 &306810067
@@ -2496,6 +2501,46 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8499605765198960581, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1479519498}
+    - target: {fileID: 8499605765198960581, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EscapeMenuButtonClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7792854390962480949, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1479519498}
+    - target: {fileID: 3810163565626471813, guid: da553e23214ce9049a3e26cefcf73768,
+        type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnButtonHover
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5885356949671907577, guid: da553e23214ce9049a3e26cefcf73768, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da553e23214ce9049a3e26cefcf73768, type: 3}
@@ -3149,19 +3194,50 @@ MonoBehaviour:
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
-    _loop: 0
+    _loop: 1
+    _isSFX: 0
   - _name: SnowWalkTrimmed
     _clip: {fileID: 8300000, guid: cc2e8b14169bb934c8062656aca1c902, type: 3}
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
+    _isSFX: 1
   - _name: DeathSFX
     _clip: {fileID: 8300000, guid: 1b17605bd890596458645c1190bfcd60, type: 3}
     _volume: 1
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
+    _isSFX: 1
+  - _name: ButtonHover
+    _clip: {fileID: 8300000, guid: 8f95474d6ff4d0247a2c862967e2fee9, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: ExitSign1
+    _clip: {fileID: 8300000, guid: 18835f9a1e2879643b2b34509359443c, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: ExitSign2
+    _clip: {fileID: 8300000, guid: ac4fdba9c9a4dc54eb8f5ffef67d92ae, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
+  - _name: IceBreak
+    _clip: {fileID: 8300000, guid: 033810ff140e36a4babbfbc1f3b2c8c7, type: 3}
+    _volume: 1
+    _pitch: 1
+    source: {fileID: 0}
+    _loop: 0
+    _isSFX: 1
 --- !u!4 &2082318516
 Transform:
   m_ObjectHideFlags: 0

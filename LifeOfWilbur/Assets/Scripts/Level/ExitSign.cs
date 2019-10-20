@@ -59,6 +59,11 @@ public class ExitSign : MonoBehaviour
         if(IsYoungWilburAtExit && IsOldWilburAtExit)
         {
             LifeOfWilbur.LevelController.NextLevel();
+            FindObjectOfType<AudioManager>().Play("ExitSign2");
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Play("ExitSign1");
         }
     }
     private void OnTriggerExit2D(Collider2D other)
