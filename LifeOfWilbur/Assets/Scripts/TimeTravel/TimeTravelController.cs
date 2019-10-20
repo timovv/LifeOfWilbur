@@ -67,7 +67,7 @@ public class TimeTravelController : MonoBehaviour
         _futureOnlyObjects = GameObject.FindGameObjectsWithTag("FutureOnly");
         _timeTravellingObjects = GameObject.FindGameObjectsWithTag("TimeTravelling");
 
-        StartCoroutine(UpdateTimeTravelState(IsInPast));
+        StartCoroutine(UpdateTimeTravelState(true));
     }
 
     private void OnEnable()

@@ -557,12 +557,22 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[0]._rooms.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -572,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[0]._rooms.Array.data[0]._sceneName
-      value: Level1_1
+      value: Level1_1_Crib
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -587,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[0]._rooms.Array.data[1]._sceneName
-      value: Level1_2
+      value: Level1_2_Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -602,7 +612,7 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[0]._rooms.Array.data[2]._sceneName
-      value: Level1_3
+      value: Level1_3_Water
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -617,7 +627,7 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[0]._rooms.Array.data[3]._sceneName
-      value: Level1_4
+      value: Level1_4_Whale
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -632,11 +642,176 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[0]._rooms.Array.data[4]._sceneName
-      value: Level1_5
+      value: Level1_5_SpikeDrop
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[0]._rooms.Array.data[4]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[0]._readableName
+      value: Level 2-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[0]._sceneName
+      value: Level2_1_Complex
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[0]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[1]._readableName
+      value: Level 2-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[1]._sceneName
+      value: Level2_2_Stairs
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[1]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[2]._readableName
+      value: Level 2-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[2]._sceneName
+      value: Level2_3_Fox
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[2]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[3]._readableName
+      value: Level 2-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[3]._sceneName
+      value: Level2_4_Stairs2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[3]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[4]._readableName
+      value: Level 2-5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[4]._sceneName
+      value: Level2_5_MoreComplex
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[1]._rooms.Array.data[4]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[0]._readableName
+      value: '3-1: Bird'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[0]._sceneName
+      value: Level3_1_Bird
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[0]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[1]._readableName
+      value: '3-2: The Storm'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[1]._sceneName
+      value: Level3_2_Storm
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[1]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[2]._readableName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[2]._sceneName
+      value: Level1_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[2]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[3]._readableName
+      value: Level 1-4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[3]._sceneName
+      value: Level1_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[3]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[4]._readableName
+      value: Level 1-5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[4]._sceneName
+      value: Level1_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[2]._rooms.Array.data[4]._playInSpeedRunMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[0]._rooms.Array.data[5]._readableName
+      value: Level 1-5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[0]._rooms.Array.data[5]._sceneName
+      value: Level1_5_Water2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+        type: 3}
+      propertyPath: _levels.Array.data[0]._rooms.Array.data[5]._playInSpeedRunMode
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
