@@ -8,21 +8,30 @@ using UnityEngine;
 /// </summary>
 public class CheatCodes : MonoBehaviour
 {
+    private bool _isSkipped;
 
     // Update is called once per frame
     void Update()
     {
         // Go to next level if "P" pressed
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) && !_isSkipped)
         {
+            _isSkipped = true;
+
             // Re-enables movement/physcis in case player was in dialogue which locks them
             CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
             TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
             LevelReset.ResetDisabled = false; // enable resetting level
             Physics2D.autoSimulation = true; // enable physcis
-            
+
             // Goes to next level
-            LifeOfWilbur.LevelController.NextRoom();
+            StartCoroutine(Yo());
         }
+    }
+
+    IEnumerator Yo()
+    {
+        yield return new WaitForSeconds(0.7f);
+        LifeOfWilbur.LevelController.NextRoom();
     }
 }
