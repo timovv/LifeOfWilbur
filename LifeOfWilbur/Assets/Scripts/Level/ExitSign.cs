@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 /// <summary>
 /// Behaviour for an exit sign.
@@ -44,7 +41,12 @@ public class ExitSign : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(TimeTravelController.IsInPast)
+            if (!IsYoungWilburAtExit && !IsOldWilburAtExit)
+            {
+                AudioManager._instance.Play("ExitSign1");
+            }
+
+            if (TimeTravelController.IsInPast)
             {
                 IsYoungWilburAtExit = true;
                 _youngWilburIndicator.SetActive(true);
@@ -59,13 +61,10 @@ public class ExitSign : MonoBehaviour
         if(IsYoungWilburAtExit && IsOldWilburAtExit)
         {
             LifeOfWilbur.LevelController.NextRoom();
-            FindObjectOfType<AudioManager>().Play("ExitSign2");
-        }
-        else
-        {
-            FindObjectOfType<AudioManager>().Play("ExitSign1");
+            AudioManager._instance.Play("ExitSign2");
         }
     }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
