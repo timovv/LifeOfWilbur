@@ -51,6 +51,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3/Level3_2_Storm.unity
     guid: b23e9f41924c9764fa6404a318925c31
   - enabled: 1
+    path: Assets/Scenes/Level3/Level3_3_Summit.unity
+    guid: 49bb8766f47cabb4ea5fca0d2a64c9de
+  - enabled: 1
     path: Assets/Scenes/LeaderboardExit.unity
     guid: 44811c79866db20448fe27d0738fec95
   - enabled: 1

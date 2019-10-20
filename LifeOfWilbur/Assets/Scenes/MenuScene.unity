@@ -567,7 +567,7 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[2]._rooms.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -722,7 +722,7 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[2]._rooms.Array.data[0]._readableName
-      value: '3-1: Bird'
+      value: Bird
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -737,7 +737,7 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[2]._rooms.Array.data[1]._readableName
-      value: '3-2: The Storm'
+      value: Blizzard
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
@@ -752,12 +752,12 @@ PrefabInstance:
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[2]._rooms.Array.data[2]._readableName
-      value: 
+      value: Summit
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
       propertyPath: _levels.Array.data[2]._rooms.Array.data[2]._sceneName
-      value: Level1_3
+      value: Level3_3_Summit
       objectReference: {fileID: 0}
     - target: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
         type: 3}
