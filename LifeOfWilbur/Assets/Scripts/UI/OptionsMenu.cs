@@ -55,8 +55,6 @@ public class OptionsMenu : MonoBehaviour
 
         try
         {
-            //Sound s = Array.Find(FindObjectOfType<AudioManager>()._sounds, sound => sound._name == "SnowWalk");
-
             AudioManager audioManager = AudioManager._instance;
 
             foreach (Sound s in audioManager._sounds)
