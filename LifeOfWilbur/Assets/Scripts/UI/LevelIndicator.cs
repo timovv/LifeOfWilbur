@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Script controlling the visualisation (appearance/disappearance) of the banner on rooms which displays the name of the rooms.
+/// </summary>
 public class LevelIndicator : MonoBehaviour
 {
     private const double FADETIME_COEFFICIENT = 0.5;
@@ -64,7 +67,11 @@ public class LevelIndicator : MonoBehaviour
         _levelText.SetText(levelText);
     }
 
-
+    
+    /// <summary>
+    /// Controls the setting of active/inactive of the banner
+    /// </summary>
+    /// <param name="value">Whether to activate/disactivate the visibility of the banner</param>
     public void TogglePanelVisibility(bool value)
     {
         _levelIndicatorPanel.SetActive(value);
