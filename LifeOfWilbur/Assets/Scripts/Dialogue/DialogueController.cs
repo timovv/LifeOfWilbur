@@ -58,12 +58,29 @@ public class DialogueController : MonoBehaviour
     /// </summary>
     private bool _textAnimating;
 
-    //DialogCamera object
+    /// <summary>
+    /// Instance of DialogCamera object, used to move/transform the camera on dialogue starting and ending
+    /// </summary>
     private DialogCamera _dialogCamera;
+
+    /// <summary>
+    /// Additional offset for the camera to make when starting conversation. This iss used if default transform position clips notable objects
+    /// </summary>
     public Vector3 _offsetPosition = new Vector3(0,0,0);
+
+    /// <summary>
+    /// Position of the object which needs to be put into focus in the future
+    /// </summary>
     public Transform _futureFocusObject;
+
+    /// <summary>
+    /// Position of the object which needs to be put into focus in the past
+    /// </summary>
     public Transform _pastFocusObject;
 
+    /// <summary>
+    /// Maintains the state of if dialogue is bolding the words being printed
+    /// </summary>
     private bool _isBold;
 
     // Singleton design pattern used for DialogueManager because only one dialogueWindow can be open at a time
@@ -75,11 +92,22 @@ public class DialogueController : MonoBehaviour
     // Populates the dictionary with the preset mappings of character to integers.
     public void Start()
     {
-        //Create main camera dialog object with object of focus
+        // Create main camera dialog object with object of focus
         _dialogCamera = gameObject.AddComponent<DialogCamera>();
         _dialogCamera.initialize(_futureFocusObject, _pastFocusObject, _offsetPosition);
 
         _quoteQueue = new Queue<Quote>();
+
+        // Initialises the mapper of character names to integers. This is used to set the profile animation in the dialogue window
+        InitaliseCharacterMapper();
+    }
+
+
+    /// <summary>
+    /// Initialises the mapper of character names to integers. This is used to set the profile animation in the dialogue window
+    /// </summary>
+    private void InitaliseCharacterMapper()
+    {
         _characterMapper = new Dictionary<string, int> {
             { "Wilbur", 1 }, //Polar bear
             { "Iris", 2 }, //Fox
@@ -97,7 +125,10 @@ public class DialogueController : MonoBehaviour
         }
     }
 
-    // Adds all quotes to the queue and opens dialogueWindow
+    /// <summary>
+    /// Adds all quotes to the queue and opens dialogueWindow
+    /// </summary>
+    /// <param name="dialogue">The dialogue conversation which is displayed to the player</param>
     public void StartDialogue(Dialogue dialogue)
     {
         _dialogCamera.ZoomInFocus();
@@ -117,6 +148,7 @@ public class DialogueController : MonoBehaviour
     /// <returns></returns>
     IEnumerator StartDialogueRoutine(Dialogue dialogue)
     {
+        IsOpen = true;
         _animator.SetBool("isOpen", true);
 
         FindObjectOfType<AudioManager>().Pause("SnowWalkTrimmed"); //Pause Sound movement
@@ -124,8 +156,6 @@ public class DialogueController : MonoBehaviour
         TimeTravelController.TimeTravelDisabled = true; // disable Time Travel
         LevelReset.ResetDisabled = true; // disable resetting level
         Physics2D.autoSimulation = false; // disable physics        
-
-        _isBold = false;
 
         // Waits 0.2f seconds to ensure the dialogueWindowOpen animation has completed before populating the dialogueWindow 
         yield return new WaitForSeconds(0.2f);
@@ -143,29 +173,24 @@ public class DialogueController : MonoBehaviour
             // If already printing a line then sets it to false - this makes TypeDialogueAnimation routine print entire line
             _textAnimating = false;
         }
+        else if (_quoteQueue.Count > 0)
+        {
+            /// Takes next quote out of the queue. This is what is currently being printed
+            Quote quote = _quoteQueue.Dequeue();
+
+            // Sets the name property and changes the image animation for the quote speaker
+            _nameTextField.text = quote._name;
+            _characterMapper.TryGetValue(quote._name, out int characterInteger);
+            _animator.SetInteger("characterInteger", characterInteger);
+            _animator.SetBool("isFuture", quote._isFuture);
+
+            // Sets the dialogue through the animation
+            StartCoroutine(TypeDialogueAnimation(quote._quote));
+        }
         else
         {
-            if (_quoteQueue.Count > 0)
-            {
-                Quote quote = _quoteQueue.Dequeue();
-
-                // Sets the name property and changes the image animation for the quote speaker
-                _nameTextField.text = quote._name;
-                int characterInteger;
-                _characterMapper.TryGetValue(quote._name, out characterInteger);
-                _animator.SetInteger("characterInteger", characterInteger);
-                _animator.SetBool("isFuture", quote._isFuture);
-
-                // Sets the dialogue through the animation
-                StartCoroutine(TypeDialogueAnimation(quote._quote));
-
-                IsOpen = true;
-            }
-            else
-            {
-                // No more quotes to display so ends the dialogue
-                EndDialogue();
-            }
+            // No more quotes to display so ends the dialogue
+            EndDialogue();
         }
     }
 
@@ -183,57 +208,72 @@ public class DialogueController : MonoBehaviour
         {
             if (_textAnimating == true)
             {
-                if (character == '*')
-                {
-                    _isBold = !_isBold;
-                    if (_isBold == true)
-                    {
-                        _dialogueTextField.text += "<b></b>";
-                    }
-                }
-                else
-                {
-                    if (_isBold)
-                    {
-                        _dialogueTextField.text = _dialogueTextField.text.Substring(0, _dialogueTextField.text.Length - 4);
-                        _dialogueTextField.text += character + "</b>";
-                    }
-                    else
-                    {
-                        _dialogueTextField.text += character;
-                    }
-                }
-                yield return null;
+                PrintNextCharacter(character);
+                yield return null; // Wait one frame and then continue
             }
             else
             {
-                // If _textAnimating variable set to false, will print the entire line at once and end animation
-                string formattedText = "";
-                _isBold = false;
-                foreach (char fullTextCharacter in text.ToCharArray())
-                {
-                    if (fullTextCharacter == '*')
-                    {
-                        if (_isBold)
-                        {
-                            formattedText += "</b>";
-                        }
-                        else
-                        {
-                            formattedText += "<b>";
-                        }
-                        _isBold = !_isBold;
-                    }
-                    else
-                    {
-                        formattedText += fullTextCharacter;
-                    }
-                }
-                _dialogueTextField.text = formattedText;
+                PrintEntireQuote(text); // Print entire conversation because user wants to go to next slide
                 break;
             }
         }
         _textAnimating = false;
+    }
+
+    /// <summary>
+    /// Prints the next singular character onto the dialogue window
+    /// </summary>
+    /// <param name="c">The character to add to the dialogue window</param>
+    private void PrintNextCharacter(char c)
+    {
+        if (c == '*')
+        {
+            // If bold then will print opening and closing bold tag. This is to avoid text unclosed tag syntax errors
+            _isBold = !_isBold;
+            if (_isBold)
+            {
+                _dialogueTextField.text += "<b></b>";
+            }
+        }
+        else
+        {
+            // If bold then must remove </b>, add character and re-add </b> to avoid text unclosed tag syntax errors
+            _dialogueTextField.text = _isBold ? RemoveClosingBTagFromDialogue() + c + "</b>" : _dialogueTextField.text + c;
+        }
+    }
+
+    /// <summary>
+    /// Returns dialogue text with the last 4 characters removed. The four characters represent the </b> in the text.
+    /// </summary>
+    /// <returns>String without </b></returns>
+    private string RemoveClosingBTagFromDialogue()
+    {
+        return _dialogueTextField.text.Substring(0, _dialogueTextField.text.Length - 4);
+    }
+
+    /// <summary>
+    /// Prints the enture line onto the dialogue window
+    /// </summary>
+    /// <param name="text">The line being printed to the dialogue window</param>
+    private void PrintEntireQuote(string text)
+    {
+        // If _textAnimating variable set to false, will print the entire line at once and end animation
+        string formattedText = "";
+        _isBold = false;
+        foreach (char fullTextCharacter in text.ToCharArray())
+        {
+            if (fullTextCharacter == '*')
+            {
+                // Prints correct <b> or </b> tag depending on _isBold state
+                formattedText += _isBold ? "</b>" : "<b>";
+                _isBold = !_isBold;
+            }
+            else
+            {
+                formattedText += fullTextCharacter;
+            }
+        }
+        _dialogueTextField.text = formattedText;
     }
 
     /// <summary>
