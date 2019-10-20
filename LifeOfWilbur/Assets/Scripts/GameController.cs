@@ -160,7 +160,6 @@ public class GameController : MonoBehaviour, ILevelController
 
     public void ResetLevel()
     {
-        Resets++;
         StartCoroutine(ResetLevelCoroutine());
     }
 
@@ -172,6 +171,7 @@ public class GameController : MonoBehaviour, ILevelController
         }
 
         _resettingLevel = true;
+        Resets++;
 
         yield return StartCoroutine(GetComponent<TransitionController>().FadeOutToBlack());
         SceneManager.LoadScene(_levelIterator.Current);
