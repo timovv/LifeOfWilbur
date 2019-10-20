@@ -71,7 +71,10 @@ public class MainMenu : MonoBehaviour
         _optionsMenu.SetActive(true);
     }
 
-
+    public void StoryButtonClick()
+    {
+        SceneManager.LoadScene("LevelSelectScene");
+    }
 
     /// <summary>
     /// Method call of the 'Quit' button which closes the application given that it is running in a window mode

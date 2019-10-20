@@ -853,8 +853,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5, y: -2.65}
-  m_SizeDelta: {x: 1.1263, y: 0.84655}
+  m_AnchoredPosition: {x: 0.4617498, y: -2.65}
+  m_SizeDelta: {x: 2.6995, y: 0.847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &243921035
 SpriteRenderer:
@@ -949,15 +949,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1750589581}
-        m_MethodName: LoadOptionsScene
+      - m_Target: {fileID: 1670086284}
+        m_MethodName: StartSpeedrunMode
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level1_1_Crib
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &243921037
@@ -1762,8 +1762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5, y: -1.47}
-  m_SizeDelta: {x: 1.1263, y: 0.84655}
+  m_AnchoredPosition: {x: 0.4617498, y: -1.47}
+  m_SizeDelta: {x: 2.6995, y: 0.847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &557056644
 Animator:
@@ -1878,14 +1878,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1750589581}
-        m_MethodName: LoadOptionsScene
+        m_MethodName: StoryButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: LevelSelectScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &557056647
@@ -3209,6 +3209,18 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5885356949671907577, guid: da553e23214ce9049a3e26cefcf73768, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: da553e23214ce9049a3e26cefcf73768, type: 3}
+--- !u!114 &1670086284 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4780197621336569988, guid: ac7c951352c001b42b1232ff18acd7e5,
+    type: 3}
+  m_PrefabInstance: {fileID: 180061486}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d684a5598dead3a4d882f9efae878266, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1687088712
 GameObject:
   m_ObjectHideFlags: 0
