@@ -39,8 +39,20 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
+        //Set the Volumes Corresponding
+        Sound OldWilbur = Array.Find(_sounds, sound => sound._name == "OldWilbur");
+        Sound YoungWilbur = Array.Find(_sounds, sound => sound._name == "YoungWilbur");
+
+        YoungWilbur._volume = 0.8f;
+        OldWilbur._volume = 0.8f;
+
+        OldWilbur.source.volume = OldWilbur._volume;
+        YoungWilbur.source.volume = YoungWilbur._volume;
+
+
         //Play the background music on scene start up
-        Play("BackgroundMusic");
+        Play("YoungWilbur");
+        Play("OldWilbur");
     }
 
     /// <summary>
@@ -118,4 +130,31 @@ public class AudioManager : MonoBehaviour
         s.source.pitch = s._pitch;
 
     }
+
+    public void ChangeVolumeTense(bool IsInPast)
+    {
+        Sound youngWilburSound = Array.Find(_sounds, sound => sound._name == "YoungWilbur");
+        Sound oldWilburSound = Array.Find(_sounds, sound => sound._name == "OldWilbur");
+
+        if (IsInPast) //Set YoungWilbur soundtrack to slider volume
+        {
+            Debug.Log("YoungWilbur");
+            youngWilburSound.source.volume = youngWilburSound._volume;
+            oldWilburSound.source.volume = 0;
+
+        }
+        else //Set AdultWilbur sound track to slider volume
+        {
+            Debug.Log("Old Wilbur");
+            youngWilburSound.source.volume = 0;
+            oldWilburSound.source.volume = oldWilburSound._volume;
+
+        }
+
+        Debug.Log("OldWilbur Volume: " + oldWilburSound.source.volume);
+        Debug.Log("YoungWilbur Volume: " + youngWilburSound.source.volume);
+    }
+
+
+
 }
