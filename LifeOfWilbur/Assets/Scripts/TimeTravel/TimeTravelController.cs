@@ -81,7 +81,7 @@ public class TimeTravelController : MonoBehaviour
         // along with other input events
         // this is better design(TM)
 
-        if (Input.GetKey(KeyCode.X) && !_isTransitioning)
+        if (Input.GetKey(KeyCode.X) && !_isTransitioning && !DialogueController.Instance.IsOpen)
         {
             // User requests TIME TRAVEL.
             // change their time as applicable. The action should not be able to be performed while another time travel event is happening.
