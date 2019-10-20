@@ -29,11 +29,11 @@ public class TransitionController : MonoBehaviour
     /// </summary>
     public bool IsTransitioning { get; private set; }
 
-    public event EventHandler OnFadingOut;
-    public event EventHandler OnFadedOut;
+    public event Action OnFadingOut;
+    public event Action OnFadedOut;
 
-    public event EventHandler OnFadingIn;
-    public event EventHandler OnFadedIn;
+    public event Action OnFadingIn;
+    public event Action OnFadedIn;
 
     public void Awake()
     {
@@ -48,7 +48,7 @@ public class TransitionController : MonoBehaviour
             yield break;
         }
 
-        OnFadingOut?.Invoke(this, EventArgs.Empty);
+        OnFadingOut?.Invoke();
         _fadedOut = true;
 
         var image = GetComponent<RawImage>();
@@ -63,6 +63,7 @@ public class TransitionController : MonoBehaviour
             yield break;
         }
 
+        OnFadingIn?.Invoke();
         _fadedOut = false;
         var image = GetComponent<RawImage>();
         image.CrossFadeAlpha(alpha: 0f, duration: _fadeDurationSeconds * .75f, ignoreTimeScale: true);

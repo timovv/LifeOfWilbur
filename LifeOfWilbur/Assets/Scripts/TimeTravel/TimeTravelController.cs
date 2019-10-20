@@ -86,7 +86,6 @@ public class TimeTravelController : MonoBehaviour
             // User requests TIME TRAVEL.
             // change their time as applicable. The action should not be able to be performed while another time travel event is happening.
             StartCoroutine(TimeTravelWithFade(GetComponent<TransitionController>()));
-            AudioManager._instance.ChangeVolumeTense(IsInPast);
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿using UnityEngine.Audio;
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class AudioManager : MonoBehaviour
 {
@@ -53,6 +54,8 @@ public class AudioManager : MonoBehaviour
         //Play the background music on scene start up
         Play("YoungWilbur");
         Play("OldWilbur");
+
+        FindObjectOfType<TransitionController>().OnFadingOut += ChangeVolumeTense;
     }
 
     /// <summary>
@@ -94,9 +97,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-
-
-
     public void Pause(string name)
     {
         try
@@ -131,30 +131,35 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void ChangeVolumeTense(bool IsInPast)
+    public void ChangeVolumeTense()
     {
         Sound youngWilburSound = Array.Find(_sounds, sound => sound._name == "YoungWilbur");
         Sound oldWilburSound = Array.Find(_sounds, sound => sound._name == "OldWilbur");
 
-        if (IsInPast) //Set YoungWilbur soundtrack to slider volume
+        if (TimeTravelController.IsInPast) //Set YoungWilbur soundtrack to slider volume
         {
             Debug.Log("YoungWilbur");
-            youngWilburSound.source.volume = youngWilburSound._volume;
-            oldWilburSound.source.volume = 0;
-
+            StartCoroutine(FadeAudio(youngWilburSound, 0.5f, youngWilburSound._volume));
+            StartCoroutine(FadeAudio(oldWilburSound, 0.5f, 0));
         }
         else //Set AdultWilbur sound track to slider volume
         {
             Debug.Log("Old Wilbur");
-            youngWilburSound.source.volume = 0;
-            oldWilburSound.source.volume = oldWilburSound._volume;
-
+            StartCoroutine(FadeAudio(youngWilburSound, 0.5f, 0));
+            StartCoroutine(FadeAudio(oldWilburSound, 0.5f, oldWilburSound._volume));
         }
-
-        Debug.Log("OldWilbur Volume: " + oldWilburSound.source.volume);
-        Debug.Log("YoungWilbur Volume: " + youngWilburSound.source.volume);
     }
 
+    public IEnumerator FadeAudio(Sound sound, float duration, float targetVol)
+    {
+        float currentTime = 0;
+        float start = sound.source.volume;
 
-
+        while (currentTime < duration)
+        {
+            currentTime += Time.unscaledDeltaTime;
+            sound.source.volume = Mathf.Lerp(start, targetVol, currentTime / duration);
+            yield return null;
+        }
+    }
 }
