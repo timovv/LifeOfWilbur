@@ -20,7 +20,6 @@ public class MainMenu : MonoBehaviour
             Physics2D.autoSimulation = true; // enable physcis
             LifeOfWilbur.GameController.StartGame(GameMode.Story);
         }
-
         else if(Input.GetKeyDown(KeyCode.Escape))
         {
             //Disable the Credits menu and go back to the main menu
@@ -29,6 +28,11 @@ public class MainMenu : MonoBehaviour
 
             //Additionally, disable the options menu
             _optionsMenu.SetActive(false);
+        }
+        else if(Input.GetKeyDown(KeyCode.S))
+        {
+#warning Remove this clause!
+            SceneManager.LoadScene("LevelSelectScene");
         }
 
         //In the case that the game was paused and the we restart, unpause the game

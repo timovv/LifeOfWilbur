@@ -31,6 +31,8 @@ public class GameController : MonoBehaviour, ILevelController
     private bool _movingToNextLevel = false;
     private bool _resettingLevel;
 
+    private int _levelCount;
+
     /// <summary>
     /// The current game mode.
     /// </summary>
@@ -112,6 +114,7 @@ public class GameController : MonoBehaviour, ILevelController
 
     private void ResetRoomEnumerators()
     {
+        _levelCount = 0;
         _levelEnumerator = ((IEnumerable<Level>)_levels).GetEnumerator();
         _levelEnumerator.MoveNext();
         _roomEnumerator = ((IEnumerable<Room>)_levelEnumerator.Current._rooms)
@@ -127,11 +130,14 @@ public class GameController : MonoBehaviour, ILevelController
         }
         else if(_levelEnumerator.MoveNext())
         {
+            SaveData.Instance.HighestUnlockedLevel = Mathf.Max(SaveData.Instance.HighestUnlockedLevel, ++_levelCount);
             _roomEnumerator = ((IEnumerable<Room>)_levelEnumerator.Current._rooms)
                 .Where(x => x._playInSpeedRunMode || CurrentGameMode == GameMode.Story)
                 .GetEnumerator();
             return true;
         }
+
+        SaveData.Instance.UnlockedSpeedRunMode = true;
 
         return false;
     }

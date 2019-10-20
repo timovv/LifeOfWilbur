@@ -21,7 +21,7 @@ public class LevelSelectScript : MonoBehaviour
 
     public void PlayLevel(string levelName)
     {
-        SceneManager.LoadScene(levelName);
+        LifeOfWilbur.GameController.StartGameAt(GameMode.Story, levelName);
         GameTimer.ElapsedTimeSeconds = 0;
     }
 
