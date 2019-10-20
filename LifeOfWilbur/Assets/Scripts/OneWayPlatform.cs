@@ -37,17 +37,15 @@ public class OneWayPlatform : MonoBehaviour
     private GameObject _youngWilbur;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-        _oldWilbur = GameObject.Find("OldWilburPlaceholder");
-        _youngWilbur = GameObject.Find("YoungWilburPlaceholder");
+
     }
 
     private void Update()
     {
         // Informs physics engine to ignore collisions between Wilbur's box colliders and the one way platform's colliders. This prevents Wilbur from getting stuck in platform
-        Physics2D.IgnoreCollision(_selfFloorCollider, _oldWilbur.GetComponent<BoxCollider2D>());
-        Physics2D.IgnoreCollision(_selfFloorCollider, _youngWilbur.GetComponent<BoxCollider2D>());
+        Physics2D.IgnoreCollision(_selfFloorCollider, GetWilbur().GetComponent<BoxCollider2D>());
         
         // If down or s is pressed, flips the platform effector. This allows Wilbur to fall through the spike
         if (_inRange && (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)))
@@ -65,16 +63,14 @@ public class OneWayPlatform : MonoBehaviour
     private IEnumerator FallThroughPlatform()
     {
         // Disables Wilbur's circle collider so he doesn't get stuck in the platform
-        Physics2D.IgnoreCollision(_selfFloorCollider, _oldWilbur.GetComponent<CircleCollider2D>(), true);
-        Physics2D.IgnoreCollision(_selfFloorCollider, _youngWilbur.GetComponent<CircleCollider2D>(), true);
+        Physics2D.IgnoreCollision(_selfFloorCollider, GetWilbur().GetComponent<CircleCollider2D>(), true);
         
-        // Rotates effector whcih allows Wilbur to fall through platform
+        // Rotates effector which allows Wilbur to fall through platform
         _platformEffector.rotationalOffset = 180f;
 
         // Waits 0.5 seconds and then re-enables the colliders for next use
         yield return new WaitForSeconds(0.5f);
-        Physics2D.IgnoreCollision(_selfFloorCollider, _oldWilbur.GetComponent<CircleCollider2D>(), false);
-        Physics2D.IgnoreCollision(_selfFloorCollider, _youngWilbur.GetComponent<CircleCollider2D>(), false);
+        Physics2D.IgnoreCollision(_selfFloorCollider, GetWilbur().GetComponent<CircleCollider2D>(), false);
     }
 
     // Player has entered collision area and is now in range for falling through platform
@@ -94,5 +90,18 @@ public class OneWayPlatform : MonoBehaviour
             _inRange = false;
         }
 
+    }
+
+    // Get the Wilbur for the current time
+    GameObject GetWilbur()
+    {
+        if(TimeTravelController.IsInPast)
+        {
+            return GameObject.Find("YoungWilburPlayer");
+        }
+        else
+        {
+            return GameObject.Find("OldWilburPlayer");
+        }
     }
 }
