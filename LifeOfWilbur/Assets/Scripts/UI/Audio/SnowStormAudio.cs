@@ -8,15 +8,8 @@ public class SnowStormAudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartSnowStormMusic();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 
     public void StartSnowStormMusic()
     {
@@ -36,6 +29,5 @@ public class SnowStormAudio : MonoBehaviour
         audioManager.Play("SnowStormLevel");
 
     }
-
 
 }
