@@ -62,6 +62,11 @@ public class GameController : MonoBehaviour, ILevelController
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
+        TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
+        LevelReset.ResetDisabled = false; // enable resetting level
+        Physics2D.autoSimulation = true; // enable physcis
+
         if(CurrentGameMode.IsInGame())
         {
             _movingToNextLevel = false;
@@ -99,6 +104,7 @@ public class GameController : MonoBehaviour, ILevelController
         }
 
         CurrentGameMode = gameMode;
+        GameTimer.ElapsedTimeSeconds = 0;
         ResetRoomEnumerators();
         NextRoom();
     }
@@ -111,7 +117,7 @@ public class GameController : MonoBehaviour, ILevelController
         }
 
         CurrentGameMode = gameMode;
-
+        GameTimer.ElapsedTimeSeconds = 0;
         ResetRoomEnumerators();
 
         while(AdvanceRoomEnumerators())
@@ -176,6 +182,7 @@ public class GameController : MonoBehaviour, ILevelController
 
         yield return StartCoroutine(GetComponent<TransitionController>().FadeOutToBlack());
 
+
         if(AdvanceRoomEnumerators())
         {
             Debug.Log($"Loading room: ${_roomEnumerator.Current}");
@@ -230,16 +237,5 @@ public class GameController : MonoBehaviour, ILevelController
     {
         CurrentGameMode = GameMode.NotInGame;
         SceneManager.LoadScene(MENU_SCENE_NAME);
-    }
-
-    public void StartStoryMode()
-    {
-        StartGame(GameMode.Story);
-    }
-
-    public void StartSpeedrunMode()
-    {
-        GameTimer.ElapsedTimeSeconds = 0;
-        StartGame(GameMode.SpeedRun);
     }
 }
