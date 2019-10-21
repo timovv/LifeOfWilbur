@@ -21,7 +21,7 @@ public class LevelReset : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !_pressed && !ResetDisabled) //TODO: change to button, not keycode
+        if (Input.GetKeyDown(KeyCode.R) && LifeOfWilbur.GameController.CurrentGameMode.IsInGame() && !_pressed && !ResetDisabled) //TODO: change to button, not keycode
         {
             //_pressed = true; // Disable further requests in case the button was spammed
             //TransitionController script = GameObject.FindWithTag("GameController") .GetComponent<TransitionController>();
