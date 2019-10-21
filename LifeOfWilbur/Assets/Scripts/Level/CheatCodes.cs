@@ -25,13 +25,16 @@ public class CheatCodes : MonoBehaviour
             Physics2D.autoSimulation = true; // enable physcis
 
             // Goes to next level
-            StartCoroutine(Yo());
+            StartCoroutine(GoToNextScene());
         }
     }
 
-    IEnumerator Yo()
+    /// <summary>
+    /// Goes to the next room
+    /// </summary>
+    IEnumerator GoToNextScene()
     {
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.7f); // Needed to prevent error (trying to delete something which does not exist) if P is spammed
         LifeOfWilbur.LevelController.NextRoom();
     }
 }
