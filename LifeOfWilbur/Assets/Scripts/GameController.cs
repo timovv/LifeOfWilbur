@@ -14,7 +14,7 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour, ILevelController
 {
     private const string MENU_SCENE_NAME = "MenuScene";
-    private const string END_SCENE_NAME = "ExitScene";
+    private const string END_SCENE_NAME = "LeaderboardExit";
 
     /// <summary>
     /// Value indicating number of resets/deaths/attempts.
@@ -68,6 +68,10 @@ public class GameController : MonoBehaviour, ILevelController
         {
             GetComponent<TimeTravelController>().enabled = false;
             GetComponent<TransitionController>().enabled = false;
+            if (scene.name == END_SCENE_NAME)
+            {
+                StartCoroutine(GetComponent<TransitionController>().FadeInFromBlack());
+            }
         }
     }
 
@@ -173,6 +177,7 @@ public class GameController : MonoBehaviour, ILevelController
             GetComponent<TransitionController>().enabled = false;
             CurrentGameMode = GameMode.NotInGame;
 
+            GameTimer.Paused = true;
             SceneManager.LoadScene(END_SCENE_NAME);
         }
     }

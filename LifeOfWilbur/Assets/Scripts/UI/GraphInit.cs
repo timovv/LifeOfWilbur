@@ -32,7 +32,7 @@ public class GraphInit : MonoBehaviour
     {
         // Get stats for "line"
         float time = GameTimer.ElapsedTimeSeconds;
-        int attempts = GameController.Resets;
+        int attempts = GameController.Resets + 1;
         int timeswaps = TimeTravelController.Timeswaps;
 
         // Get graph data for fields
