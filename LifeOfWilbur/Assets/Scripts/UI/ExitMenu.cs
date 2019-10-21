@@ -19,4 +19,10 @@ public class ExitMenu : MonoBehaviour
         //Loading the Game again, and not the menu screen
         SceneManager.LoadScene(0);
     }
+
+    public void OnButtonHover()
+    {
+        FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
+    }
+
 }
