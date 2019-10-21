@@ -37,7 +37,7 @@ public class ScoreboardInit : MonoBehaviour
         NewScore score = new NewScore {
             name = "Player", // Unused
             time = GameTimer.ElapsedTimeSeconds,
-            attempts = GameController.Resets,
+            attempts = GameController.Resets + 1,
             timeswaps = TimeTravelController.Timeswaps
         };
         StartCoroutine(PostScore(score));
@@ -62,6 +62,8 @@ public class ScoreboardInit : MonoBehaviour
             Debug.LogError("Error sending score: " + request.error);
             yield break;
         }
+
+        transform.Find("Disconnected").gameObject.SetActive(false);
 
         Scores recieved = JsonUtility.FromJson<Scores>(request.downloadHandler.text);
         FillList(recieved);
@@ -172,7 +174,7 @@ struct ListEntry
 {
     public string _id;
     public string name;
-    public int time;
+    public float time;
     public int attempts;
     public int timeswaps;
     public int rank;
