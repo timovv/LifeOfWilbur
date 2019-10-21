@@ -5009,7 +5009,7 @@ MonoBehaviour:
   _attemptsContianer: {fileID: 1954930743}
   _timeswapContianer: {fileID: 117801631}
   _tooltip: {fileID: 1583482233}
-  _graphEndPoint: http://localhost:3000/scores/graph
+  _graphEndPoint: http://wilbur.lamba.cl:3000/scores/graph
 --- !u!114 &533015843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5559,7 +5559,7 @@ MonoBehaviour:
   _entryTemplate: {fileID: 3359851213700778549, guid: 4bea662c2b3039a49a957e2e4cc4c515,
     type: 3}
   _userHighlight: {r: 1, g: 0.878, b: 0.212, a: 1}
-  _saveScoreEndPoint: http://localhost:3000/scores
+  _saveScoreEndPoint: http://wilbur.lamba.cl:3000/scores
 --- !u!1 &921123330
 GameObject:
   m_ObjectHideFlags: 0
@@ -14816,14 +14816,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2345977558520062717, guid: b191926ff83c786439f89c3890d5dc9e,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4086359318581871526, guid: b191926ff83c786439f89c3890d5dc9e,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2345977558520062717, guid: b191926ff83c786439f89c3890d5dc9e,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
