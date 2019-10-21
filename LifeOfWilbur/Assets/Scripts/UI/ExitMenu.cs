@@ -17,7 +17,7 @@ public class ExitMenu : MonoBehaviour
     public void PlayAgain()
     {
         //Loading the Game again, and not the menu screen
-        SceneManager.LoadScene(0);
+        LifeOfWilbur.GameController.ReturnToMenu();
     }
 
     public void OnButtonHover()

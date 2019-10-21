@@ -236,6 +236,7 @@ public class GameController : MonoBehaviour, ILevelController
     public void ReturnToMenu()
     {
         CurrentGameMode = GameMode.NotInGame;
+        Destroy(gameObject);
         SceneManager.LoadScene(MENU_SCENE_NAME);
     }
 }
