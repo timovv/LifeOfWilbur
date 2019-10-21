@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour, ILevelController
 {
     private const string MENU_SCENE_NAME = "MenuScene";
     private const string END_SCENE_NAME = "LeaderboardExit";
+    private const string END_SCENE_STORY_NAME = "StoryExit";
 
     /// <summary>
     /// Value indicating number of resets/deaths/attempts.
@@ -78,7 +79,7 @@ public class GameController : MonoBehaviour, ILevelController
         {
             GetComponent<TimeTravelController>().enabled = false;
             GetComponent<TransitionController>().enabled = false;
-            if (scene.name == END_SCENE_NAME)
+            if (scene.name == END_SCENE_NAME || scene.name == END_SCENE_STORY_NAME)
             {
                 StartCoroutine(GetComponent<TransitionController>().FadeInFromBlack());
             }
@@ -185,10 +186,20 @@ public class GameController : MonoBehaviour, ILevelController
             // Going to menu.
             GetComponent<TimeTravelController>().enabled = false;
             GetComponent<TransitionController>().enabled = false;
-            CurrentGameMode = GameMode.NotInGame;
 
             GameTimer.Paused = true;
-            SceneManager.LoadScene(END_SCENE_NAME);
+
+            if (CurrentGameMode == GameMode.SpeedRun) 
+            {
+                SceneManager.LoadScene(END_SCENE_NAME);
+
+            }
+            else if (CurrentGameMode == GameMode.Story)
+            {
+                SceneManager.LoadScene(END_SCENE_STORY_NAME);
+            }
+
+            CurrentGameMode = GameMode.NotInGame;
         }
     }
 

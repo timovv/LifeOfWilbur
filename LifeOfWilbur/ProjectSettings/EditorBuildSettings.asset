@@ -57,6 +57,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LeaderboardExit.unity
     guid: 44811c79866db20448fe27d0738fec95
   - enabled: 1
+    path: Assets/Scenes/StoryExit.unity
+    guid: aa61601b23bec1a48b280273a3c27d1f
+  - enabled: 0
     path: Assets/Scenes/ExitScene.unity
     guid: 7816f718c13d9544a989bd376173ae91
   m_configObjects: {}
