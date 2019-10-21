@@ -17,10 +17,10 @@ public class MainMenu : MonoBehaviour
     public GameObject _mainMenu;
     
 
-    void Awake()
+    void Start()
     {
         AudioManager audioManager = AudioManager._instance;
-        audioManager.Restart();
+        audioManager?.Restart();
     }
 
     void Update()
@@ -36,12 +36,7 @@ public class MainMenu : MonoBehaviour
         }
         else if(Input.GetKeyDown(KeyCode.Escape))
         {
-            //Disable the Credits menu and go back to the main menu
-            _creditsMenu.SetActive(false);
-            _mainMenu.SetActive(true);
-
-            //Additionally, disable the options menu
-            _optionsMenu.SetActive(false);
+            EscButtonOnClick();
         }
         else if(Input.GetKeyDown(KeyCode.S))
         {
@@ -111,5 +106,19 @@ public class MainMenu : MonoBehaviour
     }
 
 
+    public void EscButtonOnClick()
+    {
+        //Disable the Credits menu and go back to the main menu
+        _creditsMenu.SetActive(false);
+        _mainMenu.SetActive(true);
+
+        //Additionally, disable the options menu
+        _optionsMenu.SetActive(false);
+    }
+
+    public void ButtonOnHoverSound()
+    {
+        FindObjectOfType<AudioManager>().ForcePlay("ButtonHover");
+    }
 
 }
