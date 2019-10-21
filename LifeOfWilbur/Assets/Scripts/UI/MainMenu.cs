@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Script containing the various options from the main menu.
+///     Controls the starting of the game
+///     Controls the going into the options from the main menu
+///     Controls quiting
+///     Controls the displaying of credits
+/// </summary>
 public class MainMenu : MonoBehaviour
 {
     public GameObject _optionsMenu;
@@ -20,6 +27,7 @@ public class MainMenu : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.X)) 
         {
+            // Re-enables movement and physics in case it was disabled from dialogue or death and then user quit without it re-enabling.
             CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
             TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
             LevelReset.ResetDisabled = false; // enable resetting level

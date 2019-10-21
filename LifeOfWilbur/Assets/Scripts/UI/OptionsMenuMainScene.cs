@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Script controlling the appearance and the various options in the options menu
+///    Controls the navigation onto and away from this menu with the escape and back buttons
+///    Conttrols the sliders containing game and music volume and their interaction with audio components
+/// </summary>
 public class OptionsMenuMainScene : MonoBehaviour
 {
     public GameObject _optionMenuUI;

@@ -13,6 +13,10 @@ public class SpikeCollisionDetector : MonoBehaviour
     public ScreenShake screenShake;
     public float duration;
 
+    /// <summary>
+    /// If spike or water in collision regions, will shake screen, and kill player through PauseMovementOnDeath routine
+    /// </summary>
+    /// <param name="otherObj">The object which Wilbur collides with</param>
     void OnTriggerEnter2D(Collider2D otherObj)
     {
         if (otherObj.name == "Spikes" || otherObj.name == "Water")
@@ -25,15 +29,20 @@ public class SpikeCollisionDetector : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Pauses movement, kills, and then reenables. This is so Wilbur can't keep moving after he dies.
+    /// </summary>
     IEnumerator PauseMovementOnDeath()
     {
         DisableMovement();
-        // TODO (timo): We should just make it so that movement, physics, etc. are re-enabled on scene load.
         yield return new WaitForSeconds(0.1f);
         EnableMovement();
     }
 
 
+    /// <summary>
+    /// Disables movement and physics
+    /// </summary>
     void DisableMovement()
     {
         CharacterController2D.MovementDisabled = true; // disable Wilbur's movement
@@ -42,6 +51,9 @@ public class SpikeCollisionDetector : MonoBehaviour
         Physics2D.autoSimulation = false; // disable physics
     }
 
+    /// <summary>
+    /// Ren-enables movement and physics
+    /// </summary>
     void EnableMovement()
     {
         CharacterController2D.MovementDisabled = false; // enable Wilbur's movement

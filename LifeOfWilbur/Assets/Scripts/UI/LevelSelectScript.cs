@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/// <summary>
+/// Script for the level selecter screen in story mode
+///     Controls the zooming in/out of a level and starting the level
+///     Controls the navigation back to the menu scene
+/// </summary>
 public class LevelSelectScript : MonoBehaviour
 {
     public Camera _mainCamera;
@@ -15,16 +20,25 @@ public class LevelSelectScript : MonoBehaviour
 
     private void Start()
     {
+        // Stores the default position of the camera as reference point to go back to during animations
         _originalPosition = _mainCamera.transform.position;
         _originalOrthographic = _mainCamera.orthographicSize;
     }
 
+    /// <summary>
+    /// Loads the game in story mode when user clicks play button
+    /// </summary>
+    /// <param name="levelName"></param>
     public void PlayLevel(string levelName)
     {
         LifeOfWilbur.GameController.StartGameAt(GameMode.Story, levelName);
         GameTimer.ElapsedTimeSeconds = 0;
     }
 
+    /// <summary>
+    /// When user clicks on a level, will zoom camera into the target transform positions
+    /// </summary>
+    /// <param name="target">The position to place the camera</param>
     public void SelectLevel(Transform target)
     {
         //Selected animation
@@ -35,7 +49,10 @@ public class LevelSelectScript : MonoBehaviour
         StartCoroutine(resizeRoutine(target));
     }
 
-    //Duplicate code - help
+    /// <summary>
+    /// When user clicks back from a level to deselct it, will zoom camera back to stored default positions
+    /// </summary>
+    /// <param name="target">The level being unselected</param>
     public void DeselectLevel(Transform target)
     {
         //Selected animation
@@ -45,11 +62,19 @@ public class LevelSelectScript : MonoBehaviour
         StartCoroutine(deresizeRoutine()); 
     }
 
+    /// <summary>
+    /// Controls the loading of the menu scene if back button pressed
+    /// </summary>
     public void GoBackButtonClick()
     {
         SceneManager.LoadScene("MenuScene");
     }
 
+    /// <summary>
+    /// Zooms into the level
+    /// </summary>
+    /// <param name="target">The position of the level on the screen</param>
+    /// <returns></returns>
     private IEnumerator resizeRoutine(Transform target)
     {
         float elapsed = 0;
@@ -65,7 +90,9 @@ public class LevelSelectScript : MonoBehaviour
             yield return null;
         }
     }
-
+    /// <summary>
+    /// Zooms out of the level
+    /// </summary>
     private IEnumerator deresizeRoutine()
     {
         float elapsed = 0;

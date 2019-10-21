@@ -109,6 +109,7 @@ public class CharacterController2D : MonoBehaviour
 			}
 		}
 
+        // Only complete move if the movement is not disabled. Movement gets paused in menus and in dialogue
 		if (!MovementDisabled)
 		{
 			Move(_horizontalMove * Time.fixedDeltaTime);

@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/// <summary>
+/// Script controlling the appearance and the various options in the pause menu
+///    Controls the pausing and resuming of a room
+///    Conttrols the buttons and their toggles on the pause menu
+/// </summary>
 public class PauseScript : MonoBehaviour
 {
     public static bool IsPaused {get; set;} = false;
