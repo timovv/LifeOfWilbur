@@ -14,6 +14,11 @@ Prototype
 
 The commit tagged with `prototype-submission` is our prototype submission. It is on the `prototype-submission` branch.
 
+Final submission
+----------------
+
+Our final submission is tagged `final-submission`.
+
 Setup Guide
 ------------
 1. Download Unity - version `2019.2.6f1` is required via: https://unity3d.com/unity/whats-new/2019.2.6
