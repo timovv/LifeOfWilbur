@@ -11,6 +11,10 @@ public class SnowStormAudio : MonoBehaviour
         StartSnowStormMusic();
     }
 
+    /// <summary>
+    /// Method that handles starting the snow storm music when the level gets started. Stops playing the other sound
+    /// tracks and sets the volume, and starts to play the snowstorm audio.
+    /// </summary>
     public void StartSnowStormMusic()
     {
         AudioManager audioManager = AudioManager._instance;
@@ -22,10 +26,12 @@ public class SnowStormAudio : MonoBehaviour
         OldWilbur.source.Stop();
         YoungWilbur.source.Stop();
 
+        //Set SnowStormLevel Audio Source properties
         Sound SnowStormLevel = Array.Find(audioManager._sounds, sound => sound._name == "SnowStormLevel");
         SnowStormLevel._volume = FindObjectOfType<OptionsMenu>().GetBackgroundSliderValue();
         SnowStormLevel.source.volume = SnowStormLevel._volume;
 
+        //Start Playback of SnowStorm level
         audioManager.Play("SnowStormLevel");
 
     }
