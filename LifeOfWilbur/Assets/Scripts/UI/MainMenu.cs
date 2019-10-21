@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _optionsMenu;
     public GameObject _creditsMenu;
     public GameObject _mainMenu;
+    public static string PlayerName { get; private set; } = "Wilbur";
     
 
     void Start()
@@ -90,8 +91,15 @@ public class MainMenu : MonoBehaviour
         }
     }
 
+    public void SpeedrunPopupShow()
+    {
+        transform.Find("SpeedrunPopup").gameObject.SetActive(true);
+        GameObject.Find("PlayerName").GetComponent<InputField>().text = PlayerName;
+    }
+
     public void SpeedrunButtonClick()
     {
+        PlayerName = GameObject.Find("PlayerName").GetComponent<InputField>().text;
         LifeOfWilbur.GameController.StartGame(GameMode.SpeedRun);
     }
 
