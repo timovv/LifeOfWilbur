@@ -4786,7 +4786,7 @@ PrefabInstance:
     - target: {fileID: 3359851213224524816, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 5.44
+      value: 5.53
       objectReference: {fileID: 0}
     - target: {fileID: 3359851213224524816, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
@@ -4816,7 +4816,7 @@ PrefabInstance:
     - target: {fileID: 1949790888799591168, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 8.05
+      value: 8.35
       objectReference: {fileID: 0}
     - target: {fileID: 1949790888799591168, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
@@ -4886,7 +4886,7 @@ PrefabInstance:
     - target: {fileID: 5562274995548530066, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 10.01
+      value: 9.99
       objectReference: {fileID: 0}
     - target: {fileID: 5562274995548530066, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
@@ -4961,7 +4961,7 @@ PrefabInstance:
     - target: {fileID: 3673112963659857255, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 3.85
+      value: 3.64
       objectReference: {fileID: 0}
     - target: {fileID: 8796876799770966583, guid: 4bea662c2b3039a49a957e2e4cc4c515,
         type: 3}
@@ -5053,7 +5053,7 @@ MonoBehaviour:
   _attemptsContianer: {fileID: 1954930743}
   _timeswapContianer: {fileID: 117801631}
   _tooltip: {fileID: 1583482233}
-  _graphEndPoint: http://wilbur.lamba.cl:3000/scores/graph
+  _graphEndPoint: https://timo.nz/scores/graph
   _networked: 1
 --- !u!114 &533015843
 MonoBehaviour:
@@ -5604,7 +5604,7 @@ MonoBehaviour:
   _entryTemplate: {fileID: 3359851213700778549, guid: 4bea662c2b3039a49a957e2e4cc4c515,
     type: 3}
   _userHighlight: {r: 1, g: 0.878, b: 0.212, a: 1}
-  _saveScoreEndPoint: https://timo.nz/scores
+  _saveScoreEndPoint: https://timo.nz/scores/
 --- !u!1 &921123330
 GameObject:
   m_ObjectHideFlags: 0
