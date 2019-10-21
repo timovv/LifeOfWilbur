@@ -19,14 +19,4 @@ public class ExitMenu : MonoBehaviour
         //Loading the Game again, and not the menu screen
         SceneManager.LoadScene(0);
     }
-
-
-    /// <summary>
-    /// Method call for the 'Quit' button. Closes the application given that you are running on Desktop.
-    /// </summary>
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
 }
