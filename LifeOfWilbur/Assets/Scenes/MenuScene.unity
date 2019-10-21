@@ -1131,7 +1131,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.28235295, g: 0.27450982, b: 0.6666667, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1937,6 +1937,7 @@ GameObject:
   - component: {fileID: 716811451}
   - component: {fileID: 716811450}
   - component: {fileID: 716811453}
+  - component: {fileID: 716811454}
   m_Layer: 1
   m_Name: GTSLogoCredits
   m_TagString: Untagged
@@ -1960,7 +1961,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.12, y: -4.527}
+  m_AnchoredPosition: {x: -7.99, y: -4.37}
   m_SizeDelta: {x: 1.4134, y: 1.4103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &716811450
@@ -2102,7 +2103,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb83a8b3cec2ad14f9e9ba505f4ce247, type: 3}
+  m_Sprite: {fileID: -8424164187777881943, guid: eb83a8b3cec2ad14f9e9ba505f4ce247,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2113,6 +2115,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &716811454
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716811448}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c4ff37870b69f664085e411530152d95, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &948306853
 GameObject:
   m_ObjectHideFlags: 0
