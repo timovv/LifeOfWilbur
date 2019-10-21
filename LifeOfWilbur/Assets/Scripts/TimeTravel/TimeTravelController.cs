@@ -72,6 +72,12 @@ public class TimeTravelController : MonoBehaviour
 
     private void OnEnable()
     {
+        StartCoroutine(RegisterGameObjectsSoon());
+    }
+
+    private IEnumerator RegisterGameObjectsSoon()
+    {
+        yield return null;
         RegisterGameObjects();
     }
 
