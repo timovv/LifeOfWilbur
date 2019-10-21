@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>
 /// Script containing the various options from the main menu.
@@ -25,23 +26,38 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.X)) 
-        {
-            // Re-enables movement and physics in case it was disabled from dialogue or death and then user quit without it re-enabling.
-            CharacterController2D.MovementDisabled = false; // enable Wilbur's movement
-            TimeTravelController.TimeTravelDisabled = false; // enable Time Travel
-            LevelReset.ResetDisabled = false; // enable resetting level
-            Physics2D.autoSimulation = true; // enable physcis
-            LifeOfWilbur.GameController.StartGame(GameMode.Story);
-        }
-        else if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             EscButtonOnClick();
         }
-        else if(Input.GetKeyDown(KeyCode.S))
+        else if(Input.GetKeyDown(KeyCode.F1))
         {
-#warning Remove this clause!
-            SceneManager.LoadScene("LevelSelectScene");
+            // F1: unlock all
+            SaveData.Instance.HighestUnlockedLevel = 3;
+            SaveData.Instance.UnlockedSpeedRunMode = true;
+        }
+        else if(Input.GetKeyDown(KeyCode.F2))
+        {
+            SaveData.Instance.HighestUnlockedLevel = 0;
+            SaveData.Instance.UnlockedSpeedRunMode = false;
+        }
+
+        var speedRunButton = GameObject.Find("SpeedrunButton");
+
+        if (speedRunButton != null)
+        {
+            if (SaveData.Instance.UnlockedSpeedRunMode)
+            {
+                speedRunButton.GetComponent<Button>().interactable = true;
+                speedRunButton.GetComponent<SpriteRenderer>().color = Color.white;
+                speedRunButton.GetComponent<Animator>().enabled = true;
+            }
+            else
+            {
+                speedRunButton.GetComponent<Button>().interactable = false;
+                speedRunButton.GetComponent<SpriteRenderer>().color = new Color(.5f, .5f, .5f);
+                speedRunButton.GetComponent<Animator>().enabled = false;
+            }
         }
 
         //In the case that the game was paused and the we restart, unpause the game
@@ -49,19 +65,6 @@ public class MainMenu : MonoBehaviour
         {
             PauseScript.IsPaused = false;
         }
-    }
-
-    /// <summary>
-    /// Method call for the 'Play Button', which queues the next scene.
-    /// </summary>
-    private void PlayGame()
-    {
-        //Queue the next scene in the build order
-        _mainMenu.SetActive(false);
-        SceneManager.LoadScene(1);
-
-        //Setting the GamerTime back to 0 in the case of restarting the game
-        GameTimer.ElapsedTimeSeconds = 0;
     }
 
     /// <summary>
@@ -76,7 +79,20 @@ public class MainMenu : MonoBehaviour
 
     public void StoryButtonClick()
     {
-        SceneManager.LoadScene("LevelSelectScene");
+        if (SaveData.Instance.HighestUnlockedLevel == 0)
+        {
+            SaveData.Instance.HighestUnlockedLevel = 1;
+            LifeOfWilbur.GameController.StartGame(GameMode.Story);
+        }
+        else
+        {
+            SceneManager.LoadScene("LevelSelectScene");
+        }
+    }
+
+    public void SpeedrunButtonClick()
+    {
+        LifeOfWilbur.GameController.StartGame(GameMode.SpeedRun);
     }
 
     /// <summary>

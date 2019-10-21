@@ -18,11 +18,36 @@ public class LevelSelectScript : MonoBehaviour
     private Vector3 _originalPosition;
     private float _originalOrthographic;
 
+    public GameObject[] _levelButtons;
+
     private void Start()
     {
         // Stores the default position of the camera as reference point to go back to during animations
         _originalPosition = _mainCamera.transform.position;
         _originalOrthographic = _mainCamera.orthographicSize;
+    }
+
+    private void Update()
+    {
+        for(int i = 0; i < _levelButtons.Length; ++i)
+        {
+            var button = _levelButtons[i].GetComponent<Button>();
+            var sprite = _levelButtons[i].transform.Find("Text").transform.Find("LevelBase").GetComponent<SpriteRenderer>();
+            var animator = _levelButtons[i].transform.Find("Text").transform.Find("LevelBase").GetComponent<Animator>();
+
+            if(SaveData.Instance.HighestUnlockedLevel >= i + 1)
+            {
+                button.interactable = true;
+                sprite.enabled = true;
+                animator.enabled = true;
+            }
+            else
+            {
+                button.interactable = false;
+                sprite.enabled = false;
+                animator.enabled = false;
+            }
+        }
     }
 
     /// <summary>

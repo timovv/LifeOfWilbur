@@ -60,8 +60,8 @@ public class GameTimer : MonoBehaviour
         {
             ElapsedTimeSeconds += Time.unscaledDeltaTime;
         }
-        
+
         // update text on HUD.
-        GetComponent<Text>().text = FormattedElapsedTime;
+        _text.text = FormattedElapsedTime;
     }
 }
