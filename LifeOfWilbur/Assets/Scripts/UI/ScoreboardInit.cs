@@ -35,7 +35,7 @@ public class ScoreboardInit : MonoBehaviour
     {
         // Get stats from the various controllers
         NewScore score = new NewScore {
-            name = "Player", // Unused
+            name = MainMenu.PlayerName,
             time = GameTimer.ElapsedTimeSeconds,
             attempts = GameController.Resets + 1,
             timeswaps = TimeTravelController.Timeswaps
@@ -105,11 +105,13 @@ public class ScoreboardInit : MonoBehaviour
     {
         Transform listItem = Instantiate<Transform>(_entryTemplate, _container);
         TextMeshProUGUI rank = listItem.GetChild(0).GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI time = listItem.GetChild(1).GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI attempts = listItem.GetChild(2).GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI timeswaps = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI name = listItem.GetChild(1).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI time = listItem.GetChild(2).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI attempts = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI timeswaps = listItem.GetChild(4).GetComponent<TextMeshProUGUI>();
 
         rank.text = String.Format("#{0:D6}", entry.rank);
+        name.text = entry.name;
         time.text = GameTimer.FormatTime(entry.time);
         attempts.text = entry.attempts.ToString();
         timeswaps.text = entry.timeswaps.ToString();
@@ -117,6 +119,7 @@ public class ScoreboardInit : MonoBehaviour
         if (shouldHighlight)
         {
             rank.color = _userHighlight;
+            name.color = _userHighlight;
             time.color = _userHighlight;
             attempts.color = _userHighlight;
             timeswaps.color = _userHighlight;
@@ -130,11 +133,13 @@ public class ScoreboardInit : MonoBehaviour
     {
         Transform listItem = Instantiate<Transform>(_entryTemplate, _container);
         TextMeshProUGUI rank = listItem.GetChild(0).GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI time = listItem.GetChild(1).GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI attempts = listItem.GetChild(2).GetComponent<TextMeshProUGUI>();
-        TextMeshProUGUI timeswaps = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI name = listItem.GetChild(1).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI time = listItem.GetChild(2).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI attempts = listItem.GetChild(3).GetComponent<TextMeshProUGUI>();
+        TextMeshProUGUI timeswaps = listItem.GetChild(4).GetComponent<TextMeshProUGUI>();
 
         rank.text = "--------";
+        name.text = "--------";
         time.text = "--------";
         attempts.text = "----";
         timeswaps.text = "----";
