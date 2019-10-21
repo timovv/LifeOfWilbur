@@ -29,6 +29,12 @@ public class GraphInit : MonoBehaviour
     /// </summary>
     public string _graphEndPoint = "http://localhost:3000/scores/graph";
 
+    /// <summary>
+    /// Wether or not to perform api request
+    /// (not required for story mode ending)
+    /// </summary>
+    public bool _networked = true;
+
     private void Awake()
     {
         // Get stats for "line"
@@ -37,9 +43,12 @@ public class GraphInit : MonoBehaviour
         int timeswaps = TimeTravelController.Timeswaps;
 
         // Get graph data for fields
-        StartCoroutine(GetGraphData("time", _timeContianer, time));
-        StartCoroutine(GetGraphData("attempts", _attemptsContianer, attempts));
-        StartCoroutine(GetGraphData("timeswaps", _timeswapContianer, timeswaps));
+        if (_networked)
+        {
+            StartCoroutine(GetGraphData("time", _timeContianer, time));
+            StartCoroutine(GetGraphData("attempts", _attemptsContianer, attempts));
+            StartCoroutine(GetGraphData("timeswaps", _timeswapContianer, timeswaps));
+        }
 
         // Show stats on "value" fields
         TextMeshProUGUI timeValue = _timeContianer.Find("Value").GetComponent<TextMeshProUGUI>();
@@ -67,7 +76,7 @@ public class GraphInit : MonoBehaviour
             Debug.LogError("Error getting graph: " + request.error);
             yield break;
         }
-        
+
         container.Find("Disconnected").gameObject.SetActive(false);
 
         GraphBars recieved = JsonUtility.FromJson<GraphBars>(request.downloadHandler.text);
@@ -90,7 +99,7 @@ public class GraphInit : MonoBehaviour
 
         // Determining bar heights
         float highestPercentage = 0;
-        foreach(Bar bar in barData.bars)
+        foreach (Bar bar in barData.bars)
         {
             // Using highest percentage instead of max value so bars aren't tiny
             highestPercentage = Math.Max(highestPercentage, bar.percentage);
@@ -129,7 +138,7 @@ public class GraphInit : MonoBehaviour
         List<RaycastResult> uiHit = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, uiHit);
 
-        if(uiHit.Count > 0)
+        if (uiHit.Count > 0)
         {
             // Move tooltip to over bar
             GameObject target = uiHit[0].gameObject;
