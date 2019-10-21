@@ -146,7 +146,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -161,12 +161,12 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: pee pee
+      value: Oh bother, I have *overslept*.
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: poop
+      value: Today is the *Polar Bear Summit 2029*!
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -176,6 +176,21 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._isFuture
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._quote
+      value: I have to *get going*, I don't want to be *late*.
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._isFuture
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
@@ -484,7 +499,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -499,17 +514,27 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: Oh snap
+      value: Oh boy, today is the *Polar Bear Summit 2019*!
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: I shid my jorts
+      value: I can't wait to see my friends.
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._isFuture
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._name
+      value: Wilbur
+      objectReference: {fileID: 0}
+    - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
+        type: 3}
+      propertyPath: _dialogue._quoteList.Array.data[2]._quote
+      value: I should *get going*.
       objectReference: {fileID: 0}
     - target: {fileID: 4002941001655589482, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -28969,7 +28994,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -28984,12 +29009,12 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[0]._quote
-      value: "Whatcha lookin at cutie?\t\t"
+      value: The *Polar Bear Summit* is held every 10 years.
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: You wanna rub my feet?
+      value: I wonder what it would be like in the *future*...
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
@@ -29004,7 +29029,7 @@ PrefabInstance:
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[2]._quote
-      value: How quaint
+      value: Maybe the *"Time"* button does something?
       objectReference: {fileID: 0}
     - target: {fileID: 753090016978157177, guid: 77a3d6cab4808ba4aa667ca019217948,
         type: 3}
