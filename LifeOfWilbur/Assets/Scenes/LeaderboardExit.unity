@@ -5560,7 +5560,7 @@ MonoBehaviour:
   _entryTemplate: {fileID: 3359851213700778549, guid: 4bea662c2b3039a49a957e2e4cc4c515,
     type: 3}
   _userHighlight: {r: 1, g: 0.878, b: 0.212, a: 1}
-  _saveScoreEndPoint: http://wilbur.lamba.cl:3000/scores
+  _saveScoreEndPoint: https://timo.nz/scores
 --- !u!1 &921123330
 GameObject:
   m_ObjectHideFlags: 0
