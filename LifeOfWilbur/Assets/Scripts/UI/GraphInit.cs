@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 /// <summary>
 /// Generates the graphs objects for time, attempts, and timeswaps in final scoreboard scene
@@ -66,6 +67,8 @@ public class GraphInit : MonoBehaviour
             Debug.LogError("Error getting graph: " + request.error);
             yield break;
         }
+        
+        container.Find("Disconnected").gameObject.SetActive(false);
 
         GraphBars recieved = JsonUtility.FromJson<GraphBars>(request.downloadHandler.text);
         FillGraph(recieved, container, value);

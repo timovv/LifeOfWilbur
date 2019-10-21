@@ -63,6 +63,8 @@ public class ScoreboardInit : MonoBehaviour
             yield break;
         }
 
+        transform.Find("Disconnected").gameObject.SetActive(false);
+
         Scores recieved = JsonUtility.FromJson<Scores>(request.downloadHandler.text);
         FillList(recieved);
     }

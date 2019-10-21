@@ -4483,6 +4483,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0.00000023841858
       objectReference: {fileID: 0}
+    - target: {fileID: 4086359318581871526, guid: b191926ff83c786439f89c3890d5dc9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b191926ff83c786439f89c3890d5dc9e, type: 3}
 --- !u!224 &117801631 stripped
@@ -14787,10 +14792,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1325288186462198506, guid: b191926ff83c786439f89c3890d5dc9e,
+    - target: {fileID: 4086359318581871526, guid: b191926ff83c786439f89c3890d5dc9e,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.00000023841858
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6238334704834718878, guid: b191926ff83c786439f89c3890d5dc9e, type: 3}
@@ -19684,6 +19689,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086359318581871526, guid: b191926ff83c786439f89c3890d5dc9e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b191926ff83c786439f89c3890d5dc9e, type: 3}
