@@ -319,7 +319,8 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[3]._quote
-      value: There isn't much to eat around these parts, and I'm down to my last rations...
+      value: There isn't *much to eat* around these parts and I'm *running out of
+        food*.
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -329,7 +330,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._quote
-      value: 'I think I need to find a new home. '
+      value: I think I need to find a *new home*.
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -940,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[1]._quote
-      value: Do you know where the *Polar Bear summit* is?
+      value: Do you know where the *Polar Bear Summit* is?
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -970,7 +971,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[4]._quote
-      value: Oh, I'm catching up with a few of my relatives. Nothing much.
+      value: Oh, I'm catching up with a few of friends.
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -980,7 +981,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[5]._quote
-      value: 'I''m curious... what are you? '
+      value: I'm curious... what kind of animal are you?
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -990,7 +991,7 @@ PrefabInstance:
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
       propertyPath: _dialogue._quoteList.Array.data[6]._quote
-      value: I'm a *Vulpes Lagopus.* But my friends call me *Iris*.
+      value: I'm a *Arctic Fox*, but my friends call me *Iris*.
       objectReference: {fileID: 0}
     - target: {fileID: 8117323359198111501, guid: 4ed144b2e7ac7b344b23da7db0f0fd5e,
         type: 3}
@@ -10380,11 +10381,6 @@ PrefabInstance:
       propertyPath: m_CompositePaths.m_Paths.Array.data[1].Array.data[12].y
       value: -0.999961
       objectReference: {fileID: 0}
-    - target: {fileID: 6408474851507683705, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 160760102028922511, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -10405,20 +10401,25 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2882604481404620194, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 47.01294
+      objectReference: {fileID: 0}
     - target: {fileID: 6646635651002276840, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6646635651336913854, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0012207031
+      objectReference: {fileID: 0}
     - target: {fileID: 4901476924931370889, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 6.91
-      objectReference: {fileID: 0}
-    - target: {fileID: 5999949647324978620, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8285090129217970994, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10434,6 +10435,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _pastFocusObject
+      value: 
+      objectReference: {fileID: 737893799}
+    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: _futureFocusObject
+      value: 
+      objectReference: {fileID: 1443727976}
+    - target: {fileID: 1775966072678307688, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999949647324978620, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2667430984192578031, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
@@ -10465,22 +10486,17 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 84.883
       objectReference: {fileID: 0}
-    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _pastFocusObject
-      value: 
-      objectReference: {fileID: 737893799}
-    - target: {fileID: 8285090129531450590, guid: db3c9888a7c3f604a8f2d96854477215,
-        type: 3}
-      propertyPath: _futureFocusObject
-      value: 
-      objectReference: {fileID: 1443727976}
     - target: {fileID: 8285090130309482243, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7102846815764760196, guid: 479831f51a15ef6488454ad106a01b1e,
         type: 3}
+    - target: {fileID: 6408474851507683705, guid: db3c9888a7c3f604a8f2d96854477215,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8479126747980071151, guid: db3c9888a7c3f604a8f2d96854477215,
         type: 3}
       propertyPath: m_LocalPosition.z
