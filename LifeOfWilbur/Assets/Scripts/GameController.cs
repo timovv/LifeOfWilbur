@@ -40,6 +40,11 @@ public class GameController : MonoBehaviour, ILevelController
 
     void Awake()
     {
+        if(LifeOfWilbur.GameController != null && LifeOfWilbur.GameController != this)
+        {
+            Destroy(gameObject);
+        }
+
         // Don't destroy this object or its immediate children.
         DontDestroyOnLoad(gameObject);
 
@@ -47,6 +52,11 @@ public class GameController : MonoBehaviour, ILevelController
         GetComponent<TransitionController>().enabled = true;
 
         SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
@@ -130,7 +140,7 @@ public class GameController : MonoBehaviour, ILevelController
         }
         else if(_levelEnumerator.MoveNext())
         {
-            SaveData.Instance.HighestUnlockedLevel = Mathf.Max(SaveData.Instance.HighestUnlockedLevel, ++_levelCount);
+            SaveData.Instance.HighestUnlockedLevel = Mathf.Max(SaveData.Instance.HighestUnlockedLevel, ++_levelCount + 1);
             _roomEnumerator = ((IEnumerable<Room>)_levelEnumerator.Current._rooms)
                 .Where(x => x._playInSpeedRunMode || CurrentGameMode == GameMode.Story)
                 .GetEnumerator();
@@ -213,6 +223,7 @@ public class GameController : MonoBehaviour, ILevelController
 
     public void StartSpeedrunMode()
     {
+        GameTimer.ElapsedTimeSeconds = 0;
         StartGame(GameMode.SpeedRun);
     }
 }

@@ -40,14 +40,4 @@ public class SaveData
     
     private const string HIGHEST_UNLOCKED_LEVEL_KEY = "HIGHEST_UNLOCKED_LEVEL";
     private const string UNLOCKED_SPEEDRUN_MODE_KEY = "UNLOCKED_SPEEDRUN_MODE";
-
-    public int GetHighestUnlockedLevel()
-    {
-        return PlayerPrefs.GetInt(HIGHEST_UNLOCKED_LEVEL_KEY);
-    }
-
-    public void SetHighestUnlockedLevel(int level)
-    {
-        PlayerPrefs.SetInt(HIGHEST_UNLOCKED_LEVEL_KEY, level);
-    }
 }
