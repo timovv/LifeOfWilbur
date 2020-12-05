@@ -80,8 +80,8 @@ MonoBehaviour:
     _loop: 0
     _isSFX: 1
   - _name: IceBreak
-    _clip: {fileID: 8300000, guid: 033810ff140e36a4babbfbc1f3b2c8c7, type: 3}
-    _volume: 1
+    _clip: {fileID: 8300000, guid: b331afa687c4eb64380aeab1083008f4, type: 3}
+    _volume: 0.304
     _pitch: 1
     source: {fileID: 0}
     _loop: 0
