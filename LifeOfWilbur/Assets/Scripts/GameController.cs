@@ -106,6 +106,8 @@ public class GameController : MonoBehaviour, ILevelController
 
         CurrentGameMode = gameMode;
         GameTimer.ElapsedTimeSeconds = 0;
+        TimeTravelController.Timeswaps = 0;
+        Resets = 0;
         ResetRoomEnumerators();
         NextRoom();
     }

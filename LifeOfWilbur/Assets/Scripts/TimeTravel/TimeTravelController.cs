@@ -29,7 +29,7 @@ public class TimeTravelController : MonoBehaviour
     /// <summary>
     /// Value indicating number of triggers.
     /// </summary>
-    public static int Timeswaps { get; private set; }
+    public static int Timeswaps { get; set; }
 
     /// <summary>
     /// 
