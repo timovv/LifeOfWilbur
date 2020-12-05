@@ -40,8 +40,8 @@ public class BreakBlock : MonoBehaviour
     IEnumerator HideObject(GameObject gameObject, float delayTime)
     {
         gameObject.SetActive(true);
-        yield return new WaitForSeconds(delayTime);
         AudioManager._instance.ForcePlay("IceBreak");
+        yield return new WaitForSeconds(delayTime);
         gameObject.SetActive(false);
     }
 }
